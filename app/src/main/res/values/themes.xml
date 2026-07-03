@@ -1,0 +1,7 @@
+<resources>
+    <!--
+        Base theme used by the Activity window before Compose takes over.
+        NoActionBar is required — the top bar is drawn by Compose's TopAppBar.
+    -->
+    <style name="Theme.YTSync" parent="android:Theme.Material.Light.NoActionBar" />
+</resources>
