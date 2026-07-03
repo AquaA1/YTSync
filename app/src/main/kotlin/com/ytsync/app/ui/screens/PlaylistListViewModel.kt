@@ -25,6 +25,11 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.io.File
 import javax.inject.Inject
+import androidx.work.ExistingWorkPolicy
+import androidx.work.OneTimeWorkRequestBuilder
+import androidx.work.WorkManager
+import androidx.work.workDataOf
+import com.ytsync.app.data.sync.SyncWorker
 
 private const val TAG = "PlaylistListViewModel"
 
@@ -130,97 +135,16 @@ class PlaylistListViewModel @Inject constructor(
     }
 
     fun syncPlaylist(playlistId: Long) {
-        viewModelScope.launch {
-            val playlist = repository.getPlaylistById(playlistId) ?: return@launch
-            try {
-                repository.markPlaylistSyncing(playlistId)
-
-                // 1. Fetch playlist metadata
-                val meta = engine.getPlaylistMetadata(playlist.url)
-
-                // 2. Create playlist folder
-                val playlistDir = fileManager.getPlaylistDir(meta.name)
-
-                // 3. Update playlist name and songCount in Room
-                val updatedPlaylist = playlist.copy(
-                    name = meta.name,
-                    songCount = meta.totalCount,
-                    syncStatus = SyncStatus.SYNCING
-                )
-                repository.updatePlaylist(updatedPlaylist)
-
-                // 4. Insert/update songs in Room
-                val songEntities = meta.songIds.mapIndexed { index, videoId ->
-                    val title = meta.songTitles.getOrElse(index) { "Song $videoId" }
-                    val existing = repository.getSongByVideoId(playlistId, videoId)
-                    existing ?: SongEntity(
-                        playlistId = playlistId,
-                        videoId = videoId,
-                        title = title,
-                        downloadStatus = DownloadStatus.PENDING
-                    )
-                }
-
-                songEntities.forEach { song ->
-                    if (song.id == 0L) {
-                        repository.insertSong(song)
-                    } else {
-                        repository.updateSong(song)
-                    }
-                }
-
-                // 5. Download the playlist (limiting to 3 for Stage 4 live test, or download full if preferred.
-                // Let's download the full playlist but allow it to run in the background thread.
-                // We don't specify limit here so it syncs all tracks.)
-                engine.downloadPlaylist(playlist.url, playlistDir.absolutePath) { progress ->
-                    Log.d(TAG, "Syncing playlist $playlistId: $progress%")
-                }
-
-                // 6. Scan directory and update song statuses
-                val mp3s = fileManager.getMp3Files(playlistDir)
-                val allSongsInDb = repository.getSongsForPlaylist(playlistId).first()
-                allSongsInDb.forEach { song ->
-                    val songFile = fileManager.getSongFile(playlistDir, song.title)
-                    if (songFile.exists()) {
-                        repository.markSongDownloaded(song.id, songFile.absolutePath)
-                    } else {
-                        // fallback title contains match by removing all non-alphanumeric characters
-                        val songAlphanumeric = song.title.filter { it.isLetterOrDigit() }.lowercase()
-                        val matched = mp3s.find { mp3 ->
-                            val mp3Alphanumeric = mp3.nameWithoutExtension.filter { it.isLetterOrDigit() }.lowercase()
-                            mp3Alphanumeric.contains(songAlphanumeric) || songAlphanumeric.contains(mp3Alphanumeric)
-                        }
-                        if (matched != null) {
-                            repository.markSongDownloaded(song.id, matched.absolutePath)
-                        } else {
-                            repository.markSongFailed(song.id)
-                        }
-                    }
-                }
-
-                // 7. Write metadata.json
-                val finalSongs = repository.getSongsForPlaylist(playlistId).first()
-                fileManager.writeMetadata(
-                    playlistDir,
-                    PlaylistFolderMetadata(
-                        url = playlist.url,
-                        name = meta.name,
-                        downloadedIds = finalSongs.filter { 
-                            it.downloadStatus == DownloadStatus.DOWNLOADED && it.filePath != null && File(it.filePath).exists()
-                        }.map { it.videoId },
-                        totalCount = meta.totalCount,
-                        lastSyncTimestamp = System.currentTimeMillis()
-                    )
-                )
-
-                // 8. Mark playlist synced
-                repository.markPlaylistSynced(playlistId, meta.totalCount)
-            } catch (e: Exception) {
-                Log.e(TAG, "Sync failed for playlist $playlistId", e)
-                repository.markPlaylistError(playlistId)
-                _error.value = "Sync failed: ${e.message ?: "Unknown error"}"
-            }
-        }
+        Log.i(TAG, "Enqueuing sync request for playlist $playlistId via WorkManager")
+        val data = workDataOf("playlistId" to playlistId)
+        val request = OneTimeWorkRequestBuilder<SyncWorker>()
+            .setInputData(data)
+            .build()
+        WorkManager.getInstance(context).enqueueUniqueWork(
+            "sync_playlist_$playlistId",
+            ExistingWorkPolicy.REPLACE,
+            request
+        )
     }
 
     fun deletePlaylist(playlist: PlaylistEntity) {
