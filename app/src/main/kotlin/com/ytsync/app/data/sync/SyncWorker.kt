@@ -55,10 +55,13 @@ class SyncWorker @AssistedInject constructor(
             try {
                 repository.markPlaylistSyncing(playlist.id)
 
-                val playlistDir = fileManager.getPlaylistDir(playlist.name)
-
                 // 1. Fetch metadata
                 val meta = engine.getPlaylistMetadata(playlist.url)
+
+                // Update playlist name in database immediately
+                repository.updatePlaylistName(playlist.id, meta.name)
+
+                val playlistDir = fileManager.getPlaylistDir(meta.name)
 
                 // 2. Insert/update songs in Room
                 val songEntities = meta.songIds.mapIndexed { index, videoId ->
@@ -171,8 +174,8 @@ class SyncWorker @AssistedInject constructor(
                 )
 
                 // 7. Complete sync
-                repository.markPlaylistSynced(playlist.id, meta.totalCount)
-                Log.i(TAG, "Finished syncing playlist: ${playlist.name}")
+                repository.markPlaylistSynced(playlist.id, meta.name, meta.totalCount)
+                Log.i(TAG, "Finished syncing playlist: ${meta.name}")
 
             } catch (e: Exception) {
                 Log.e(TAG, "Failed syncing playlist: ${playlist.name}", e)

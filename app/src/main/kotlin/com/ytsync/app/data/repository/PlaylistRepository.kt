@@ -27,6 +27,7 @@ class PlaylistRepository @Inject constructor(
     // ── Playlists ──────────────────────────────────────────────────────────────
 
     val allPlaylists: Flow<List<PlaylistEntity>> = playlistDao.getAll()
+    val allSongs: Flow<List<SongEntity>> = songDao.getAll()
 
     suspend fun insertPlaylist(playlist: PlaylistEntity): Long =
         playlistDao.insert(playlist)
@@ -54,10 +55,16 @@ class PlaylistRepository @Inject constructor(
         playlistDao.update(p.copy(syncStatus = SyncStatus.SYNCING))
     }
 
-    suspend fun markPlaylistSynced(id: Long, songCount: Int) {
+    suspend fun updatePlaylistName(id: Long, name: String) {
+        val p = playlistDao.getById(id) ?: return
+        playlistDao.update(p.copy(name = name))
+    }
+
+    suspend fun markPlaylistSynced(id: Long, name: String, songCount: Int) {
         val p = playlistDao.getById(id) ?: return
         playlistDao.update(
             p.copy(
+                name = name,
                 syncStatus = SyncStatus.SYNCED,
                 lastSyncedAt = System.currentTimeMillis(),
                 songCount = songCount,
@@ -103,6 +110,11 @@ class PlaylistRepository @Inject constructor(
     suspend fun markSongFailed(songId: Long) {
         val s = songDao.getById(songId) ?: return
         songDao.update(s.copy(downloadStatus = DownloadStatus.FAILED))
+    }
+
+    suspend fun resetSongToPending(songId: Long) {
+        val s = songDao.getById(songId) ?: return
+        songDao.update(s.copy(filePath = null, downloadStatus = DownloadStatus.PENDING))
     }
 
     /** Clears all playlist and song records from Room. */

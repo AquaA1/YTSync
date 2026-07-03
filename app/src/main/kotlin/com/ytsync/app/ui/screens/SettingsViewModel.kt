@@ -18,6 +18,10 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.stateIn
+
 private const val TAG = "SettingsViewModel"
 
 @HiltViewModel
@@ -35,6 +39,17 @@ class SettingsViewModel @Inject constructor(
     private val _syncFrequencyHours = MutableStateFlow(settingsManager.syncFrequencyHours)
     val syncFrequencyHours: StateFlow<Int> = _syncFrequencyHours
 
+    private val _useDynamicColor = MutableStateFlow(settingsManager.useDynamicColor)
+    val useDynamicColor: StateFlow<Boolean> = _useDynamicColor
+
+    val lastSyncedTime: StateFlow<Long?> = repository.allPlaylists
+        .map { playlists -> playlists.mapNotNull { it.lastSyncedAt }.maxOrNull() }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = null
+        )
+
     fun setWifiOnly(wifiOnly: Boolean) {
         Log.i(TAG, "Setting wifiOnly to $wifiOnly")
         settingsManager.isWifiOnly = wifiOnly
@@ -47,6 +62,12 @@ class SettingsViewModel @Inject constructor(
         settingsManager.syncFrequencyHours = hours
         _syncFrequencyHours.value = hours
         syncScheduler.scheduleBackgroundSync()
+    }
+
+    fun setUseDynamicColor(enabled: Boolean) {
+        Log.i(TAG, "Setting useDynamicColor to $enabled")
+        settingsManager.useDynamicColor = enabled
+        _useDynamicColor.value = enabled
     }
 
     fun clearAllData(onComplete: () -> Unit) {

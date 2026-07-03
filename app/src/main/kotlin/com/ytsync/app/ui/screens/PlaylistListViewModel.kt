@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
@@ -98,6 +99,14 @@ class PlaylistListViewModel @Inject constructor(
             initialValue = emptyList()
         )
 
+    val lastSyncedTime: StateFlow<Long?> = repository.allPlaylists
+        .map { playlists -> playlists.mapNotNull { it.lastSyncedAt }.maxOrNull() }
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.WhileSubscribed(5000),
+            initialValue = null
+        )
+
     private val _error = MutableStateFlow<String?>(null)
     val error: StateFlow<String?> = _error
 
@@ -147,13 +156,25 @@ class PlaylistListViewModel @Inject constructor(
         )
     }
 
-    fun deletePlaylist(playlist: PlaylistEntity) {
+    fun syncAllPlaylists() {
+        Log.i(TAG, "Syncing all playlists")
+        viewModelScope.launch {
+            playlists.value.forEach { playlist ->
+                syncPlaylist(playlist.id)
+            }
+        }
+    }
+
+    fun deletePlaylist(playlist: PlaylistEntity, deleteFiles: Boolean) {
         viewModelScope.launch {
             try {
                 repository.deletePlaylist(playlist)
-                // Optionally clean up folder from disk
-                val playlistDir = fileManager.getPlaylistDir(playlist.name)
-                playlistDir.deleteRecursively()
+                if (deleteFiles) {
+                    val playlistDir = fileManager.getPlaylistDir(playlist.name)
+                    if (playlistDir.exists()) {
+                        playlistDir.deleteRecursively()
+                    }
+                }
             } catch (e: Exception) {
                 Log.e(TAG, "Failed to delete playlist", e)
             }
