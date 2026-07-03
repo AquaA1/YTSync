@@ -13,4 +13,7 @@ sealed class Screen(val route: String) {
     data object PlaylistDetail : Screen("playlist_detail/{playlistId}") {
         fun createRoute(playlistId: Long): String = "playlist_detail/$playlistId"
     }
+
+    /** Settings screen — options to configure app configurations. */
+    data object Settings : Screen("settings")
 }

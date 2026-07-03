@@ -80,11 +80,11 @@ class SyncWorker @AssistedInject constructor(
                     }
                 }
 
-                // 3. Count missing/out-of-sync songs
+                // 3. Scan and identify missing songs
                 val mp3s = fileManager.getMp3Files(playlistDir)
                 val allSongsInDb = repository.getSongsForPlaylist(playlist.id).first()
 
-                val outOfSyncCount = allSongsInDb.count { song ->
+                val missingSongs = allSongsInDb.filter { song ->
                     val songFile = fileManager.getSongFile(playlistDir, song.title)
                     if (songFile.exists()) {
                         false
@@ -98,15 +98,43 @@ class SyncWorker @AssistedInject constructor(
                     }
                 }
 
-                // 4. Download missing files if needed
-                if (outOfSyncCount > 0) {
-                    notificationHelper.showSyncNotification(playlist.name, outOfSyncCount)
-                    engine.downloadPlaylist(playlist.url, playlistDir.absolutePath) { progress ->
-                        Log.d(TAG, "Syncing playlist ${playlist.id}: $progress%")
+                // 4. Download missing files sequentially, updating database in real time
+                if (missingSongs.isNotEmpty()) {
+                    notificationHelper.showSyncNotification(playlist.name, missingSongs.size)
+                    
+                    missingSongs.forEachIndexed { idx, song ->
+                        val videoUrl = "https://www.youtube.com/watch?v=${song.videoId}"
+                        Log.i(TAG, "Downloading track ${idx + 1}/${missingSongs.size}: ${song.title}")
+                        
+                        try {
+                            engine.downloadSong(videoUrl, playlistDir.absolutePath)
+                            
+                            // Immediately scan directory to find the downloaded file for this song
+                            val currentMp3s = fileManager.getMp3Files(playlistDir)
+                            val songFile = fileManager.getSongFile(playlistDir, song.title)
+                            if (songFile.exists()) {
+                                repository.markSongDownloaded(song.id, songFile.absolutePath)
+                            } else {
+                                val songAlphanumeric = song.title.filter { it.isLetterOrDigit() }.lowercase()
+                                val matched = currentMp3s.find { mp3 ->
+                                    val mp3Alphanumeric = mp3.nameWithoutExtension.filter { it.isLetterOrDigit() }.lowercase()
+                                    mp3Alphanumeric.contains(songAlphanumeric) || songAlphanumeric.contains(mp3Alphanumeric)
+                                }
+                                if (matched != null) {
+                                    repository.markSongDownloaded(song.id, matched.absolutePath)
+                                } else {
+                                    Log.w(TAG, "Download finished but file not found on disk for: ${song.title}")
+                                    repository.markSongFailed(song.id)
+                                }
+                            }
+                        } catch (e: Exception) {
+                            Log.e(TAG, "Failed downloading song: ${song.title}", e)
+                            repository.markSongFailed(song.id)
+                        }
                     }
                 }
 
-                // 5. Scan directory and update statuses using alphanumeric matching
+                // 5. Final reconciliation of all songs
                 val finalMp3s = fileManager.getMp3Files(playlistDir)
                 val finalSongsInDb = repository.getSongsForPlaylist(playlist.id).first()
                 finalSongsInDb.forEach { song ->
@@ -121,7 +149,7 @@ class SyncWorker @AssistedInject constructor(
                         }
                         if (matched != null) {
                             repository.markSongDownloaded(song.id, matched.absolutePath)
-                        } else {
+                        } else if (song.downloadStatus != DownloadStatus.DOWNLOADED) {
                             repository.markSongFailed(song.id)
                         }
                     }

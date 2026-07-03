@@ -98,4 +98,17 @@ class FileManager @Inject constructor(
     fun getExistingPlaylistDirs(): List<File> {
         return ytSyncRoot.listFiles { f -> f.isDirectory }?.toList() ?: emptyList()
     }
+
+    /** Clears all playlist and song folders on disk. */
+    fun clearAllDownloads() {
+        try {
+            if (ytSyncRoot.exists()) {
+                ytSyncRoot.deleteRecursively()
+            }
+            ytSyncRoot.mkdirs()
+            Log.i(TAG, "Successfully cleared all downloaded files from disk.")
+        } catch (e: Exception) {
+            Log.e(TAG, "Failed to clear all downloads", e)
+        }
+    }
 }

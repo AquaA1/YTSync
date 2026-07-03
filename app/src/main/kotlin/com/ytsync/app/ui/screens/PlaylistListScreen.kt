@@ -20,9 +20,12 @@ import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.MusicNote
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Sync
 import androidx.compose.material.icons.filled.SyncProblem
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -60,6 +63,15 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import com.ytsync.app.data.db.entity.PlaylistEntity
 import com.ytsync.app.data.db.entity.SyncStatus
 import kotlinx.coroutines.launch
+import android.Manifest
+import android.content.Context
+import android.content.pm.PackageManager
+import android.os.Build
+import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.ui.platform.LocalContext
+import androidx.core.content.ContextCompat
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -68,6 +80,7 @@ import java.util.Locale
 @Composable
 fun PlaylistListScreen(
     onPlaylistClick: (Long) -> Unit,
+    onSettingsClick: () -> Unit,
     viewModel: PlaylistListViewModel = hiltViewModel(),
 ) {
     val playlists by viewModel.playlists.collectAsState()
@@ -77,6 +90,69 @@ fun PlaylistListScreen(
     val sheetState = rememberModalBottomSheetState()
     val scope = rememberCoroutineScope()
     val snackbarHostState = remember { SnackbarHostState() }
+
+    val context = LocalContext.current
+
+    val permissionsToRequest = remember {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            arrayOf(Manifest.permission.POST_NOTIFICATIONS)
+        } else {
+            arrayOf(
+                Manifest.permission.READ_EXTERNAL_STORAGE,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE
+            )
+        }
+    }
+
+    var showRationaleDialog by remember {
+        mutableStateOf(
+            permissionsToRequest.any {
+                ContextCompat.checkSelfPermission(context, it) != PackageManager.PERMISSION_GRANTED
+            }
+        )
+    }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.RequestMultiplePermissions(),
+        onResult = { results ->
+            val allGranted = results.values.all { it }
+            if (allGranted) {
+                Log.i("PlaylistListScreen", "All permissions successfully granted.")
+            } else {
+                Log.w("PlaylistListScreen", "Some or all permissions denied by user.")
+            }
+        }
+    )
+
+    if (showRationaleDialog) {
+        AlertDialog(
+            onDismissRequest = { showRationaleDialog = false },
+            title = { Text("Permissions Required", fontWeight = FontWeight.Bold) },
+            text = {
+                val rationaleText = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+                    "YTSync needs permission to post notifications. This allows you to track background metadata synchronization and download operations progress."
+                } else {
+                    "YTSync needs storage access to scan local downloaded directories and save audio files to your external storage directory."
+                }
+                Text(rationaleText)
+            },
+            confirmButton = {
+                TextButton(
+                    onClick = {
+                        showRationaleDialog = false
+                        permissionLauncher.launch(permissionsToRequest)
+                    }
+                ) {
+                    Text("Grant", fontWeight = FontWeight.Bold)
+                }
+            },
+            dismissButton = {
+                TextButton(onClick = { showRationaleDialog = false }) {
+                    Text("Not Now")
+                }
+            }
+        )
+    }
 
     // Show error message as Snackbar
     LaunchedEffect(error) {
@@ -98,10 +174,17 @@ fun PlaylistListScreen(
                             contentDescription = "Update Downloader Engine"
                         )
                     }
+                    IconButton(onClick = onSettingsClick) {
+                        Icon(
+                            imageVector = Icons.Default.Settings,
+                            contentDescription = "Settings"
+                        )
+                    }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer,
                     titleContentColor = MaterialTheme.colorScheme.onPrimaryContainer,
+                    actionIconContentColor = MaterialTheme.colorScheme.onPrimaryContainer
                 ),
             )
         },

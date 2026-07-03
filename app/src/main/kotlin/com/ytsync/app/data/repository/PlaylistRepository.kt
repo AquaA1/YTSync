@@ -1,5 +1,6 @@
 package com.ytsync.app.data.repository
 
+import com.ytsync.app.data.db.AppDatabase
 import com.ytsync.app.data.db.dao.PlaylistDao
 import com.ytsync.app.data.db.dao.SongDao
 import com.ytsync.app.data.db.entity.DownloadStatus
@@ -20,6 +21,7 @@ import javax.inject.Singleton
 class PlaylistRepository @Inject constructor(
     private val playlistDao: PlaylistDao,
     private val songDao: SongDao,
+    private val db: AppDatabase
 ) {
 
     // ── Playlists ──────────────────────────────────────────────────────────────
@@ -101,5 +103,10 @@ class PlaylistRepository @Inject constructor(
     suspend fun markSongFailed(songId: Long) {
         val s = songDao.getById(songId) ?: return
         songDao.update(s.copy(downloadStatus = DownloadStatus.FAILED))
+    }
+
+    /** Clears all playlist and song records from Room. */
+    suspend fun clearAllData() {
+        db.clearAllTables()
     }
 }
