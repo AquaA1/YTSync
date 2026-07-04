@@ -99,15 +99,37 @@ class DownloadsViewModel @Inject constructor(
         _filterPlaylistId.value = playlistId
     }
 
-    fun deleteSongFile(songItem: DownloadedSongItem) {
+    fun deleteSongRowAndFile(songItem: DownloadedSongItem) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 songItem.song.filePath?.let { path ->
                     fileManager.deleteFile(path)
                 }
-                repository.resetSongToPending(songItem.song.id)
+                repository.deleteSong(songItem.song)
             } catch (e: Exception) {
-                Log.e("DownloadsViewModel", "Failed to delete song file and reset DB", e)
+                Log.e("DownloadsViewModel", "Failed to delete song file and row", e)
+            }
+        }
+    }
+
+    fun deleteSongFileAndExclude(songItem: DownloadedSongItem) {
+        viewModelScope.launch(Dispatchers.IO) {
+            try {
+                songItem.song.filePath?.let { path ->
+                    fileManager.deleteFile(path)
+                }
+                val s = repository.getSongByVideoId(songItem.song.playlistId, songItem.song.videoId)
+                if (s != null) {
+                    repository.updateSong(s.copy(
+                        filePath = null,
+                        excludeFromSync = true,
+                        downloadStatus = DownloadStatus.PENDING,
+                        downloadPhase = DownloadPhase.DONE,
+                        progress = 0
+                    ))
+                }
+            } catch (e: Exception) {
+                Log.e("DownloadsViewModel", "Failed to delete song file and exclude", e)
             }
         }
     }

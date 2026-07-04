@@ -1,8 +1,14 @@
 package com.ytsync.app.ui.screens
 
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.AnchoredDraggableState
+import androidx.compose.foundation.gestures.DraggableAnchors
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.anchoredDraggable
+import androidx.compose.foundation.gestures.animateTo
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -13,6 +19,10 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.IntOffset
+import kotlinx.coroutines.launch
+import kotlin.math.roundToInt
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -42,6 +52,7 @@ fun DownloadsScreen(
     var showFilterMenu by remember { mutableStateOf(false) }
     var songToDelete by remember { mutableStateOf<DownloadedSongItem?>(null) }
     var songDetailsToShow by remember { mutableStateOf<DownloadedSongItem?>(null) }
+    var revealedSongId by remember { mutableStateOf<Long?>(null) }
 
     // Grouping helper
     val grouped = remember(downloadedSongs, sortOrder) {
@@ -57,23 +68,41 @@ fun DownloadsScreen(
         AlertDialog(
             onDismissRequest = { songToDelete = null },
             title = { Text("Delete Song", fontWeight = FontWeight.Bold) },
-            text = { Text("Are you sure you want to delete '${item.song.title}' from your storage? The song status will be set back to Pending.") },
+            text = { Text("Choose how you want to delete '${item.song.title}' from your storage:") },
             confirmButton = {
-                Button(
-                    onClick = {
-                        viewModel.deleteSongFile(item)
-                        songToDelete = null
-                    },
-                    colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error)
+                Column(
+                    verticalArrangement = Arrangement.spacedBy(8.dp),
+                    modifier = Modifier.fillMaxWidth()
                 ) {
-                    Text("Delete", color = MaterialTheme.colorScheme.onError)
+                    Button(
+                        onClick = {
+                            viewModel.deleteSongRowAndFile(item)
+                            songToDelete = null
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Delete (re-download next sync)", color = MaterialTheme.colorScheme.onError)
+                    }
+                    Button(
+                        onClick = {
+                            viewModel.deleteSongFileAndExclude(item)
+                            songToDelete = null
+                        },
+                        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.error),
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Delete and don't download again", color = MaterialTheme.colorScheme.onError)
+                    }
+                    TextButton(
+                        onClick = { songToDelete = null },
+                        modifier = Modifier.fillMaxWidth()
+                    ) {
+                        Text("Cancel", textAlign = TextAlign.Center)
+                    }
                 }
             },
-            dismissButton = {
-                TextButton(onClick = { songToDelete = null }) {
-                    Text("Cancel")
-                }
-            }
+            dismissButton = null
         )
     }
 
@@ -135,6 +164,10 @@ fun DownloadsScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                .clickable(
+                    enabled = revealedSongId != null,
+                    onClick = { revealedSongId = null }
+                )
         ) {
             // Sort & Filter Bar
             Row(
@@ -248,14 +281,22 @@ fun DownloadsScreen(
 
                         items(itemsList, key = { it.song.id }) { item ->
                             SwipeToDismissSongWrapper(
+                                isRevealed = revealedSongId == item.song.id,
+                                onRevealStateChanged = { revealed ->
+                                    if (revealed) {
+                                        revealedSongId = item.song.id
+                                    } else if (revealedSongId == item.song.id) {
+                                        revealedSongId = null
+                                    }
+                                },
                                 onDeleteTriggered = { songToDelete = item },
-                                content = {
-                                    DownloadedSongRow(
-                                        item = item,
-                                        onRowClick = { songDetailsToShow = item }
-                                    )
-                                }
-                            )
+                                onRowClick = { songDetailsToShow = item }
+                            ) { clickHandler ->
+                                DownloadedSongRow(
+                                    item = item,
+                                    onRowClick = clickHandler
+                                )
+                            }
                         }
                     }
                 }
@@ -371,63 +412,121 @@ fun DownloadedSongRow(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+enum class SwipeState {
+    CLOSED,
+    REVEALED
+}
+
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SwipeToDismissSongWrapper(
+    isRevealed: Boolean,
+    onRevealStateChanged: (Boolean) -> Unit,
     onDeleteTriggered: () -> Unit,
-    content: @Composable () -> Unit
+    onRowClick: () -> Unit,
+    content: @Composable (onClick: () -> Unit) -> Unit
 ) {
-    val dismissState = rememberSwipeToDismissBoxState(
-        confirmValueChange = { value ->
-            if (value == SwipeToDismissBoxValue.EndToStart) {
-                onDeleteTriggered()
-                false
-            } else {
-                false
+    val density = LocalDensity.current
+    val coroutineScope = rememberCoroutineScope()
+    val revealOffsetPx = with(density) { -80.dp.toPx() }
+
+    val state = remember {
+        AnchoredDraggableState(
+            initialValue = SwipeState.CLOSED,
+            positionalThreshold = { distance -> distance * 0.5f },
+            velocityThreshold = { with(density) { 100.dp.toPx() } },
+            animationSpec = tween()
+        )
+    }
+
+    LaunchedEffect(revealOffsetPx) {
+        state.updateAnchors(
+            DraggableAnchors {
+                SwipeState.CLOSED at 0f
+                SwipeState.REVEALED at revealOffsetPx
+            }
+        )
+    }
+
+    LaunchedEffect(isRevealed) {
+        if (isRevealed) {
+            if (state.currentValue != SwipeState.REVEALED) {
+                state.animateTo(SwipeState.REVEALED)
+            }
+        } else {
+            if (state.currentValue != SwipeState.CLOSED) {
+                state.animateTo(SwipeState.CLOSED)
             }
         }
-    )
+    }
 
-    SwipeToDismissBox(
-        state = dismissState,
+    val targetValue = state.targetValue
+    LaunchedEffect(targetValue) {
+        onRevealStateChanged(targetValue == SwipeState.REVEALED)
+    }
+
+    Box(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 16.dp, vertical = 6.dp),
-        enableDismissFromStartToEnd = false,
-        enableDismissFromEndToStart = true,
-        backgroundContent = {
-            val isSwiped = dismissState.currentValue != SwipeToDismissBoxValue.Settled || 
-                          dismissState.targetValue != SwipeToDismissBoxValue.Settled
-            if (isSwiped) {
-                val color = MaterialTheme.colorScheme.errorContainer
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize(),
-                    contentAlignment = Alignment.CenterEnd
-                ) {
-                    Surface(
-                        color = color,
-                        shape = RoundedCornerShape(12.dp),
-                        modifier = Modifier
-                            .fillMaxHeight()
-                            .width(72.dp)
-                    ) {
-                        Box(
-                            contentAlignment = Alignment.Center,
-                            modifier = Modifier.fillMaxSize()
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Delete,
-                                contentDescription = "Delete Song",
-                                tint = MaterialTheme.colorScheme.onErrorContainer
-                            )
+            .padding(horizontal = 16.dp, vertical = 6.dp)
+    ) {
+        // Background: Action buttons
+        Box(
+            modifier = Modifier
+                .matchParentSize(),
+            contentAlignment = Alignment.CenterEnd
+        ) {
+            Surface(
+                color = MaterialTheme.colorScheme.errorContainer,
+                shape = RoundedCornerShape(12.dp),
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .width(72.dp)
+                    .clickable {
+                        coroutineScope.launch {
+                            state.animateTo(SwipeState.CLOSED)
                         }
+                        onDeleteTriggered()
                     }
+            ) {
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Delete,
+                        contentDescription = "Delete Song",
+                        tint = MaterialTheme.colorScheme.onErrorContainer
+                    )
                 }
             }
-        },
-        content = { content() }
-    )
+        }
+
+        // Foreground: Row content
+        val rowClick = {
+            if (state.currentValue == SwipeState.REVEALED) {
+                coroutineScope.launch {
+                    state.animateTo(SwipeState.CLOSED)
+                }
+            } else {
+                onRowClick()
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .offset {
+                    val offset = if (state.offset.isNaN()) 0f else state.offset
+                    IntOffset(offset.roundToInt(), 0)
+                }
+                .anchoredDraggable(
+                    state = state,
+                    orientation = Orientation.Horizontal
+                )
+        ) {
+            content(rowClick)
+        }
+    }
 }
 
 @Composable

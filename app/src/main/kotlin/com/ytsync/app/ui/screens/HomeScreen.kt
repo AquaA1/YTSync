@@ -9,7 +9,14 @@ import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.animateContentSize
+import androidx.compose.animation.core.tween
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.gestures.AnchoredDraggableState
+import androidx.compose.foundation.gestures.DraggableAnchors
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.anchoredDraggable
+import androidx.compose.foundation.gestures.animateTo
 import androidx.documentfile.provider.DocumentFile
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -19,6 +26,9 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.IntOffset
+import kotlin.math.roundToInt
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -35,7 +45,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 import kotlinx.coroutines.launch
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable
 fun HomeScreen(
     onPlaylistClick: (Long) -> Unit,
@@ -51,6 +61,7 @@ fun HomeScreen(
     var showRationaleDialog by remember { mutableStateOf(false) }
     var playlistToDelete by remember { mutableStateOf<PlaylistEntity?>(null) }
     var deletePhysicalFiles by remember { mutableStateOf(false) }
+    var revealedPlaylistId by remember { mutableStateOf<Long?>(null) }
 
     val scope = rememberCoroutineScope()
     val sheetState = rememberModalBottomSheetState()
@@ -218,6 +229,10 @@ fun HomeScreen(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(innerPadding)
+                .clickable(
+                    enabled = revealedPlaylistId != null,
+                    onClick = { revealedPlaylistId = null }
+                )
         ) {
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
@@ -287,15 +302,23 @@ fun HomeScreen(
                 } else {
                     items(playlists, key = { it.id }) { playlist ->
                         SwipeToDismissPlaylistWrapper(
+                            isRevealed = revealedPlaylistId == playlist.id,
+                            onRevealStateChanged = { revealed ->
+                                if (revealed) {
+                                    revealedPlaylistId = playlist.id
+                                } else if (revealedPlaylistId == playlist.id) {
+                                    revealedPlaylistId = null
+                                }
+                            },
                             onDeleteTriggered = { playlistToDelete = playlist },
-                            content = {
-                                PlaylistItemCard(
-                                    playlist = playlist,
-                                    onClick = { onPlaylistClick(playlist.id) },
-                                    onSyncClick = { viewModel.syncPlaylist(playlist.id) }
-                                )
-                            }
-                        )
+                            onRowClick = { onPlaylistClick(playlist.id) }
+                        ) { clickHandler ->
+                            PlaylistItemCard(
+                                playlist = playlist,
+                                onClick = clickHandler,
+                                onSyncClick = { viewModel.syncPlaylist(playlist.id) }
+                            )
+                        }
                     }
                 }
             }
@@ -455,62 +478,116 @@ fun PlaylistItemCard(
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun SwipeToDismissPlaylistWrapper(
+    isRevealed: Boolean,
+    onRevealStateChanged: (Boolean) -> Unit,
     onDeleteTriggered: () -> Unit,
-    content: @Composable () -> Unit
+    onRowClick: () -> Unit,
+    content: @Composable (onClick: () -> Unit) -> Unit
 ) {
-    val dismissState = rememberSwipeToDismissBoxState(
-        confirmValueChange = { value ->
-            if (value == SwipeToDismissBoxValue.EndToStart) {
-                onDeleteTriggered()
-                false // Don't automatically dismiss visually yet
-            } else {
-                false
+    val density = LocalDensity.current
+    val coroutineScope = rememberCoroutineScope()
+    val revealOffsetPx = with(density) { -80.dp.toPx() }
+
+    val state = remember {
+        AnchoredDraggableState(
+            initialValue = SwipeState.CLOSED,
+            positionalThreshold = { distance -> distance * 0.5f },
+            velocityThreshold = { with(density) { 100.dp.toPx() } },
+            animationSpec = tween()
+        )
+    }
+
+    LaunchedEffect(revealOffsetPx) {
+        state.updateAnchors(
+            DraggableAnchors {
+                SwipeState.CLOSED at 0f
+                SwipeState.REVEALED at revealOffsetPx
+            }
+        )
+    }
+
+    LaunchedEffect(isRevealed) {
+        if (isRevealed) {
+            if (state.currentValue != SwipeState.REVEALED) {
+                state.animateTo(SwipeState.REVEALED)
+            }
+        } else {
+            if (state.currentValue != SwipeState.CLOSED) {
+                state.animateTo(SwipeState.CLOSED)
             }
         }
-    )
+    }
 
-    SwipeToDismissBox(
-        state = dismissState,
-        enableDismissFromStartToEnd = false,
-        enableDismissFromEndToStart = true,
-        backgroundContent = {
-            val isSwiped = dismissState.currentValue != SwipeToDismissBoxValue.Settled || 
-                          dismissState.targetValue != SwipeToDismissBoxValue.Settled
-            if (isSwiped) {
-                val color = MaterialTheme.colorScheme.errorContainer
-                Box(
-                    modifier = Modifier
-                        .fillMaxSize()
-                        .padding(vertical = 4.dp)
-                        .clickable { onDeleteTriggered() },
-                    contentAlignment = Alignment.CenterEnd
-                ) {
-                    Surface(
-                        color = color,
-                        shape = RoundedCornerShape(16.dp),
-                        modifier = Modifier
-                            .fillMaxHeight()
-                            .width(80.dp)
-                    ) {
-                        Box(
-                            contentAlignment = Alignment.Center,
-                            modifier = Modifier.fillMaxSize()
-                        ) {
-                            Icon(
-                                imageVector = Icons.Default.Delete,
-                                contentDescription = "Delete",
-                                tint = MaterialTheme.colorScheme.onErrorContainer
-                            )
+    val targetValue = state.targetValue
+    LaunchedEffect(targetValue) {
+        onRevealStateChanged(targetValue == SwipeState.REVEALED)
+    }
+
+    Box(
+        modifier = Modifier
+            .fillMaxWidth()
+    ) {
+        // Background: Action buttons
+        Box(
+            modifier = Modifier
+                .matchParentSize()
+                .padding(vertical = 4.dp),
+            contentAlignment = Alignment.CenterEnd
+        ) {
+            Surface(
+                color = MaterialTheme.colorScheme.errorContainer,
+                shape = RoundedCornerShape(16.dp),
+                modifier = Modifier
+                    .fillMaxHeight()
+                    .width(80.dp)
+                    .clickable {
+                        coroutineScope.launch {
+                            state.animateTo(SwipeState.CLOSED)
                         }
+                        onDeleteTriggered()
                     }
+            ) {
+                Box(
+                    contentAlignment = Alignment.Center,
+                    modifier = Modifier.fillMaxSize()
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Delete,
+                        contentDescription = "Delete",
+                        tint = MaterialTheme.colorScheme.onErrorContainer
+                    )
                 }
             }
-        },
-        content = { content() }
-    )
+        }
+
+        // Foreground: Row content
+        val rowClick = {
+            if (state.currentValue == SwipeState.REVEALED) {
+                coroutineScope.launch {
+                    state.animateTo(SwipeState.CLOSED)
+                }
+            } else {
+                onRowClick()
+            }
+        }
+
+        Box(
+            modifier = Modifier
+                .offset {
+                    val offset = if (state.offset.isNaN()) 0f else state.offset
+                    IntOffset(offset.roundToInt(), 0)
+                }
+                .anchoredDraggable(
+                    state = state,
+                    orientation = Orientation.Horizontal
+                )
+        ) {
+            content(rowClick)
+        }
+    }
 }
 
 @Composable

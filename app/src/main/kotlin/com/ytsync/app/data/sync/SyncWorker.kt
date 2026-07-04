@@ -131,11 +131,15 @@ class SyncWorker @AssistedInject constructor(
 
                     Log.i("SyncDiagnostics", "Identifying missing songs: Scanning target directory and comparing with ${allSongsInDb.size} DB tracks")
                     val missingSongs = allSongsInDb.filter { song ->
-                        val exists = fileManager.fileExists(song.filePath)
-                        if (exists) {
-                            Log.i("SyncDiagnostics", "Song skip check: File exists on disk for '${song.title}'")
+                        if (song.excludeFromSync) {
+                            Log.i("SyncDiagnostics", "Song skip check: '${song.title}' is excluded from sync, skipping.")
                             false
                         } else {
+                            val exists = fileManager.fileExists(song.filePath)
+                            if (exists) {
+                                Log.i("SyncDiagnostics", "Song skip check: File exists on disk for '${song.title}'")
+                                false
+                            } else {
                             val songAlphanumeric = song.title.filter { it.isLetterOrDigit() }.lowercase()
                             val matched = mp3s.find { mp3 ->
                                 val mp3Alphanumeric = (mp3.name ?: "").substringBeforeLast(".").filter { it.isLetterOrDigit() }.lowercase()
@@ -154,6 +158,7 @@ class SyncWorker @AssistedInject constructor(
                             }
                         }
                     }
+                }
 
                     // Temporary directory for downloads to feed into native yt-dlp
                     val tempDownloadDir = File(appContext.cacheDir, "ytsync_temp").apply {
@@ -241,6 +246,10 @@ class SyncWorker @AssistedInject constructor(
                     val finalMp3s = fileManager.getMp3Documents(playlistDir)
                     val finalSongsInDb = repository.getSongsForPlaylist(playlist.id).first()
                     finalSongsInDb.forEach { song ->
+                        if (song.excludeFromSync) {
+                            Log.i("SyncDiagnostics", "Reconciliation: '${song.title}' is excluded from sync, skipping.")
+                            return@forEach
+                        }
                         val exists = fileManager.fileExists(song.filePath)
                         if (exists) {
                             Log.i("SyncDiagnostics", "Reconciliation: Song exists on disk, marking DOWNLOADED: '${song.title}'")
