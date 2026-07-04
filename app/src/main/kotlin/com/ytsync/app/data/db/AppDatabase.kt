@@ -10,7 +10,7 @@ import com.ytsync.app.data.db.entity.SongEntity
 
 @Database(
     entities = [PlaylistEntity::class, SongEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false,
 )
 @TypeConverters(Converters::class)

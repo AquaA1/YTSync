@@ -38,4 +38,10 @@ data class SongEntity(
 
     @ColumnInfo(name = "download_status")
     val downloadStatus: DownloadStatus = DownloadStatus.PENDING,
+
+    @ColumnInfo(name = "download_phase")
+    val downloadPhase: DownloadPhase = DownloadPhase.DONE,
+
+    @ColumnInfo(name = "progress")
+    val progress: Int = 0,
 )

@@ -1,10 +1,13 @@
 package com.ytsync.app.data.engine
 
 import android.util.Log
+import com.ytsync.app.data.db.entity.DownloadPhase
 import com.yausername.youtubedl_android.YoutubeDL
 import com.yausername.youtubedl_android.YoutubeDLRequest
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import kotlinx.coroutines.sync.Mutex
+import kotlinx.coroutines.sync.withLock
 import org.json.JSONObject
 import java.util.UUID
 import javax.inject.Inject
@@ -25,6 +28,7 @@ private const val TAG = "YtdlpDownloadEngine"
  */
 @Singleton
 class YtdlpDownloadEngine @Inject constructor() : DownloadEngine {
+    private val executeMutex = Mutex()
 
     // ── Metadata ───────────────────────────────────────────────────────────────
 
@@ -36,7 +40,10 @@ class YtdlpDownloadEngine @Inject constructor() : DownloadEngine {
                 addOption("--dump-single-json")
                 addOption("--no-warnings")
             }
-            val response = YoutubeDL.getInstance().execute(request, UUID.randomUUID().toString())
+            val response = executeMutex.withLock {
+                YoutubeDLInitializer.awaitInitialization()
+                YoutubeDL.getInstance().execute(request, UUID.randomUUID().toString())
+            }
             val json = JSONObject(response.out)
 
             val title = json.optString("title", "Unknown Playlist")
@@ -78,22 +85,76 @@ class YtdlpDownloadEngine @Inject constructor() : DownloadEngine {
                 addOption("--playlist-end", limit)
             }
         }
-        YoutubeDL.getInstance().execute(request, UUID.randomUUID().toString()) { progress, _, _ ->
-            onProgress(progress.toInt().coerceIn(0, 100))
+        executeMutex.withLock {
+            YoutubeDLInitializer.awaitInitialization()
+            YoutubeDL.getInstance().execute(request, UUID.randomUUID().toString()) { progress, _, _ ->
+                onProgress(progress.toInt().coerceIn(0, 100))
+            }
         }
         Log.d(TAG, "Playlist download complete")
     }
 
     // ── Single-song download ───────────────────────────────────────────────────
 
-    override suspend fun downloadSong(url: String, outputDir: String): Unit =
+    override suspend fun downloadSong(
+        url: String, 
+        outputDir: String, 
+        onPhaseChanged: (DownloadPhase, Int) -> Unit
+    ): Unit =
         withContext(Dispatchers.IO) {
             Log.d(TAG, "Downloading song: $url  →  $outputDir")
             val request = buildAudioRequest(url, outputDir).apply {
                 addOption("--no-playlist") // guard: never expand to full playlist
             }
-            YoutubeDL.getInstance().execute(request, UUID.randomUUID().toString()) { p, _, _ ->
-                Log.v(TAG, "Song progress: ${p.toInt()}%")
+            var lastPhase: DownloadPhase? = DownloadPhase.PREPARING
+            var lastProgress = -999
+
+            // Notify initial phase
+            onPhaseChanged(DownloadPhase.PREPARING, 0)
+
+            executeMutex.withLock {
+                YoutubeDLInitializer.awaitInitialization()
+                YoutubeDL.getInstance().execute(request, UUID.randomUUID().toString()) { progress, eta, line ->
+                    val trimmed = line.trim()
+                    val bracketEnd = trimmed.indexOf(']')
+                    
+                    var currentPhase = lastPhase ?: DownloadPhase.PREPARING
+                    var currentProgress = lastProgress
+
+                    if (trimmed.startsWith("[") && bracketEnd > 0) {
+                        val phaseTag = trimmed.substring(0, bracketEnd + 1)
+                        when (phaseTag) {
+                            "[youtube]", "[info]" -> {
+                                currentPhase = DownloadPhase.PREPARING
+                            }
+                            "[download]" -> {
+                                currentPhase = DownloadPhase.DOWNLOADING
+                                currentProgress = progress.toInt().coerceIn(0, 100)
+                            }
+                            "[ExtractAudio]", "[Metadata]", "[ThumbnailsConvertor]", "[EmbedThumbnail]" -> {
+                                currentPhase = DownloadPhase.CONVERTING
+                            }
+                        }
+                    }
+                    
+                    val phaseChanged = currentPhase != lastPhase
+                    val progressSubstantiallyChanged = currentPhase == DownloadPhase.DOWNLOADING && 
+                        (Math.abs(currentProgress - lastProgress) >= 5 || (currentProgress == 100 && lastProgress != 100))
+                    
+                    if (phaseChanged || progressSubstantiallyChanged) {
+                        lastPhase = currentPhase
+                        lastProgress = currentProgress
+                        
+                        if (phaseChanged) {
+                            Log.i("SyncDiagnostics", "Sub-phase transition to $currentPhase: $trimmed")
+                        } else {
+                            Log.i("SyncDiagnostics", "Sub-phase progress: $currentProgress% ($trimmed)")
+                        }
+                        
+                        onPhaseChanged(currentPhase, if (currentPhase == DownloadPhase.DOWNLOADING) currentProgress else 0)
+                    }
+                    Log.v(TAG, "Song progress: ${progress.toInt()}% ($line)")
+                }
             }
             Log.d(TAG, "Song download complete")
         }

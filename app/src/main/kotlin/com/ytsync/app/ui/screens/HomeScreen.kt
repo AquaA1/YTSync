@@ -41,6 +41,8 @@ fun HomeScreen(
     val playlists by viewModel.playlists.collectAsState()
     val lastSyncedTime by viewModel.lastSyncedTime.collectAsState()
     val error by viewModel.error.collectAsState()
+    val showUpdateBanner by viewModel.showUpdateBanner.collectAsState()
+    val newSongsCount by viewModel.newSongsCount.collectAsState()
 
     var showBottomSheet by remember { mutableStateOf(false) }
     var showRationaleDialog by remember { mutableStateOf(false) }
@@ -225,6 +227,54 @@ fun HomeScreen(
                         lastSynced = lastSyncedTime,
                         onSyncAll = { viewModel.syncAllPlaylists() }
                     )
+                }
+
+                if (showUpdateBanner) {
+                    item {
+                        Card(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .animateContentSize(),
+                            colors = CardDefaults.cardColors(
+                                containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                                contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                            ),
+                            shape = RoundedCornerShape(12.dp)
+                        ) {
+                            Column(modifier = Modifier.padding(16.dp)) {
+                                Row(
+                                    verticalAlignment = Alignment.CenterVertically,
+                                    modifier = Modifier.fillMaxWidth()
+                                ) {
+                                    Icon(
+                                        imageVector = Icons.Default.Info,
+                                        contentDescription = null,
+                                        tint = MaterialTheme.colorScheme.secondary
+                                    )
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Text(
+                                        text = "$newSongsCount new songs found across your playlists",
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        fontWeight = FontWeight.Bold,
+                                        modifier = Modifier.weight(1f)
+                                    )
+                                }
+                                Spacer(modifier = Modifier.height(12.dp))
+                                Row(
+                                    modifier = Modifier.fillMaxWidth(),
+                                    horizontalArrangement = Arrangement.End
+                                ) {
+                                    TextButton(onClick = { viewModel.dismissBanner() }) {
+                                        Text("Dismiss")
+                                    }
+                                    Spacer(modifier = Modifier.width(8.dp))
+                                    Button(onClick = { viewModel.syncAffectedPlaylists() }) {
+                                        Text("Sync Now")
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 if (playlists.isEmpty()) {

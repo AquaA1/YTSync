@@ -1,5 +1,7 @@
 package com.ytsync.app.data.engine
 
+import com.ytsync.app.data.db.entity.DownloadPhase
+
 /**
  * Abstraction over the underlying YouTube download tool.
  *
@@ -30,6 +32,11 @@ interface DownloadEngine {
     /**
      * Download a single video by its full YouTube URL to [outputDir].
      * Audio is extracted as MP3 with embedded metadata and thumbnail.
+     * Reports download sub-phases and byte transfer progress via [onPhaseChanged].
      */
-    suspend fun downloadSong(url: String, outputDir: String)
+    suspend fun downloadSong(
+        url: String, 
+        outputDir: String, 
+        onPhaseChanged: (DownloadPhase, Int) -> Unit = { _, _ -> }
+    )
 }

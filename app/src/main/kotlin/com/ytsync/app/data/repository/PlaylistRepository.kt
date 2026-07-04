@@ -4,6 +4,7 @@ import com.ytsync.app.data.db.AppDatabase
 import com.ytsync.app.data.db.dao.PlaylistDao
 import com.ytsync.app.data.db.dao.SongDao
 import com.ytsync.app.data.db.entity.DownloadStatus
+import com.ytsync.app.data.db.entity.DownloadPhase
 import com.ytsync.app.data.db.entity.PlaylistEntity
 import com.ytsync.app.data.db.entity.SongEntity
 import com.ytsync.app.data.db.entity.SyncStatus
@@ -104,17 +105,39 @@ class PlaylistRepository @Inject constructor(
 
     suspend fun markSongDownloaded(songId: Long, filePath: String) {
         val s = songDao.getById(songId) ?: return
-        songDao.update(s.copy(filePath = filePath, downloadStatus = DownloadStatus.DOWNLOADED))
+        songDao.update(s.copy(
+            filePath = filePath, 
+            downloadStatus = DownloadStatus.DOWNLOADED,
+            downloadPhase = DownloadPhase.DONE,
+            progress = 0
+        ))
     }
 
     suspend fun markSongFailed(songId: Long) {
         val s = songDao.getById(songId) ?: return
-        songDao.update(s.copy(downloadStatus = DownloadStatus.FAILED))
+        songDao.update(s.copy(
+            downloadStatus = DownloadStatus.FAILED,
+            downloadPhase = DownloadPhase.DONE,
+            progress = 0
+        ))
     }
 
     suspend fun resetSongToPending(songId: Long) {
         val s = songDao.getById(songId) ?: return
-        songDao.update(s.copy(filePath = null, downloadStatus = DownloadStatus.PENDING))
+        songDao.update(s.copy(
+            filePath = null, 
+            downloadStatus = DownloadStatus.PENDING,
+            downloadPhase = DownloadPhase.DONE,
+            progress = 0
+        ))
+    }
+
+    suspend fun updateSongDownloadPhase(songId: Long, phase: DownloadPhase, progress: Int) {
+        val s = songDao.getById(songId) ?: return
+        songDao.update(s.copy(
+            downloadPhase = phase,
+            progress = progress
+        ))
     }
 
     /** Clears all playlist and song records from Room. */

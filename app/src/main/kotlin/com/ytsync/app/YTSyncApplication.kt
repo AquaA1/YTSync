@@ -29,23 +29,8 @@ class YTSyncApplication : Application(), Configuration.Provider {
 
     override fun onCreate() {
         super.onCreate()
-        initYoutubeDL()
+        com.ytsync.app.data.engine.YoutubeDLInitializer.init(this)
         syncScheduler.scheduleBackgroundSync()
-    }
-
-    private fun initYoutubeDL() {
-        try {
-            YoutubeDL.getInstance().init(this)
-            Log.i(TAG, "YoutubeDL initialized")
-        } catch (e: YoutubeDLException) {
-            Log.e(TAG, "Failed to initialize YoutubeDL", e)
-        }
-        try {
-            FFmpeg.getInstance().init(this)
-            Log.i(TAG, "FFmpeg initialized")
-        } catch (e: YoutubeDLException) {
-            Log.e(TAG, "Failed to initialize FFmpeg", e)
-        }
     }
 }
 

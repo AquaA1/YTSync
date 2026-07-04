@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.ytsync.app.data.db.entity.DownloadStatus
+import com.ytsync.app.data.db.entity.DownloadPhase
 import com.ytsync.app.data.db.entity.SongEntity
 import com.ytsync.app.data.repository.PlaylistRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -51,7 +52,7 @@ class DownloadsViewModel @Inject constructor(
     ) { songs, playlistsList, sort, filterId ->
         val playlistMap = playlistsList.associate { it.id to it.name }
         
-        val items = songs.filter { it.downloadStatus == DownloadStatus.DOWNLOADED }
+        val items = songs.filter { it.downloadStatus == DownloadStatus.DOWNLOADED || it.downloadPhase != DownloadPhase.DONE }
             .map { song ->
                 val file = song.filePath?.let { File(it) }
                 val exists = file?.exists() == true

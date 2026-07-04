@@ -1,0 +1,1621 @@
+--------- beginning of main
+07-04 13:45:50.432 30582 30582 I ci.bank.imobile: Using CollectorTypeCC GC.
+07-04 13:45:50.440 11147 11188 I adbd    : jdwp connection from 30582
+07-04 13:45:50.448 30582 30582 D ActivityThread: setConscryptValidator
+07-04 13:45:50.448 30582 30582 D ActivityThread: setConscryptValidator - put
+07-04 13:45:50.463 30582 30582 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10345; state: ENABLED
+07-04 13:45:50.478 30582 30582 D nativeloader: Configuring clns-4 for other apk /system/framework/org.apache.http.legacy.jar. target_sdk_version=35, uses_libraries=ALL, library_path=/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/lib/arm64:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!/lib/arm64-v8a:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.xhdpi.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.csam.icici.bank.imobile
+07-04 13:45:50.478 30582 30582 D nativeloader: Extending system_exposed_libraries: libface_landmark.arcsoft.so:liblow_light_hdr.arcsoft.so:libhigh_dynamic_range.arcsoft.so:libFacialAttributeDetection.arcsoft.so:libFacialAttributeDetection.arcsoft.so:libBeauty_v4.camera.samsung.so:libexifa.camera.samsung.so:libjpega.camera.samsung.so:libOpenCv.camera.samsung.so:libVideoClassifier.camera.samsung.so:libtensorflowLite.dynamic_viewing.camera.samsung.so:libImageScreener.camera.samsung.so:libMyFilter.camera.samsung.so:libtensorflowLite.myfilter.camera.samsung.so:libtensorflowlite_inference_api.myfilter.camera.samsung.so:libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so:libHprFace_GAE_api.camera.samsung.so:libFace_Landmark_API.camera.samsung.so:libHprFace_GAE_jni.camera.samsung.so:libcolor_engine.camera.samsung.so:libDLInterface_aidl.camera.samsung.so:libImageTagger.camera.samsung.so:libSceneDetector_v1.camera.samsung.so:libQREngine.camera.samsung.so:libEventDetector.camera.samsung.so:libFood.camera.samsung.so:libFoodDetector.camera.samsung.so:libPortraitSolution.c
+07-04 13:45:50.546 30582 30582 W ziparchive: Unable to open '/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.arm64_v8a.dm': No such file or directory
+07-04 13:45:50.546 30582 30582 W ziparchive: Unable to open '/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.arm64_v8a.dm': No such file or directory
+07-04 13:45:50.549 30582 30582 W ci.bank.imobile: Entry not found
+07-04 13:45:50.551 30582 30582 W ziparchive: Unable to open '/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.xhdpi.dm': No such file or directory
+07-04 13:45:50.551 30582 30582 W ziparchive: Unable to open '/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.xhdpi.dm': No such file or directory
+07-04 13:45:50.554 30582 30582 W ci.bank.imobile: Entry not found
+07-04 13:45:50.556 30582 30582 D nativeloader: Configuring clns-5 for other apk /data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.arm64_v8a.apk:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.xhdpi.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/lib/arm64:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!/lib/arm64-v8a:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.xhdpi.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.csam.icici.bank.imobile
+07-04 13:45:50.658  1417  1459 I SemDvfsHyPerManager: acquire hyper - APP_LAUNCH/1417@31, type = -999
+07-04 13:45:50.658   855   891 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1049107  [1417 / 31]    HINT : APP_LAUNCH    list : 
+07-04 13:45:50.659   855   891 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:891
+07-04 13:45:50.660   855   891 I mtkpower_client: ret_hdl:249
+07-04 13:45:50.660   855   891 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:891
+07-04 13:45:50.661   858   929 I libPowerHal: [perfLockAcq] idx:0 hdl:249 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:249
+07-04 13:45:50.662   858   929 I libPowerHal: [PE] (less) /proc/mcdi/state set +prefix:enable 0;
+07-04 13:45:50.661  4127  4127 I SemDvfsHyPerManager: acquire hyper - APP_START_SHORT/4127@12, type = -999
+07-04 13:45:50.662   858   929 I libPowerHal: [perfLockAcq] idx:1 hdl:250 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:250
+07-04 13:45:50.663   858   929 I libPowerHal: vendor.samsung.: cpu_ctrl set cpu freq: 1800000 -1 -1 -1
+07-04 13:45:50.663   855   891 I mtkpower_client: ret_hdl:250
+07-04 13:45:50.663   855   891 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:891
+07-04 13:45:50.664   858   929 I libPowerHal: [perfLockAcq] idx:2 hdl:251 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:251
+07-04 13:45:50.664   858   929 I libPowerHal: [PE] vendor.samsung. update cmd:1000000, param:0
+07-04 13:45:50.664   858   929 I libPowerHal: [PE] vendor.samsung. update cmd:1000000 param:0
+07-04 13:45:50.664   855   891 I mtkpower_client: ret_hdl:251
+--------- beginning of system
+07-04 13:45:50.664  1417  2479 D ActivityTaskManager: startActivityAsUser: callingPid=30601, callingUid=2000, caller=com.android.server.wm.ActivityTaskManagerService.startActivityAsUser:1816 com.android.server.am.ActivityManagerService.startActivityAsUserWithFeature:3747 com.android.server.am.ActivityManagerShellCommand.runStartActivity:656 com.android.server.am.ActivityManagerShellCommand.onCommand:222 com.android.modules.utils.BasicShellCommandHandler.exec:97 android.os.ShellCommand.exec:38 com.android.server.am.ActivityManagerService.onShellCommand:11276 
+07-04 13:45:50.665   855   891 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 8567742  [4127 / 12]    HINT : APP_START    list : [TIMEOUT / 1500] 
+07-04 13:45:50.665  1417  1450 I ChimeraSystemEventListener: appLaunchIntent package name is: com.ytsync.app
+07-04 13:45:50.665  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 161252188; UID 10272; state: DISABLED
+07-04 13:45:50.666  1417  2479 I ActivityTaskManager: START u0 {flg=0x10000000 cmp=com.ytsync.app/.MainActivity} from uid 2000
+07-04 13:45:50.668  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 194480991; UID 10272; state: ENABLED
+07-04 13:45:50.668  1417  2479 D ActivityTaskManager: TaskLaunchParamsModifier:task=null activity=ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} display-id=0 display-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@108013957
+07-04 13:45:50.668  1417  2479 D [secipm]: mSecIpmManager Preload com.ytsync.app dex files
+07-04 13:45:50.668  1417  2479 D ActivityTaskManager: TaskLaunchParamsModifier:task=null activity=ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t-1} display-id=0 display-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@108013957 non-freeform-display display-area=DefaultTaskDisplayArea@108013957 maximized-bounds
+07-04 13:45:50.670   905  2615 I SurfaceFlinger: id=404 createSurf flag=24004, Task=115#404
+07-04 13:45:50.671  1417  2479 D ActivityTaskManager: Top Process State changed to PROCESS_STATE_TOP_SLEEPING#2
+07-04 13:45:50.671  1417  2479 D ActivityTaskManager: TaskLaunchParamsModifier:task=Task{1da0fe7 #115 type=standard A=10272:com.ytsync.app U=0 visible=false visibleRequested=false mode=fullscreen translucent=true sz=0} activity=ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t-1} display-from-task=0 display-id=0 display-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@108013957 non-freeform-display display-area=DefaultTaskDisplayArea@108013957 maximized-bounds
+07-04 13:45:50.672  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 174042980; UID 10272; state: DISABLED
+07-04 13:45:50.672  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 184838306; UID 10272; state: DISABLED
+07-04 13:45:50.672  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 185004937; UID 10272; state: DISABLED
+07-04 13:45:50.672  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 181136395; UID 10272; state: DISABLED
+07-04 13:45:50.672  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 174042936; UID 10272; state: DISABLED
+07-04 13:45:50.673   905  2615 I SurfaceFlinger: id=405 createSurf flag=80004, ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115}#405
+07-04 13:45:50.674   858   879 I mtkpower@impl: [setMode] type:5, enabled:1
+07-04 13:45:50.674  1417  2479 D ActivityTaskManager: Temporarily retain top process state for launching app
+07-04 13:45:50.675  1417  2479 W WindowManager: Prepare app transition: mNextAppTransitionRequests=[TRANSIT_OPEN], mNextAppTransitionFlags=, displayId: 0 Callers=com.android.server.wm.DisplayContent.prepareAppTransition:6493 com.android.server.wm.DisplayContent.prepareAppTransition:6484 com.android.server.wm.Task.startActivityLocked:6595 com.android.server.wm.ActivityStarter.startActivityInner:2980 com.android.server.wm.ActivityStarter.startActivityUnchecked:2470 
+07-04 13:45:50.675  1417  2479 V WindowManager: Checking theme of starting window: 0x7f0f010d
+07-04 13:45:50.675  1417  2479 V WindowManager: Translucent=false Floating=false ShowWallpaper=false Disable=false
+07-04 13:45:50.675  1417  2479 D MARsPolicyManager: onPackageResumedFG pkgName = com.ytsync.app, userId = 0
+07-04 13:45:50.675   905   905 I SurfaceFlinger: SFWD update time=1645268329712
+07-04 13:45:50.676  1417  2479 W WindowManager: Prepare app transition: mNextAppTransitionRequests=[TRANSIT_OPEN, TRANSIT_OPEN], mNextAppTransitionFlags=, displayId: 0 Callers=com.android.server.wm.DisplayContent.prepareAppTransition:6493 com.android.server.wm.TaskFragment.resumeTopActivity:1573 com.android.server.wm.TaskFragment.resumeTopActivity:1307 com.android.server.wm.Task.resumeTopActivityInnerLocked:6451 com.android.server.wm.Task.resumeTopActivityUncheckedLocked:6352 
+07-04 13:45:50.678  1417  2479 I Pageboost: stop alp
+07-04 13:45:50.678  1417  2479 I SemDvfsHyPerManager: acquire hyper - AMS_APP_LAUNCH/1417@15, type = -999
+07-04 13:45:50.678  2968  2968 E pageboostd: Received HALT command code 2
+07-04 13:45:50.678   855   891 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 1026043  [1417 / 15]    HINT : AMS_APP_LAUNCH    list : 
+07-04 13:45:50.679   855   891 I mtkpower_client: perf_lock_rel, hdl:249, tid:891
+07-04 13:45:50.679  4127  4127 I SemDvfsHyPerManager: acquire hyper - APP_START/4127@14, type = -999
+07-04 13:45:50.679   855   891 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:891
+07-04 13:45:50.679   858   929 I libPowerHal: [perfLockRel] hdl:249, idx:0
+07-04 13:45:50.679   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1c3c000, param:1
+07-04 13:45:50.679   858   929 I libPowerHal: [PD] (less) /proc/mcdi/state set +prefix:enable 1;
+07-04 13:45:50.680   855   891 I mtkpower_client: ret_hdl:252
+07-04 13:45:50.680   855   891 I mtkpower_client: perf_lock_rel, hdl:250, tid:891
+07-04 13:45:50.680   858   929 I libPowerHal: [perfLockAcq] idx:0 hdl:252 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:252
+07-04 13:45:50.680   858   929 I libPowerHal: [PE] (less) /proc/mcdi/state set +prefix:enable 0;
+07-04 13:45:50.680   855   891 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:891
+07-04 13:45:50.680   858   929 I libPowerHal: [perfLockRel] hdl:250, idx:1
+07-04 13:45:50.681   858   929 I libPowerHal: vendor.samsung.: cpu_ctrl set cpu freq: -1 -1 -1 -1
+07-04 13:45:50.681  2364  2364 I TopTaskTracker: onTaskMovedToFront : taskId = 115
+07-04 13:45:50.682   855   891 I mtkpower_client: ret_hdl:253
+07-04 13:45:50.682   855   891 I mtkpower_client: perf_lock_rel, hdl:251, tid:891
+07-04 13:45:50.682   858   929 I libPowerHal: [perfLockAcq] idx:1 hdl:253 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:253
+07-04 13:45:50.682   858   929 I libPowerHal: vendor.samsung.: cpu_ctrl set cpu freq: 1800000 -1 -1 -1
+07-04 13:45:50.682   855   891 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:891
+07-04 13:45:50.682   858   929 I libPowerHal: [perfLockRel] hdl:251, idx:2
+07-04 13:45:50.682   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1000000, param:-1
+07-04 13:45:50.683   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1000000 param:-1
+07-04 13:45:50.683  1417  1450 D CompatibilityChangeReporter: Compat change id reported: 135634846; UID 10272; state: DISABLED
+07-04 13:45:50.683   855   891 I mtkpower_client: ret_hdl:254
+07-04 13:45:50.683   858   929 I libPowerHal: [perfLockAcq] idx:2 hdl:254 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:254
+07-04 13:45:50.683  1417  1450 D CompatibilityChangeReporter: Compat change id reported: 177438394; UID 10272; state: DISABLED
+07-04 13:45:50.683  1417  1450 D CompatibilityChangeReporter: Compat change id reported: 135772972; UID 10272; state: DISABLED
+07-04 13:45:50.683   858   929 I libPowerHal: [PE] vendor.samsung. update cmd:1000000, param:0
+07-04 13:45:50.683   858   929 I libPowerHal: [PE] vendor.samsung. update cmd:1000000 param:0
+07-04 13:45:50.683   855   891 I HYPER-HAL: [RequestManager.cpp]acquire(): Acquired ID : 8576025  [4127 / 14]    HINT : APP_START    list : 
+07-04 13:45:50.683  1417  1450 D CompatibilityChangeReporter: Compat change id reported: 135754954; UID 10272; state: ENABLED
+07-04 13:45:50.684  1417  1460 D CompatibilityChangeReporter: Compat change id reported: 143937733; UID 10272; state: ENABLED
+07-04 13:45:50.690   829   829 D Zygote  : Forked child process 30609
+07-04 13:45:50.690  1417  1460 I ActivityManager: Start proc 30609:com.ytsync.app/u0a272 for top-activity {com.ytsync.app/com.ytsync.app.MainActivity}
+07-04 13:45:50.701 30609 30609 I com.ytsync.app: Late-enabling -Xcheck:jni
+07-04 13:45:50.722 30609 30609 I com.ytsync.app: Using CollectorTypeCC GC.
+07-04 13:45:50.726 11147 11188 I adbd    : jdwp connection from 30609
+07-04 13:45:50.734 30609 30609 D ActivityThread: setConscryptValidator
+07-04 13:45:50.734 30609 30609 D ActivityThread: setConscryptValidator - put
+07-04 13:45:50.738  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 168419799; UID 10272; state: DISABLED
+07-04 13:45:50.739  1417  2479 I ActivityManager: DSS OFF for com.ytsync.app
+07-04 13:45:50.743  1417  2479 V WindowManager: rotationForOrientation(orient=SCREEN_ORIENTATION_NOSENSOR (5), last=ROTATION_0 (0)); user=ROTATION_0 (0) USER_ROTATION_LOCKED
+07-04 13:45:50.743  1417  2479 D WindowManager: rotationForOrientation, orientationSource=Window{fbe53f4 u0 NotificationShade}
+07-04 13:45:50.743  1417  2479 V WindowManager: Computed rotation=ROTATION_0 (0) for display id=0 based on lastOrientation=SCREEN_ORIENTATION_NOSENSOR (5) and oldRotation=ROTATION_0 (0), caller=com.android.server.wm.DisplayRotation.updateOrientation:414 com.android.server.wm.DisplayContent.updateOrientation:1990 com.android.server.wm.DisplayContent.updateOrientation:1891 com.android.server.wm.RootWindowContainer.ensureVisibilityAndConfig:2139 com.android.server.wm.ActivityTaskSupervisor.realStartActivityLocked:913 com.android.server.wm.RootWindowContainer$AttachApplicationHelper.test:4288 
+07-04 13:45:50.746  1417  2479 D TspStateManager: updateCustomValue customSetting=
+07-04 13:45:50.747  1417  2479 D TspStateManager: updateCustomValue customSetting=
+07-04 13:45:50.748  1417  2479 D SGM:PkgDataHelper: notifyAppCreate(), pkgName: com.ytsync.app, userId: 0, sendRet: true
+07-04 13:45:50.748  1417  1669 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_APP_CREATE, pkgName: com.ytsync.app, userId: 0
+07-04 13:45:50.748  1870  1870 I AODTriggers: onAODEventDispatched = 4 / eventData = r7.a$d@437e559
+07-04 13:45:50.748  1870  1870 I AOD_LIVE_CLOCK@LiveClockController: updateDisplayState: DISPLAY_STATE_OFF
+07-04 13:45:50.748  1417  2479 D ActivityTaskManager: scheduleTopResumedActivityChanged, onTop=true r=ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115} caller=com.android.server.wm.ActivityTaskSupervisor.scheduleTopResumedActivityStateIfNeeded:2535 com.android.server.wm.ActivityTaskSupervisor.updateTopResumedActivityIfNeeded:2527 com.android.server.wm.TaskFragment.setResumedActivity:493 com.android.server.wm.TaskFragment.onActivityStateChanged:805 com.android.server.wm.ActivityRecord.setState:6406 com.android.server.wm.Task.minimalResumeActivityLocked:6155 
+07-04 13:45:50.748  1417  2479 D InputDispatcher: Focused application(0): ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115}
+07-04 13:45:50.749  1417  2479 D SGM:FgCheckThread: TaskStackListener.onTaskFocusChanged(), taskId=7, focused=false
+07-04 13:45:50.749  1417  2479 D SGM:FgCheckThread: TaskStackListener.onTaskFocusChanged(), taskId=115, focused=true
+07-04 13:45:50.749  1417  2479 D SGM:FgCheckThread:   sendRunningComponentFocus(), pkgName: com.ytsync.app, userId: 0
+07-04 13:45:50.749  1417  1669 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_TASK_FOCUSED, pkgName: com.ytsync.app, userId: 0
+07-04 13:45:50.749  1417  1669 D SGM:FgCheckThread: handleTaskFocused().
+07-04 13:45:50.749  1417  1669 D SGM:FgCheckThread:   handleTaskFocused(), pkgName: com.ytsync.app, userID:0
+07-04 13:45:50.749  1417  1669 D SGM:FgCheckThread: handleResume().
+07-04 13:45:50.749  1417  1669 D SGM:SystemHelper: callReleaseBlock needReleaseBlock:false
+07-04 13:45:50.749  1417  1669 D SGM:FgCheckThread:   handleResume(). device is locked yet. ignore
+07-04 13:45:50.751   905   947 I SurfaceFlinger: id=406 createSurf flag=80000, 2be8701 ActivityRecordInputSink com.ytsync.app/.MainActivity#406
+07-04 13:45:50.754  1417  2479 W WindowManager: Execute app transition: mNextAppTransitionRequests=[TRANSIT_OPEN, TRANSIT_OPEN], mNextAppTransitionFlags=, displayId: 0 Callers=com.android.server.wm.RootWindowContainer.executeAppTransitionForAllDisplay:2580 com.android.server.wm.ActivityTaskSupervisor.reportResumedActivityLocked:2287 com.android.server.wm.ActivityRecord.completeResumeLocked:6987 com.android.server.wm.Task.minimalResumeActivityLocked:6156 com.android.server.wm.ActivityTaskSupervisor.realStartActivityLocked:1137 
+07-04 13:45:50.754  1417  2479 D ActivityTaskManager: scheduleTopResumedActivityChanged, onTop=false r=ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115} caller=com.android.server.wm.ActivityTaskSupervisor.updateTopResumedActivityIfNeeded:2510 com.android.server.wm.TaskFragment.setResumedActivity:493 com.android.server.wm.TaskFragment.onActivityStateChanged:790 com.android.server.wm.ActivityRecord.setState:6406 com.android.server.wm.TaskFragment.startPausing:1880 com.android.server.wm.TaskFragment.startPausing:1817 
+07-04 13:45:50.755  1417  1450 I ActivityManager: Changes in 10272 20 to 2, 0 to 15
+07-04 13:45:50.755  1417  1450 I AppOps  : updateUidProcState uid: 10272 procState: 2 capability:15
+07-04 13:45:50.755  1417  1450 I AppOps  : commitUidPendingStateLocked() :: UID - 10272, 700 > 200, 0 > 15
+07-04 13:45:50.755  1417  1723 D AS.MultiSoundManager: mForegroundUid = 10272
+07-04 13:45:50.755  1417  1450 I ActivityManager: updateOomAdj start time is before than pendingPid added, don't delete it
+07-04 13:45:50.756  1417  1450 D PersonaActivityHelper: Activity not in resumed state, do not run immediate lock
+07-04 13:45:50.759 30609 30609 D CompatibilityChangeReporter: Compat change id reported: 171979766; UID 10272; state: ENABLED
+07-04 13:45:50.761  1417  1448 D Fingerprint21: onForegroundActivitiesChanged: pid = 30609, uid = 10272, foregroundActivities = true
+07-04 13:45:50.768  1417  1450 D EnterpriseDeviceManagerService: isMdmAdminPresentInternal() : MDM Admin Found - com.samsung.knox.securefolder
+07-04 13:45:50.769  1417  1450 I GameSDK@LifeCycle: noteResumeComponent(): package name  : com.ytsync.app
+07-04 13:45:50.770  1417  1450 D SGM:GameManager: identifyGamePackage. com.ytsync.app, mCurrentUserId: 0, callerUserId: 0, callingMethodInfo: com.samsung.android.game.SemGameManager.isGamePackage(SemGameManager.java:104)
+07-04 13:45:50.770  1417  1450 D SGM:PkgDataHelper: getGamePkgData(). com.ytsync.app
+07-04 13:45:50.770  1417  1450 D SGM:SemGameManager: isGamePackage(), pkgName=com.ytsync.app, ret=false
+07-04 13:45:50.771  1417  1417 I CocktailBarManagerServiceContainer: handleMessage: entry what = 5
+07-04 13:45:50.771  1417  1417 I CocktailBarManagerServiceImpl: noteResumeComponent : no active host
+07-04 13:45:50.772  1417  1450 D ActivityTaskManager: user 0 is skipped. It's a knox excluded user id
+07-04 13:45:50.772 30609 30609 W ziparchive: Unable to open '/data/app/~~0OrLeg-PT1N0SAsGlU4tOw==/com.ytsync.app-yiDdUCi1x62U_wrgfk6AQA==/base.dm': No such file or directory
+07-04 13:45:50.772 30609 30609 W ziparchive: Unable to open '/data/app/~~0OrLeg-PT1N0SAsGlU4tOw==/com.ytsync.app-yiDdUCi1x62U_wrgfk6AQA==/base.dm': No such file or directory
+07-04 13:45:50.772  1417  3124 I MediaSessionMonitor: Media session stopped : controllerList empty
+07-04 13:45:50.773  1417  1450 D SGM:GameManager: identifyGamePackage. com.ytsync.app, mCurrentUserId: 0, callerUserId: 0, callingMethodInfo: com.android.server.ssrm.SortingMachine.isGame(SortingMachine.java:162)
+07-04 13:45:50.773  1417  1450 D SGM:PkgDataHelper: getGamePkgData(). com.ytsync.app
+07-04 13:45:50.774  1417  1450 D SGM:FgCheckThread: noteResumeComponent(), received pkgName: com.ytsync.app, userId: 0
+07-04 13:45:50.774  1417  1669 D SGM:FgCheckThread: onLooperPrepared(), msg: MSG_APP_RESUME, pkgName: com.ytsync.app, userid: 0
+07-04 13:45:50.774  1417  1669 D SGM:FgCheckThread: handleResume().
+07-04 13:45:50.774  1417  1669 D SGM:SystemHelper: callReleaseBlock needReleaseBlock:false
+07-04 13:45:50.774  1417  1669 D SGM:FgCheckThread:   handleResume(). device is locked yet. ignore
+07-04 13:45:50.776  1417  1450 I ActivityManager: updateOomAdj start time is before than pendingPid added, don't delete it
+07-04 13:45:50.778  1417  1448 D Fingerprint21: onForegroundActivitiesChanged: pid = 2364, uid = 10083, foregroundActivities = false
+07-04 13:45:50.908  1417  2148 D MdnieScenarioControlService:  packageName : com.ytsync.app    className : com.ytsync.app.MainActivity
+07-04 13:45:50.908  1417  2148 V MdnieScenarioControlService: setUIMode from UI function(3)
+07-04 13:45:50.946 30582 30582 V GraphicsEnvironment: ANGLE Developer option for 'com.csam.icici.bank.imobile' set to: 'default'
+07-04 13:45:50.946 30582 30582 V GraphicsEnvironment: ANGLE GameManagerService for com.csam.icici.bank.imobile: false
+07-04 13:45:50.946 30582 30582 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+07-04 13:45:50.951 30582 30582 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+07-04 13:45:50.956 30582 30631 W ResourcesOffloading: An exception occurred : 
+07-04 13:45:50.956 30582 30631 W ResourcesOffloading: android.content.res.Resources$NotFoundException: Resource ID #0x7f08138b
+07-04 13:45:50.956 30582 30631 W ResourcesOffloading: 	at android.content.res.ResourcesImpl.getValueForDensity(ResourcesImpl.java:251)
+07-04 13:45:50.956 30582 30631 W ResourcesOffloading: 	at android.content.res.Resources.offloadDrawable(Resources.java:2916)
+07-04 13:45:50.956 30582 30631 W ResourcesOffloading: 	at android.app.ResourcesOffloading$ResourcesOffloadingRunnable.run(ResourcesOffloading.java:94)
+07-04 13:45:50.956 30582 30631 W ResourcesOffloading: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:50.958 30582 30582 D NetworkSecurityConfig: Using Network Security Config from resource network_security_config debugBuild: false
+07-04 13:45:51.006 30582 30582 I SignatureCheck: Signature check ok
+07-04 13:45:51.008  1417  2148 V MdnieScenarioControlService: mAclOffEnabled : true mAclPreviewState : false mAclCompensationState : false
+07-04 13:45:51.009 30582 30582 D LicenseClient: Connecting to the licensing service...
+07-04 13:45:51.057 30582 30582 D CompatibilityChangeReporter: Compat change id reported: 183155436; UID 10345; state: ENABLED
+07-04 13:45:51.193 30582 30640 W ci.bank.imobile: ClassLoaderContext classpath size mismatch. expected=17, found=0 (DLC[];PCL[base.apk*3755885884:base.apk!classes2.dex*1606151859:base.apk!classes3.dex*2384970117:base.apk!classes4.dex*3315715881:base.apk!classes5.dex*613106875:base.apk!classes6.dex*2151166013:base.apk!classes7.dex*1525195371:base.apk!classes8.dex*708154306:base.apk!classes9.dex*3815015810:base.apk!classes10.dex*2116277739:base.apk!classes11.dex*1175126314:base.apk!classes12.dex*1020916127:base.apk!classes13.dex*2812997735:base.apk!classes14.dex*4175907585:base.apk!classes15.dex*2676884683:base.apk!classes16.dex*2435379685:base.apk!classes17.dex*2328489407]{PCL[/system/framework/org.apache.http.legacy.jar*3951777098]#PCL[/system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar*1887653036]#PCL[/system/framework/com.android.location.provider.jar*3175360615]#PCL[/system/framework/com.android.media.remotedisplay.jar*3743104115]} | DLC[];PCL[])
+07-04 13:45:51.203  1417  2479 D CompatibilityChangeReporter: Compat change id reported: 161145287; UID 10345; state: DISABLED
+07-04 13:45:51.208 30582 30640 W System  : ClassLoader referenced unknown path: 
+07-04 13:45:51.209 30582 30640 D nativeloader: Configuring clns-6 for other apk . target_sdk_version=37, uses_libraries=, library_path=/data/app/~~Kgw2rt8dC5rWOySvTNikdg==/com.google.android.gms-RMQYt-burjj75PB44pcM1Q==/lib/arm64:/data/app/~~Kgw2rt8dC5rWOySvTNikdg==/com.google.android.gms-RMQYt-burjj75PB44pcM1Q==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.google.android.gms
+07-04 13:45:51.223  1417  2479 I GenerationRegistry: mBackingStore.isClosed() : false
+07-04 13:45:51.231 30582 30640 W ci.bank.imobile: ClassLoaderContext classpath size mismatch. expected=17, found=13 (DLC[];PCL[base.apk*3755885884:base.apk!classes2.dex*1606151859:base.apk!classes3.dex*2384970117:base.apk!classes4.dex*3315715881:base.apk!classes5.dex*613106875:base.apk!classes6.dex*2151166013:base.apk!classes7.dex*1525195371:base.apk!classes8.dex*708154306:base.apk!classes9.dex*3815015810:base.apk!classes10.dex*2116277739:base.apk!classes11.dex*1175126314:base.apk!classes12.dex*1020916127:base.apk!classes13.dex*2812997735:base.apk!classes14.dex*4175907585:base.apk!classes15.dex*2676884683:base.apk!classes16.dex*2435379685:base.apk!classes17.dex*2328489407]{PCL[/system/framework/org.apache.http.legacy.jar*3951777098]#PCL[/system_ext/framework/org.carconnectivity.android.digitalkey.timesync.jar*1887653036]#PCL[/system/framework/com.android.location.provider.jar*3175360615]#PCL[/system/framework/com.android.media.remotedisplay.jar*3743104115]} | DLC[];PCL[/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk*901594581:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes2.dex*987388896:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes3.dex*315434275:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes4.dex*367962750:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes5.dex*2197863262:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes6.dex*1739510526:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes7.dex*3741721467:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes8.dex*3921572263:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes9.dex*721206963:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes10.dex*3131562139:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes11.dex*651008059:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes12.dex*2853701189:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!classes13.dex*3740095587]{PCL[/system/framework/org.apache.http.legacy.jar*3951777098]})
+07-04 13:45:51.255  1417  1450 W ActivityTaskManager: Activity top resumed state loss timeout for ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115}
+07-04 13:45:51.255  1417  1450 W ActivityTaskManager: Activity pause timeout for ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115}
+07-04 13:45:51.256  1417  1417 I CocktailBarManagerServiceContainer: handleMessage: entry what = 6
+07-04 13:45:51.256  1417  1417 I CocktailBarManagerServiceImpl: notePauseComponent : no active host
+07-04 13:45:51.256  1417  1450 D SGM:FgCheckThread: notePauseComponent(), received pkgName: com.ytsync.app, userId: 0
+07-04 13:45:51.319 30582 30660 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10345; state: ENABLED
+07-04 13:45:51.328 30582 30660 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10345; state: ENABLED
+07-04 13:45:51.329  1417  4236 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10345; state: ENABLED
+07-04 13:45:51.356  2364  2396 I RecentModel: onTaskStackChangedBackground
+07-04 13:45:51.392  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:51.392  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:51.392  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:51.482 30582 30582 I WebViewFactory: Loading com.google.android.webview version 149.0.7827.163 (code 782716303)
+07-04 13:45:51.487 30609 30609 D nativeloader: Configuring clns-4 for other apk /data/app/~~0OrLeg-PT1N0SAsGlU4tOw==/com.ytsync.app-yiDdUCi1x62U_wrgfk6AQA==/base.apk. target_sdk_version=35, uses_libraries=, library_path=/data/app/~~0OrLeg-PT1N0SAsGlU4tOw==/com.ytsync.app-yiDdUCi1x62U_wrgfk6AQA==/lib/arm64:/data/app/~~0OrLeg-PT1N0SAsGlU4tOw==/com.ytsync.app-yiDdUCi1x62U_wrgfk6AQA==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand:/data/user/0/com.ytsync.app
+07-04 13:45:51.488 30582 30582 D ApplicationLoaders: Returning zygote-cached class loader: /system/framework/android.test.base.jar
+07-04 13:45:51.495 30582 30582 D nativeloader: Configuring clns-7 for other apk /data/app/~~vD4Uy68rvHkm-LZnBuJRzA==/com.google.android.webview-hBLVcDIiIz6PYucchX96Jw==/base.apk. target_sdk_version=36, uses_libraries=, library_path=/data/app/~~vD4Uy68rvHkm-LZnBuJRzA==/com.google.android.webview-hBLVcDIiIz6PYucchX96Jw==/lib/arm64:/data/app/~~vD4Uy68rvHkm-LZnBuJRzA==/com.google.android.webview-hBLVcDIiIz6PYucchX96Jw==/base.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+07-04 13:45:51.503 30609 30609 V GraphicsEnvironment: ANGLE Developer option for 'com.ytsync.app' set to: 'default'
+07-04 13:45:51.503 30609 30609 V GraphicsEnvironment: ANGLE GameManagerService for com.ytsync.app: false
+07-04 13:45:51.503 30609 30609 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+07-04 13:45:51.508 30609 30609 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+07-04 13:45:51.557 30582 30582 I cr_WVCFactoryProvider: version=149.0.7827.163 (782716303) minSdkVersion=29 multiprocess=true packageId=127 splits=config.arm64_v8a,config.xhdpi
+07-04 13:45:51.573 30582 30676 I chromium: [0704/134551.571605:INFO:android_webview/browser/variations/variations_seed_loader.cc:67] Failed to open file for reading.: No such file or directory (2)
+07-04 13:45:51.585 30609 30609 D NetworkSecurityConfig: No Network Security Config specified, using platform default
+07-04 13:45:51.594 30582 30582 I cr_LibraryLoader: Successfully loaded native library
+07-04 13:45:51.599 30582 30582 I cr_CachingUmaRecorder: Flushed 41 samples from 19 histograms, 0 samples were dropped.
+07-04 13:45:51.617   577   577 D io_stats: !@ 179,0 r 1066977 23889478 w 166435 3539464 d 0 0 f 0 0 iot 233580 0 th 0 0 0 pt 0 inp 0 0 1646.209
+07-04 13:45:51.675   858   879 I mtkpower@impl: [setMode] type:5, enabled:0
+07-04 13:45:51.675  1417  1450 I ActivityManager: Changes in 10272 2 to 12, 15 to 0
+07-04 13:45:51.696  1417  1749 I ChimeraPolicyHandler: prepareForTrigger() - skip reason: screen off
+07-04 13:45:51.696  1417  1749 I ChimeraAggressivePolicyHandler: executePolicy() - prepareForTrigger fails
+07-04 13:45:51.717  1417  4236 I GenerationRegistry: mBackingStore.isClosed() : false
+07-04 13:45:51.761 30609 30609 I YTSyncApplication: YoutubeDL initialized
+07-04 13:45:51.762 30609 30609 I YTSyncApplication: FFmpeg initialized
+07-04 13:45:51.763 30609 30609 I SyncScheduler: Scheduling background periodic sync: every 12h, wifiOnly = true
+07-04 13:45:51.765   855 30604 I mtkpower_client: perf_lock_rel, hdl:252, tid:30604
+07-04 13:45:51.765   855 30604 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:30604
+07-04 13:45:51.765   858   929 I libPowerHal: [perfLockRel] hdl:252, idx:0
+07-04 13:45:51.765   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1c3c000, param:1
+07-04 13:45:51.765   858   929 I libPowerHal: [PD] (less) /proc/mcdi/state set +prefix:enable 1;
+07-04 13:45:51.766   855 30604 I mtkpower_client: ret_hdl:255
+07-04 13:45:51.766   855 30604 I mtkpower_client: perf_lock_rel, hdl:253, tid:30604
+07-04 13:45:51.766   858   929 I libPowerHal: [perfLockAcq] idx:3 hdl:255 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:255
+07-04 13:45:51.766   858   929 I libPowerHal: [PE] (less) /proc/mcdi/state set +prefix:enable 0;
+07-04 13:45:51.766   855 30604 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:30604
+07-04 13:45:51.766   858   929 I libPowerHal: [perfLockRel] hdl:253, idx:1
+07-04 13:45:51.766   858   929 I libPowerHal: vendor.samsung.: cpu_ctrl set cpu freq: -1 -1 -1 -1
+07-04 13:45:51.767   855 30604 I mtkpower_client: ret_hdl:256
+07-04 13:45:51.767   858   929 I libPowerHal: [perfLockAcq] idx:0 hdl:256 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:256
+07-04 13:45:51.767   855 30604 I mtkpower_client: perf_lock_rel, hdl:254, tid:30604
+07-04 13:45:51.767   858   929 I libPowerHal: vendor.samsung.: cpu_ctrl set cpu freq: 1800000 -1 -1 -1
+07-04 13:45:51.767   855 30604 I mtkpower_client: perf_lock_acq, hdl:0, dur:0, num:2, tid:30604
+07-04 13:45:51.767   858   929 I libPowerHal: [perfLockRel] hdl:254, idx:2
+07-04 13:45:51.767   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1000000, param:-1
+07-04 13:45:51.767   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1000000 param:-1
+07-04 13:45:51.768   855 30604 I mtkpower_client: ret_hdl:257
+07-04 13:45:51.768   858   929 I libPowerHal: [perfLockAcq] idx:1 hdl:257 hint:-1 pid:855 duration:0 lock_user:vendor.samsung. => ret_hdl:257
+07-04 13:45:51.768   855 30604 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 1049107
+07-04 13:45:51.768   858   929 I libPowerHal: [PE] vendor.samsung. update cmd:1000000, param:0
+07-04 13:45:51.768   858   929 I libPowerHal: [PE] vendor.samsung. update cmd:1000000 param:0
+07-04 13:45:51.778 30582 30582 I DrmHalHidl: found instance=clearkey version=android.hardware.drm@1.4::IDrmFactory
+07-04 13:45:51.778 30582 30582 I DrmHalHidl: found instance=widevine version=android.hardware.drm@1.4::IDrmFactory
+07-04 13:45:51.779 30582 30582 E DrmHalHidl: uuid=[edef8ba979d64ace a3c827dcd51d21ed] No supported hal instance found
+07-04 13:45:51.781   841   841 I WVCdm   : [app][com.csam.icici.bank.imobile] calling virtual Return<void> wvdrm::hardware::drm::V1_4::widevine::WVDrmFactory::createPlugin(const hidl_array<uint8_t, 16> &, const android::hardware::hidl_string &, android::hardware::drm::V1_4::IDrmFactory::createPlugin_cb)
+07-04 13:45:51.781   841   841 D WVCdm   : Instantiating CDM.
+07-04 13:45:51.783   841   841 D WVCdm   : [cdm_engine.cpp(544):QueryStatus] security_level = Default, query_token = DeviceID
+07-04 13:45:51.785   841   841 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(834):Initialize] Level 3 Build Info (v16): OEMCrypto Level3 Code 22593 May 28 2021 16:59:08
+07-04 13:45:51.785   841 30702 I WVCdm   : [(0):] Level3 Library 22593 May 28 2021 16:59:08
+07-04 13:45:51.793   841   841 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(848):Initialize] L3 Initialized. Trying L1.
+07-04 13:45:51.794   841   841 D GPTEEClient: Initialize
+07-04 13:45:51.797   841   841 D TLCWidevineMdw: TLCMdw_Initialize: allocate 4M share memory successfully, (0xf1c01000)
+07-04 13:45:51.797   841   841 D TLCWidevineMdw: TLCMdw_Initialize: WRAPPED_KEYBOX_PATH = /mnt/vendor/efs/wv.keys
+07-04 13:45:51.798   841   841 D TLCWidevineMdw: TLCMdw_Initialize: init successfully with Context=0xf3f30040 Session=0xf3f30048
+07-04 13:45:51.798   841   841 D OEMCryptoCENC: OEMCrypto_APIVersion: 16
+07-04 13:45:51.798   841   841 W WVCdm   : [oemcrypto_adapter_dynamic.cpp(1054):LoadLevel1] Could not load L1 _oecc113.
+07-04 13:45:51.798   841   841 W WVCdm   : [oemcrypto_adapter_dynamic.cpp(1055):LoadLevel1] Could not load L1 _oecc114.
+07-04 13:45:51.798   841   841 D OEMCryptoCENC: Use GPTEEClient(teegris)
+07-04 13:45:51.798   841   841 D WVCdm   : [oemcrypto_adapter_dynamic.cpp(867):Initialize] OEMCrypto_Initialize Level 1 success. I will use level 1.
+07-04 13:45:51.798   841   841 I WVCdm   : [oemcrypto_adapter_dynamic.cpp(870):Initialize] Level 1 Build Info (v16): OEMCrypto Level1 code with V16 on 2021/10/28
+07-04 13:45:51.798   841   841 D TLCWidevineMdw: [TLCMdw_IsKeyboxValid] Enter...sSession:0xf3f30048
+07-04 13:45:51.800   841   841 D TLCWidevineMdw: [TLCMdw_GetKeyData] Enter...
+07-04 13:45:51.800   841   841 D OEMCryptoCENC: OEMCrypto_APIVersion: 16
+07-04 13:45:51.800   841   841 D OEMCryptoCENC: OEMCrypto_MinorAPIVersion: 1
+07-04 13:45:51.800   841   841 D WVCdm   : [crypto_session.cpp(398):CacheVersion] OEMCrypto version (default security level): 16.1
+07-04 13:45:51.800   841   841 D WVCdm   : [crypto_session.cpp(407):CacheVersion] OEMCrypto version (L3 security level): 16.3
+07-04 13:45:51.800   841   841 D WVCdm   : [crypto_session.cpp(889):Open] Opening crypto session: requested_security_level = Default
+07-04 13:45:51.801   841   841 D TLCWidevineMdw: [TLCMdw_SupportsUsageTable] Enter...
+07-04 13:45:51.801   841   841 D WVCdm   : [usage_table_header.cpp(162):Init] security_level = L1
+07-04 13:45:51.801   841   841 D TLCWidevineMdw: [TLCMdw_GetNumberOfOpenSessions] Enter...
+07-04 13:45:51.801   841   841 D OEMCryptoCENC: OEMCrypto_MaximumUsageTableHeaderSize: 300
+07-04 13:45:51.801   841   841 D WVCdm   : [usage_table_header.cpp(514):DetermineTableCapacity] capacity = 300, security_level = L1
+07-04 13:45:51.801   841   841 I WVCdm   : [usage_table_header.cpp(204):RestoreTable] Found usage table to restore: entry_count = 0
+07-04 13:45:51.801   841   841 D TLCWidevineMdw: [TLCMdw_LoadUsageTableHeader] Enter... buffer_len:80
+07-04 13:45:51.807   841   841 D TLCWidevineMdw: [TLCMdw_OpenSession] End, return session id: 3
+07-04 13:45:51.807   841   841 D TLCWidevineMdw: [TLCMdw_GetKeyData] Enter...
+07-04 13:45:51.807   841   841 D TLCWidevineMdw: [TLCMdw_GetRandom] Enter... 8
+07-04 13:45:51.808   841   841 D OEMCryptoCENC: OEMCrypto_APIVersion: 16
+07-04 13:45:51.808   841   841 D TLCWidevineMdw: [TLCMdw_GetDeviceID] Enter...
+07-04 13:45:51.808   841   841 D TLCWidevineMdw: TLCMdw_CloseSession: session id[3]
+07-04 13:45:51.809 30582 30582 E DrmHalAidl: Failed to get vendor from drm plugin: -1010
+07-04 13:45:51.809 30582 30582 E DrmHalAidl: Failed to get description from drm plugin: -1010
+07-04 13:45:51.810   841   841 E WVCdm   : [wv_content_decryption_module.cpp(426):GetMetricsInternal] Cdm Identifier not found
+07-04 13:45:51.811   841   841 E WVCdm   : [wv_content_decryption_module.cpp(486):CloseCdm] Cdm Identifier not found
+07-04 13:45:51.811   841   841 E WVCdm   : Failed to close cdm. status 12
+07-04 13:45:51.812   841   841 I WVCdm   : [(0):] L3 Terminate.
+07-04 13:45:51.812   841   841 E WVCdm   : [oemcrypto_adapter_dynamic.cpp(882):Level1Terminate] L1 Terminate
+07-04 13:45:51.812   841   841 D GPTEEClient: Terminate
+07-04 13:45:51.812   841   841 D TLCWidevineMdw: TLCMdw_Terminate: release all resources
+07-04 13:45:51.844 30582 30582 D ConnectivityManager: StackLog: [android.net.ConnectivityManager.sendRequestForNetwork(ConnectivityManager.java:4402)] [android.net.ConnectivityManager.registerDefaultNetworkCallbackForUid(ConnectivityManager.java:4966)] [android.net.ConnectivityManager.registerDefaultNetworkCallback(ConnectivityManager.java:4933)] [android.net.ConnectivityManager.registerDefaultNetworkCallback(ConnectivityManager.java:4907)] [com.icici.dff.functionalcomponent.networkmanager.IMConnectivityManager.register(Unknown Source:22)] [com.csam.icici.bank.imobile.ApplicationiMobile.register$015(Unknown Source:0)] [com.csam.icici.bank.imobile.ApplicationiMobile$c2020060317.onCreate(Unknown Source:101)] [java.lang.reflect.Method.invoke(Native Method)] [com.csam.icici.bank.imobile.ApplicationiMobile.onCreate(Unknown Source:13)] [android.app.Instrumentation.callApplicationOnCreate(Instrumentation.java:1266)] [android.app.ActivityThread.handleBindApplication(ActivityThread.java:7636)] [android.app.ActivityThread.-$$Nest$mhandleBindApplication(Unknown Source:0)] [android.app.ActivityThread$H.handleMessage(ActivityThread.java:2400)]
+07-04 13:45:51.846  1417  4236 D ConnectivityService: requestNetwork for uid/pid:10345/30582 activeRequest: null callbackRequest: 497 [NetworkRequest [ REQUEST id=498, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10345 RequestorUid: 10345 RequestorPkg: com.csam.icici.bank.imobile UnderlyingNetworks: Null] ]] callback flags: 0 order: 2147483647
+07-04 13:45:51.846  1417  1707 D ConnectivityService:    accepting network in place of null for NetworkRequest [ REQUEST id=498, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10345 RequestorUid: 10345 RequestorPkg: com.csam.icici.bank.imobile UnderlyingNetworks: Null] ]
+07-04 13:45:51.847  1417  1686 D WifiNetworkFactory: got request NetworkRequest [ REQUEST id=498, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10345 RequestorUid: 10345 RequestorPkg: com.csam.icici.bank.imobile UnderlyingNetworks: Null] ]
+07-04 13:45:51.847  1417  1686 D UntrustedWifiNetworkFactory: got request NetworkRequest [ REQUEST id=498, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10345 RequestorUid: 10345 RequestorPkg: com.csam.icici.bank.imobile UnderlyingNetworks: Null] ]
+07-04 13:45:51.847  1417  1686 D OemPaidWifiNetworkFactory: got request NetworkRequest [ REQUEST id=498, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10345 RequestorUid: 10345 RequestorPkg: com.csam.icici.bank.imobile UnderlyingNetworks: Null] ]
+07-04 13:45:51.848  1417  1686 D MultiInternetWifiNetworkFactory: got request NetworkRequest [ REQUEST id=498, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 10345 RequestorUid: 10345 RequestorPkg: com.csam.icici.bank.imobile UnderlyingNetworks: Null] ]
+07-04 13:45:51.848  1417  1707 D ConnectivityService: Rematched networks [computed 1ms] [applied 0ms] [issued 1]
+07-04 13:45:51.848  1417  1707 D ConnectivityService: NetworkReassignment :
+07-04 13:45:51.848  1417  1707 D ConnectivityService:   498 : null → 100
+07-04 13:45:51.851  2769  2769 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.time.trustedtime.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+07-04 13:45:52.057  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.060 30582 30749 D TrafficStats: tagSocket(128) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.061  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.089 30609 30609 D WM-PackageManagerHelper: Skipping component enablement for androidx.work.impl.background.systemjob.SystemJobService
+07-04 13:45:52.089 30609 30609 D WM-Schedulers: Created SystemJobScheduler and enabled SystemJobService
+07-04 13:45:52.099  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.099 30582 30749 D TrafficStats: tagSocket(128) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.125  1417  4236 I GenerationRegistry: mBackingStore.isClosed() : false
+07-04 13:45:52.126 30609 30767 D OpenGLRenderer: RenderThread::requireGlContext()
+07-04 13:45:52.126 30609 30767 D libMEOW : meow new tls: 0xb4000079f861a580
+07-04 13:45:52.126 30609 30767 D libMEOW : meow reload base cfg path: na
+07-04 13:45:52.126 30609 30767 D libMEOW : meow reload overlay cfg path: na
+07-04 13:45:52.128 30609 30767 E QT      : [QT]file does not exist
+07-04 13:45:52.129 30609 30767 D libMEOW : applied 2 plugins for [com.ytsync.app]:
+07-04 13:45:52.129 30609 30767 D libMEOW :   plugin 1: [libMEOW_gift.so]:
+07-04 13:45:52.129 30609 30767 D libMEOW :   plugin 2: [libMEOW_semaphore]:
+07-04 13:45:52.134  2769 29766 I PhenotypeResourceReader: unable to find any Phenotype resource metadata for com.csam.icici.bank.imobile
+07-04 13:45:52.136   533   533 I hwservicemanager: getTransport: Cannot find entry android.hardware.configstore@1.0::ISurfaceFlingerConfigs/default in either framework or device VINTF manifest.
+07-04 13:45:52.137 30609 30767 E OpenGLRenderer: Device claims wide gamut support, cannot find matching config, error = EGL_SUCCESS
+07-04 13:45:52.137 30609 30767 W OpenGLRenderer: Failed to initialize 101010-2 format, error = EGL_SUCCESS
+07-04 13:45:52.147 30609 30767 D OpenGLRenderer: RenderThread::setGrContext()
+07-04 13:45:52.165 30582 30760 E ci.bank.imobile: No package ID 6a found for ID 0x6a0b0013.
+07-04 13:45:52.165   855 30606 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 8567742
+07-04 13:45:52.168 30582 30760 I FA      : App measurement initialized, version: 173000
+07-04 13:45:52.168 30582 30760 I FA      : To enable debug logging run: adb shell setprop log.tag.FA VERBOSE
+07-04 13:45:52.168 30582 30760 I FA      : To enable faster debug mode event logging run:
+07-04 13:45:52.168 30582 30760 I FA      :   adb shell setprop debug.firebase.analytics.app com.csam.icici.bank.imobile
+07-04 13:45:52.183   855 30607 I mtkpower_client: perf_lock_rel, hdl:255, tid:30607
+07-04 13:45:52.184   855 30607 I mtkpower_client: perf_lock_rel, hdl:256, tid:30607
+07-04 13:45:52.184   858   929 I libPowerHal: [perfLockRel] hdl:255, idx:3
+07-04 13:45:52.184   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1c3c000, param:1
+07-04 13:45:52.184   858   929 I libPowerHal: [PD] (less) /proc/mcdi/state set +prefix:enable 1;
+07-04 13:45:52.184   855 30607 I mtkpower_client: perf_lock_rel, hdl:257, tid:30607
+07-04 13:45:52.184   858   929 I libPowerHal: [perfLockRel] hdl:256, idx:0
+07-04 13:45:52.184   858   929 I libPowerHal: vendor.samsung.: cpu_ctrl set cpu freq: -1 -1 -1 -1
+07-04 13:45:52.185   858   929 I libPowerHal: [perfLockRel] hdl:257, idx:1
+07-04 13:45:52.185   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1000000, param:-1
+07-04 13:45:52.185   858   929 I libPowerHal: [PD] vendor.samsung. update cmd:1000000 param:-1
+07-04 13:45:52.185   855 30607 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 1026043
+07-04 13:45:52.208 30582 30670 D TrafficStats: tagSocket(117) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.208 30582 30748 D TrafficStats: tagSocket(123) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.209  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.209  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.210  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.210  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.237 30582 30784 D TrafficStats: tagSocket(134) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.244 30582 30785 D TrafficStats: tagSocket(135) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.248 30609 30763 D CompatibilityChangeReporter: Compat change id reported: 160794467; UID 10272; state: ENABLED
+07-04 13:45:52.251 30582 30688 V DetectAF: app-Libc[38][3e][3f][39][4e][65]
+07-04 13:45:52.289 30609 30609 I DecorView: [INFO] isPopOver=false config=true
+07-04 13:45:52.290 30609 30609 I DecorView: updateCaptionType: isFloating=false isApplication=true hasWindowDecorCaption=false this=DecorView@6d27add[]
+07-04 13:45:52.291 30609 30609 D DecorView: setCaptionType = 0, this = DecorView@6d27add[]
+07-04 13:45:52.295  3176  3176 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+07-04 13:45:52.296  3176  3176 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+07-04 13:45:52.303 30609 30609 I DecorView: getCurrentDensityDpi: from real metrics. densityDpi=300 msg=resources_loaded
+07-04 13:45:52.304 30609 30609 I DecorView: setWindowBackground: isPopOver=false color=fffafafa d=android.graphics.drawable.ColorDrawable@7f36d23
+07-04 13:45:52.311 30609 30763 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10272; state: ENABLED
+07-04 13:45:52.314  1417  4245 D CompatibilityChangeReporter: Compat change id reported: 194532703; UID 10272; state: ENABLED
+07-04 13:45:52.392  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:52.393  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:52.393  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:52.397 30582 30582 D jni_lib_merge: Entering merged library JNI_OnLoad.
+07-04 13:45:52.397 30582 30582 D jni_lib_merge: Preparing 12 pre-merged libs (including stub)
+07-04 13:45:52.397 30582 30582 D jni_lib_merge: Preparing to register libfabricjni_so.  onload_func: 0x798c54ebbc
+07-04 13:45:52.397 30582 30582 D jni_lib_merge: Preparing to register libreact_devsupportjni_so.  onload_func: 0x798c61d9e0
+07-04 13:45:52.397 30582 30582 D jni_lib_merge: Preparing to register libreact_featureflagsjni_so.  onload_func: 0x798c62d5a8
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libreact_newarchdefaults_so.  onload_func: 0x798c65639c
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libreactnativeblob_so.  onload_func: 0x798c6e8390
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libreactnativejni_so.  onload_func: 0x798c7027fc
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libreactnativejni_common_so.  onload_func: 0x798c709130
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register librninstance_so.  onload_func: 0x798c71f080
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libturbomodulejsijni_so.  onload_func: 0x798c7b0efc
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libuimanagerjni_so.  onload_func: 0x798c7b8538
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: Preparing to register libyoga_so.  onload_func: 0x798c7bfafc
+07-04 13:45:52.398 30582 30582 D jni_lib_merge: About to register 11 actual methods.
+07-04 13:45:52.401 30582 30582 D jni_lib_merge: Entering merged library JNI_OnLoad.
+07-04 13:45:52.401 30582 30582 D jni_lib_merge: Preparing 4 pre-merged libs (including stub)
+07-04 13:45:52.401 30582 30582 D jni_lib_merge: Preparing to register libhermes_executor_so.  onload_func: 0x79c5458108
+07-04 13:45:52.401 30582 30582 D jni_lib_merge: Preparing to register libhermesinstancejni_so.  onload_func: 0x79c545f12c
+07-04 13:45:52.401 30582 30582 D jni_lib_merge: Preparing to register libjsijniprofiler_so.  onload_func: 0x79c545f848
+07-04 13:45:52.402 30582 30582 D jni_lib_merge: About to register 3 actual methods.
+07-04 13:45:52.410 30582 30582 I PlayCore: UID: [10345]  PID: [30582] ReviewService : requestInAppReview (com.csam.icici.bank.imobile)
+07-04 13:45:52.412 30582 30792 I PlayCore: UID: [10345]  PID: [30582] ReviewService : Initiate binding to the service.
+07-04 13:45:52.435 30609 30609 I MSHandlerLifeCycle: check: return. pkg=com.ytsync.app parent=null callers=com.android.internal.policy.DecorView.setVisibility:4412 android.app.ActivityThread.handleResumeActivity:5476 android.app.servertransaction.ResumeActivityItem.execute:54 android.app.servertransaction.ActivityTransactionItem.execute:45 android.app.servertransaction.TransactionExecutor.executeLifecycleState:176 
+07-04 13:45:52.435 30609 30609 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@6d27add[]
+07-04 13:45:52.445   905   947 D SurfaceFlinger: [SF client] NEW(0xb4000075dfe5d100) for (30609:com.ytsync.app)
+07-04 13:45:52.448 30582 30582 D LicenseClient: Connected to the licensing service.
+07-04 13:45:52.451 30582 30582 I Choreographer: Skipped 70 frames!  The application may be doing too much work on its main thread.
+07-04 13:45:52.451 30582 30801 D LicenseClient: Sending request to licensing service...
+07-04 13:45:52.453  1417  1417 W JobScheduler: Job didn't exist in JobStore: 88e7b68 #u0a345/17404 com.csam.icici.bank.imobile/androidx.work.impl.background.systemjob.SystemJobService
+07-04 13:45:52.456 30582 30582 I PlayCore: UID: [10345]  PID: [30582] ReviewService : ServiceConnectionImpl.onServiceConnected(ComponentInfo{com.android.vending/com.google.android.finsky.inappreviewservice.InAppReviewService})
+07-04 13:45:52.456 30582 30792 I PlayCore: UID: [10345]  PID: [30582] ReviewService : linkToDeath
+07-04 13:45:52.469 30609 30767 D NativeCustomFrequencyManager: [NativeCFMS] BpCustomFrequencyManager::BpCustomFrequencyManager()
+07-04 13:45:52.475 30582 30786 D TrafficStats: tagSocket(131) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.483  1417  4233 D InputTransport: Input channel constructed: '33a8fa1', fd=976
+07-04 13:45:52.483  1417  4233 D InputTransport: Input channel constructed: '33a8fa1', fd=978
+07-04 13:45:52.484  1417  4233 D InputTransport: Input channel constructed: '33a8fa1', fd=985
+07-04 13:45:52.486   905   947 D SurfaceFlinger: [SF client] NEW(0xb4000075dfe5db80) for (1417:system_server)
+07-04 13:45:52.488   905   947 I SurfaceFlinger: id=407 createSurf flag=80004, 33a8fa1 com.ytsync.app/com.ytsync.app.MainActivity#407
+07-04 13:45:52.489 30582 30801 D LicenseClient: Request to licensing service sent.
+07-04 13:45:52.490  1417  4233 D RestrictionPolicy: isScreenCaptureEnabled : ret=true userId=0
+07-04 13:45:52.490  1417  4233 D InputTransport: Input channel destroyed: '33a8fa1', fd=985
+07-04 13:45:52.492 30582 30598 I LicenseClient: License check succeeded.
+07-04 13:45:52.502 30609 30609 D InsetsController: onStateChanged: InsetsState: {mDisplayFrame=Rect(0, 0 - 720, 1600), mDisplayCutout=DisplayCutout{insets=Rect(0, 58 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(298, 0 - 422, 58), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=720 displayHeight=1600 physicalDisplayWidth=720 physicalDisplayHeight=1600 density={1.875} cutoutSpec={M62.05,0l-2.7,0l-2.7,0l-1.4,0.1L53.95,0.2l-1.3,0.2l-1.3,0.2L49.95,0.9l-1.3,0.4l-1.3,0.5l-1.2,0.6L44.95,3 l-1.1,0.7l-1,0.8l-1,0.9l-0.9,1l-0.8,1l-0.7,1.1l-0.7,1.2l-0.6,1.2l-0.5,1.3l-0.4,1.3l-0.4,1.3l-0.5,2.3l-0.4,2.3l-0.4,2.3L34.95,23.9 l-0.6,2.3l-0.7,2.2l-0.4,1.1L32.95,30.6l-0.5,1.1L31.95,32.7c-3.5,7.2-9.3,13.1-16.6,16.6c-17.7,8.5-38.9,1.1-47.4-16.6l-0.5-1.1 l-0.5-1.1l-0.4-1.1l-0.4-1.1l-0.7-2.2l-0.6-2.3l-0.5-2.3l-0.4-2.3l-0.4-2.3l-0.5-2.3l-0.4-1.3l-0.4-1.3L-38.15,11l-0.6-1.2l-0.7-1.2 L-40.05,7.5l-0.8-1l-0.9-1l-1-0.9l-1-0.8L-44.95,3l-1.2-0.6l-1.2-0.6l-1.3-0.5l-1.3-0.4l-1.3-0.3L-52.55,0.4L-53.95,0.2L-55.25,0.1L-56.65,0L-59.35,0 L-62.05,0Z} rotation={0} scale={1.0} physicalPixelDisplaySizeRatio={1.0}}}}, mRoundedCorners=RoundedCorners{[RoundedCorner{position=TopLeft, radius=60, center=Point(60, 60)}, RoundedCorner{position=TopRight, radius=60, center=Point(660, 60)}, RoundedCorner{position=BottomRight, radius=60, center=Point(660, 1540)}, RoundedCorner{position=BottomLeft, radius=60, center=Point(60, 1540)}]}  mRoundedCornerFrame=Rect(0, 0 - 720, 1600), mPrivacyIndicatorBounds=PrivacyIndicatorBounds {static bounds=Rect(637, 0 - 720, 58) rotation=0}, mSources= { InsetsSource: {mType=ITYPE_STATUS_BAR, mFrame=[0,0][720,58], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_NAVIGATION_BAR, mFrame=[0,1510][720,1600], mVisible=false, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_GESTURES, mFrame=[0,0][0,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_GESTURES, mFrame=[720,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_MANDATORY_GESTURES, mFrame=[0,0][720,81], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_MANDATORY_GESTURES, mFrame=[0,1510][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_LEFT_DISPLAY_CUTOUT, mFrame=[0,0][-100000,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_DISPLAY_CUTOUT, mFrame=[0,0][720,58], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_RIGHT_DISPLAY_CUTOUT, mFrame=[100000,0][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_DISPLAY_CUTOUT, mFrame=[0,100000][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_TOP_TAPPABLE_ELEMENT, mFrame=[0,0][720,58], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_BOTTOM_TAPPABLE_ELEMENT, mFrame=[0,1510][720,1600], mVisible=true, mInsetsRoundedCornerFrame=false}, InsetsSource: {mType=ITYPE_IME, mFrame=[0,0][0,0], mVisibleFrame=[0,927][720,1600], mVisible=false, mInsetsRoundedCornerFrame=false} } host=com.ytsync.app/com.ytsync.app.MainActivity from=android.view.ViewRootImpl.setView:1732
+07-04 13:45:52.504  2769  2769 D BoundBrokerSvc: onBind: Intent { act=com.google.android.gms.time.trustedtime.singleuserapi.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentSingleUserInternalApiService }
+07-04 13:45:52.504  2769  2769 D BoundBrokerSvc: Loading bound service for intent: Intent { act=com.google.android.gms.time.trustedtime.singleuserapi.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentSingleUserInternalApiService }
+07-04 13:45:52.510  1417  4233 D CoreBackPreview: Window{33a8fa1 u0 com.ytsync.app/com.ytsync.app.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@8a727f, mPriority=0}
+07-04 13:45:52.514  3176 30804 D AdvertisingIdClient: AdvertisingIdClient already created.
+07-04 13:45:52.514  3176 30804 D AdvertisingIdClient: AdvertisingIdClient is not bounded. Starting to bind it...
+07-04 13:45:52.516 30609 30609 I ViewRootImpl@9b43877[MainActivity]: setView = com.android.internal.policy.DecorView@6d27add TM=true
+07-04 13:45:52.524 30609 30609 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@6d27add[MainActivity]
+07-04 13:45:52.537  3176 30804 D AdvertisingIdClient: AdvertisingIdClient is bounded
+07-04 13:45:52.538 30609 30609 I ViewRootImpl@9b43877[MainActivity]: stopped(true) old = false
+07-04 13:45:52.538 30609 30609 I ViewRootImpl@9b43877[MainActivity]: WindowStopped on com.ytsync.app/com.ytsync.app.MainActivity set to true
+07-04 13:45:52.546 30609 30609 I MSHandlerLifeCycle: removeMultiSplitHandler: no exist. decor=DecorView@6d27add[MainActivity]
+07-04 13:45:52.558  2769  2769 D BoundBrokerSvc: onRebind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+07-04 13:45:52.567  3176 30804 W AdvertisingIdSettings: Package com.csam.icici.bank.imobile failed Ad Id permission check. Apps that target Android SDK 33 or higher should declare com.google.android.gms.permission.AD_ID in the app manifest to access Ad Id.
+07-04 13:45:52.569  3176 30804 I AdvertisingIdClient: shouldSendLog 88093
+07-04 13:45:52.569  3176 30804 I AdvertisingIdClient: GetInfoInternal elapse 54ms
+07-04 13:45:52.598 26989 27022 I System.out: Caught a exception encoding the public key: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.599 26989 27022 W System.err: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.601 26989 27022 W System.err: 	at nef.cm(PG:212)
+07-04 13:45:52.601 26989 27022 W System.err: 	at nef.L(PG:2)
+07-04 13:45:52.601 26989 27022 W System.err: 	at nef.I(PG:101)
+07-04 13:45:52.601 26989 27022 W System.err: 	at nef.J(PG:13)
+07-04 13:45:52.601 26989 27022 W System.err: 	at tbm.bd(PG:45)
+07-04 13:45:52.601 26989 27022 W System.err: 	at vew.f(PG:476)
+07-04 13:45:52.601 26989 27022 W System.err: 	at vew.b(PG:77)
+07-04 13:45:52.601 26989 27022 W System.err: 	at vew.a(PG:44)
+07-04 13:45:52.601 26989 27022 W System.err: 	at arxt.ia(PG:73)
+07-04 13:45:52.601 26989 27022 W System.err: 	at arxt.S(PG:90)
+07-04 13:45:52.601 26989 27022 W System.err: 	at trk.call(PG:192)
+07-04 13:45:52.602 26989 27022 W System.err: 	at bpjl.a(PG:3)
+07-04 13:45:52.602 26989 27022 W System.err: 	at bpiq.run(PG:19)
+07-04 13:45:52.602 26989 27022 W System.err: 	at bpjm.run(PG:5)
+07-04 13:45:52.602 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-04 13:45:52.602 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-04 13:45:52.602 26989 27022 W System.err: 	at whd.run(PG:662)
+07-04 13:45:52.602 26989 27022 W System.err: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:52.602 26989 27022 W System.err: Caused by: com.android.apksig.internal.asn1.Asn1BerParser$Asn1UnexpectedTagException: Tag mismatch. Expected: UNIVERSAL BIT STRING, but found UNIVERSAL SEQUENCE
+07-04 13:45:52.602 26989 27022 W System.err: 	at myw.a(PG:49)
+07-04 13:45:52.602 26989 27022 W System.err: 	at nef.cm(PG:171)
+07-04 13:45:52.602 26989 27022 W System.err: 	... 17 more
+07-04 13:45:52.606 26989 27022 I System.out: Caught a exception encoding the public key: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.606 26989 27022 W System.err: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.606 26989 27022 W System.err: 	at nef.cm(PG:212)
+07-04 13:45:52.606 26989 27022 W System.err: 	at nef.L(PG:2)
+07-04 13:45:52.606 26989 27022 W System.err: 	at nef.I(PG:101)
+07-04 13:45:52.606 26989 27022 W System.err: 	at nef.J(PG:13)
+07-04 13:45:52.606 26989 27022 W System.err: 	at tbm.bd(PG:45)
+07-04 13:45:52.606 26989 27022 W System.err: 	at nef.co(PG:338)
+07-04 13:45:52.606 26989 27022 W System.err: 	at nef.N(PG:60)
+07-04 13:45:52.607 26989 27022 W System.err: 	at arxt.ia(PG:65)
+07-04 13:45:52.607 26989 27022 W System.err: 	at arxt.S(PG:119)
+07-04 13:45:52.607 26989 27022 W System.err: 	at trk.call(PG:192)
+07-04 13:45:52.607 26989 27022 W System.err: 	at bpjl.a(PG:3)
+07-04 13:45:52.607 26989 27022 W System.err: 	at bpiq.run(PG:19)
+07-04 13:45:52.607 26989 27022 W System.err: 	at bpjm.run(PG:5)
+07-04 13:45:52.607 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-04 13:45:52.607 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-04 13:45:52.607 26989 27022 W System.err: 	at whd.run(PG:662)
+07-04 13:45:52.607 26989 27022 W System.err: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:52.607 26989 27022 W System.err: Caused by: com.android.apksig.internal.asn1.Asn1BerParser$Asn1UnexpectedTagException: Tag mismatch. Expected: UNIVERSAL BIT STRING, but found UNIVERSAL SEQUENCE
+07-04 13:45:52.607 26989 27022 W System.err: 	at myw.a(PG:49)
+07-04 13:45:52.607 26989 27022 W System.err: 	at nef.cm(PG:171)
+07-04 13:45:52.607 26989 27022 W System.err: 	... 16 more
+07-04 13:45:52.615 26989 27022 I System.out: Caught a exception encoding the public key: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.615 26989 27022 W System.err: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.615 26989 27022 W System.err: 	at nef.cm(PG:212)
+07-04 13:45:52.616 26989 27022 W System.err: 	at nef.L(PG:2)
+07-04 13:45:52.616 26989 27022 W System.err: 	at nef.I(PG:101)
+07-04 13:45:52.616 26989 27022 W System.err: 	at nef.J(PG:13)
+07-04 13:45:52.616 26989 27022 W System.err: 	at tbm.bd(PG:45)
+07-04 13:45:52.616 26989 27022 W System.err: 	at vew.f(PG:476)
+07-04 13:45:52.616 26989 27022 W System.err: 	at vew.b(PG:77)
+07-04 13:45:52.616 26989 27022 W System.err: 	at vew.a(PG:44)
+07-04 13:45:52.616 26989 27022 W System.err: 	at arxt.ia(PG:73)
+07-04 13:45:52.616 26989 27022 W System.err: 	at arxt.S(PG:90)
+07-04 13:45:52.616 26989 27022 W System.err: 	at trk.call(PG:192)
+07-04 13:45:52.616 26989 27022 W System.err: 	at bpjl.a(PG:3)
+07-04 13:45:52.616 26989 27022 W System.err: 	at bpiq.run(PG:19)
+07-04 13:45:52.616 26989 27022 W System.err: 	at bpjm.run(PG:5)
+07-04 13:45:52.616 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-04 13:45:52.616 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-04 13:45:52.616 26989 27022 W System.err: 	at whd.run(PG:662)
+07-04 13:45:52.616 26989 27022 W System.err: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:52.616 26989 27022 W System.err: Caused by: com.android.apksig.internal.asn1.Asn1BerParser$Asn1UnexpectedTagException: Tag mismatch. Expected: UNIVERSAL BIT STRING, but found UNIVERSAL SEQUENCE
+07-04 13:45:52.616 26989 27022 W System.err: 	at myw.a(PG:49)
+07-04 13:45:52.616 26989 27022 W System.err: 	at nef.cm(PG:171)
+07-04 13:45:52.616 26989 27022 W System.err: 	... 17 more
+07-04 13:45:52.619 26989 27022 I System.out: Caught a exception encoding the public key: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.619 26989 27022 W System.err: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.619 26989 27022 W System.err: 	at nef.cm(PG:212)
+07-04 13:45:52.619 26989 27022 W System.err: 	at nef.L(PG:2)
+07-04 13:45:52.619 26989 27022 W System.err: 	at nef.I(PG:101)
+07-04 13:45:52.619 26989 27022 W System.err: 	at nef.J(PG:13)
+07-04 13:45:52.619 26989 27022 W System.err: 	at tbm.bd(PG:45)
+07-04 13:45:52.619 26989 27022 W System.err: 	at nef.co(PG:338)
+07-04 13:45:52.620 26989 27022 W System.err: 	at nef.N(PG:60)
+07-04 13:45:52.620 26989 27022 W System.err: 	at arxt.ia(PG:65)
+07-04 13:45:52.620 26989 27022 W System.err: 	at arxt.S(PG:119)
+07-04 13:45:52.620 26989 27022 W System.err: 	at trk.call(PG:192)
+07-04 13:45:52.620 26989 27022 W System.err: 	at bpjl.a(PG:3)
+07-04 13:45:52.620 26989 27022 W System.err: 	at bpiq.run(PG:19)
+07-04 13:45:52.620 26989 27022 W System.err: 	at bpjm.run(PG:5)
+07-04 13:45:52.620 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-04 13:45:52.620 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-04 13:45:52.620 26989 27022 W System.err: 	at whd.run(PG:662)
+07-04 13:45:52.620 26989 27022 W System.err: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:52.620 26989 27022 W System.err: Caused by: com.android.apksig.internal.asn1.Asn1BerParser$Asn1UnexpectedTagException: Tag mismatch. Expected: UNIVERSAL BIT STRING, but found UNIVERSAL SEQUENCE
+07-04 13:45:52.620 26989 27022 W System.err: 	at myw.a(PG:49)
+07-04 13:45:52.620 26989 27022 W System.err: 	at nef.cm(PG:171)
+07-04 13:45:52.620 26989 27022 W System.err: 	... 16 more
+07-04 13:45:52.629 26989 27022 I System.out: Caught a exception encoding the public key: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.629 26989 27022 W System.err: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.629 26989 27022 W System.err: 	at nef.cm(PG:212)
+07-04 13:45:52.629 26989 27022 W System.err: 	at nef.L(PG:2)
+07-04 13:45:52.629 26989 27022 W System.err: 	at nef.I(PG:101)
+07-04 13:45:52.629 26989 27022 W System.err: 	at nef.J(PG:13)
+07-04 13:45:52.629 26989 27022 W System.err: 	at tbm.bd(PG:45)
+07-04 13:45:52.629 26989 27022 W System.err: 	at vew.f(PG:476)
+07-04 13:45:52.629 26989 27022 W System.err: 	at vew.b(PG:77)
+07-04 13:45:52.629 26989 27022 W System.err: 	at vew.a(PG:44)
+07-04 13:45:52.629 26989 27022 W System.err: 	at arxt.ia(PG:73)
+07-04 13:45:52.629 26989 27022 W System.err: 	at arxt.S(PG:90)
+07-04 13:45:52.629 26989 27022 W System.err: 	at trk.call(PG:192)
+07-04 13:45:52.629 26989 27022 W System.err: 	at bpjl.a(PG:3)
+07-04 13:45:52.630 26989 27022 W System.err: 	at bpiq.run(PG:19)
+07-04 13:45:52.630 26989 27022 W System.err: 	at bpjm.run(PG:5)
+07-04 13:45:52.630 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-04 13:45:52.630 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-04 13:45:52.630 26989 27022 W System.err: 	at whd.run(PG:662)
+07-04 13:45:52.630 26989 27022 W System.err: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:52.630 26989 27022 W System.err: Caused by: com.android.apksig.internal.asn1.Asn1BerParser$Asn1UnexpectedTagException: Tag mismatch. Expected: UNIVERSAL BIT STRING, but found UNIVERSAL SEQUENCE
+07-04 13:45:52.630 26989 27022 W System.err: 	at myw.a(PG:49)
+07-04 13:45:52.630 26989 27022 W System.err: 	at nef.cm(PG:171)
+07-04 13:45:52.630 26989 27022 W System.err: 	... 17 more
+07-04 13:45:52.633 26989 27022 I System.out: Caught a exception encoding the public key: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.633 26989 27022 W System.err: com.android.apksig.internal.asn1.Asn1DecodingException: Failed to parse mzp.a
+07-04 13:45:52.633 26989 27022 W System.err: 	at nef.cm(PG:212)
+07-04 13:45:52.633 26989 27022 W System.err: 	at nef.L(PG:2)
+07-04 13:45:52.633 26989 27022 W System.err: 	at nef.I(PG:101)
+07-04 13:45:52.633 26989 27022 W System.err: 	at nef.J(PG:13)
+07-04 13:45:52.633 26989 27022 W System.err: 	at tbm.bd(PG:45)
+07-04 13:45:52.633 26989 27022 W System.err: 	at nef.co(PG:338)
+07-04 13:45:52.633 26989 27022 W System.err: 	at nef.N(PG:60)
+07-04 13:45:52.633 26989 27022 W System.err: 	at arxt.ia(PG:65)
+07-04 13:45:52.633 26989 27022 W System.err: 	at arxt.S(PG:119)
+07-04 13:45:52.633 26989 27022 W System.err: 	at trk.call(PG:192)
+07-04 13:45:52.633 26989 27022 W System.err: 	at bpjl.a(PG:3)
+07-04 13:45:52.633 26989 27022 W System.err: 	at bpiq.run(PG:19)
+07-04 13:45:52.633 26989 27022 W System.err: 	at bpjm.run(PG:5)
+07-04 13:45:52.633 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+07-04 13:45:52.633 26989 27022 W System.err: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:644)
+07-04 13:45:52.633 26989 27022 W System.err: 	at whd.run(PG:662)
+07-04 13:45:52.633 26989 27022 W System.err: 	at java.lang.Thread.run(Thread.java:1012)
+07-04 13:45:52.634 26989 27022 W System.err: Caused by: com.android.apksig.internal.asn1.Asn1BerParser$Asn1UnexpectedTagException: Tag mismatch. Expected: UNIVERSAL BIT STRING, but found UNIVERSAL SEQUENCE
+07-04 13:45:52.634 26989 27022 W System.err: 	at myw.a(PG:49)
+07-04 13:45:52.634 26989 27022 W System.err: 	at nef.cm(PG:171)
+07-04 13:45:52.634 26989 27022 W System.err: 	... 16 more
+07-04 13:45:52.643 30582 30598 I PlayCore: UID: [10345]  PID: [30582] OnRequestInstallCallback : onGetLaunchReviewFlowInfo
+07-04 13:45:52.644 30582 30792 I PlayCore: UID: [10345]  PID: [30582] ReviewService : Unbind from service.
+07-04 13:45:52.693 30582 30582 D CCC     : message added: 18941
+07-04 13:45:52.710  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:45:52.832   811   811 E audit   : type=1400 audit(1783152952.830:698): avc:  denied  { write } for  pid=3176 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:45:52.832   811   811 E audit   : type=1300 audit(1783152952.830:698): arch=c00000b7 syscall=203 success=no exit=-13 a0=5e a1=b400007a64ea9360 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3176 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:45:52.832   811   811 E audit   : type=1327 audit(1783152952.830:698): proctitle="com.google.android.gms"
+07-04 13:45:52.857  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.858 30582 30789 D TrafficStats: tagSocket(141) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.899  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:52.900 30582 30784 D TrafficStats: tagSocket(142) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:52.950 30582 30802 D nativeloader: Configuring clns-8 for other apk . target_sdk_version=35, uses_libraries=ALL, library_path=/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/lib/arm64:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/base.apk!/lib/arm64-v8a:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.arm64_v8a.apk!/lib/arm64-v8a:/data/app/~~2VpyyR-HTKLuUWEAtMek-A==/com.csam.icici.bank.imobile-zEuudn7jsQSlHHdlxealdA==/split_config.xhdpi.apk!/lib/arm64-v8a, permitted_path=/data:/mnt/expand
+07-04 13:45:52.950 30582 30802 D nativeloader: Extending system_exposed_libraries: libface_landmark.arcsoft.so:liblow_light_hdr.arcsoft.so:libhigh_dynamic_range.arcsoft.so:libFacialAttributeDetection.arcsoft.so:libFacialAttributeDetection.arcsoft.so:libBeauty_v4.camera.samsung.so:libexifa.camera.samsung.so:libjpega.camera.samsung.so:libOpenCv.camera.samsung.so:libVideoClassifier.camera.samsung.so:libtensorflowLite.dynamic_viewing.camera.samsung.so:libImageScreener.camera.samsung.so:libMyFilter.camera.samsung.so:libtensorflowLite.myfilter.camera.samsung.so:libtensorflowlite_inference_api.myfilter.camera.samsung.so:libHpr_RecGAE_cvFeature_v1.0.camera.samsung.so:libHprFace_GAE_api.camera.samsung.so:libFace_Landmark_API.camera.samsung.so:libHprFace_GAE_jni.camera.samsung.so:libcolor_engine.camera.samsung.so:libDLInterface_aidl.camera.samsung.so:libImageTagger.camera.samsung.so:libSceneDetector_v1.camera.samsung.so:libQREngine.camera.samsung.so:libEventDetector.camera.samsung.so:libFood.camera.samsung.so:libFoodDetector.camera.samsung.so:libPortraitSolution.c
+07-04 13:45:53.013  1417  4233 I GenerationRegistry: mBackingStore.isClosed() : false
+07-04 13:45:53.026  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:53.042 30582 30790 D TrafficStats: tagSocket(150) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:53.066  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:53.085 30582 30784 D TrafficStats: tagSocket(153) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:53.393  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:53.393  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:53.393  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:53.476 30582 30592 W JavaBinder: BinderProxy is being destroyed but the application did not call unlinkToDeath to unlink all of its death recipients beforehand.  Releasing leaked death recipient: com.google.android.play.core.review.internal.zzl
+07-04 13:45:53.477 30582 30592 I BpBinder: onLastStrongRef automatically unlinking death recipients: <uncached descriptor>
+07-04 13:45:53.562 30609 30609 I ViewRootImpl@9b43877[MainActivity]: performTraversals params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030309
+07-04 13:45:53.562 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   fl=81810100
+07-04 13:45:53.562 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   pfl=16020040
+07-04 13:45:53.562 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   bhv=DEFAULT
+07-04 13:45:53.562 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   fitSides= naviIconColor=0}
+07-04 13:45:53.571 30609 30609 I ViewRootImpl@9b43877[MainActivity]: performTraversals mFirst=true windowShouldResize=false viewVisibilityChanged=false mForceNextWindowRelayout=false params={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030309
+07-04 13:45:53.571 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   fl=81810100
+07-04 13:45:53.571 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   pfl=16020040
+07-04 13:45:53.571 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   bhv=DEFAULT
+07-04 13:45:53.571 30609 30609 I ViewRootImpl@9b43877[MainActivity]:   fitSides= naviIconColor=0}
+07-04 13:45:53.573  1417  4245 V WindowManager: Relayout Window{33a8fa1 u0 com.ytsync.app/com.ytsync.app.MainActivity}: viewVisibility=8 req=0x0 d0
+07-04 13:45:53.583  1417  4245 V WindowManager: Relayout hash=33a8fa1, pid=30609, syncId=-1: mAttrs={(0,0)(fillxfill) sim={adjust=resize forwardNavigation} layoutInDisplayCutoutMode=always ty=BASE_APPLICATION wanim=0x1030309
+07-04 13:45:53.583  1417  4245 V WindowManager:   fl=81810100
+07-04 13:45:53.583  1417  4245 V WindowManager:   pfl=16020040
+07-04 13:45:53.583  1417  4245 V WindowManager:   bhv=DEFAULT
+07-04 13:45:53.583  1417  4245 V WindowManager:   fitSides= naviIconColor=0}
+07-04 13:45:53.588 30609 30609 I ViewRootImpl@9b43877[MainActivity]: Relayout returned: old=(0,0,720,1600) new=(0,0,720,1600) req=(0,0)8 dur=17 res=0x0 s={false 0x0} ch=false seqId=0
+07-04 13:45:53.593 30609 30609 I Choreographer: Skipped 50 frames!  The application may be doing too much work on its main thread.
+07-04 13:45:53.601  1417  2479 D ActivityTaskManager: mStartingWindow and mStartingData is null for token=ActivityRecord{407f9a6 u0 com.ytsync.app/.MainActivity} t115}
+07-04 13:45:53.617   577   577 D io_stats: !@ 179,0 r 1070322 23932098 w 166732 3541500 d 0 0 f 0 0 iot 234292 0 th 0 0 0 pt 0 inp 0 3 1648.210
+07-04 13:45:53.638  2769  6103 I FontLog : (REDACTED) Received query %s, URI %s
+07-04 13:45:53.639  2769  6103 I FontLog : (REDACTED) Query [%s] resolved to %s
+07-04 13:45:53.643  2769  6103 I FontLog : (REDACTED) Fetch %s end status %s
+07-04 13:45:53.655  2769  6103 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+07-04 13:45:53.668  2769  6103 I FontLog : (REDACTED) Pulling font file for id = %d, cache size = %d
+07-04 13:45:53.681  1417  4148 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+07-04 13:45:54.338  1417  1761 I SemWifiServiceDetector: Traff. tracking started
+07-04 13:45:54.393  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:54.393  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:54.393  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:54.684   855 30608 I HYPER-HAL: [RequestManager.cpp]releaseLocked(): Released ID : 8576025
+07-04 13:45:54.840  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.024057677]
+07-04 13:45:54.840  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.36151767]
+07-04 13:45:54.840  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.9570668]
+07-04 13:45:54.840  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 0.529769 msecs
+07-04 13:45:54.841  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 0.877 msecs
+07-04 13:45:54.842  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 0.744846 msecs
+07-04 13:45:55.343  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.04696546]
+07-04 13:45:55.344  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.24223414]
+07-04 13:45:55.344  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.910037]
+07-04 13:45:55.344  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.116923 msecs
+07-04 13:45:55.346  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.937846 msecs
+07-04 13:45:55.348  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.53423 msecs
+07-04 13:45:55.394  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:55.394  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:55.394  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:55.618   577   577 D io_stats: !@ 179,0 r 1070345 23932282 w 166739 3541520 d 0 0 f 0 0 iot 234308 0 th 0 0 0 pt 0 inp 0 0 1650.211
+07-04 13:45:55.849  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.04621037]
+07-04 13:45:55.850  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.34455898]
+07-04 13:45:55.850  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.8004018]
+07-04 13:45:55.850  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.111077 msecs
+07-04 13:45:55.852  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.996616 msecs
+07-04 13:45:55.854  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.457154 msecs
+07-04 13:45:56.355  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.02406682]
+07-04 13:45:56.356  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.54298407]
+07-04 13:45:56.356  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.8254224]
+07-04 13:45:56.356  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.110153 msecs
+07-04 13:45:56.358  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.884923 msecs
+07-04 13:45:56.360  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.545923 msecs
+07-04 13:45:56.394  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:56.395  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:56.395  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:56.784  1417  7726 D SGM:GameManager: identifyGamePackage. com.ytsync.app, mCurrentUserId: 0, callerUserId: 0, callingMethodInfo: com.android.server.ssrm.SortingMachine.isGame(SortingMachine.java:162)
+07-04 13:45:56.784  1417  7726 D SGM:PkgDataHelper: getGamePkgData(). com.ytsync.app
+07-04 13:45:56.862  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.055167474]
+07-04 13:45:56.863  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.32165048]
+07-04 13:45:56.863  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.92270994]
+07-04 13:45:56.863  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.134538 msecs
+07-04 13:45:56.865  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.396538 msecs
+07-04 13:45:56.867  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.553231 msecs
+07-04 13:45:57.146 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:45:57.146  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:57.149  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:45:57.395  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:57.395  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:57.395  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:57.602  2769  2769 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.common.telemetry.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentApiService }
+07-04 13:45:57.604  1417  2479 W ProcessStats: Tracking association SourceState{8a87280 com.ytsync.app/10272 Top #17426} whose proc state 1 is better than process ProcessState{aa3e12e com.google.android.gms.persistent/10211 pkg=com.google.android.gms} proc state 2 (0 skipped)
+07-04 13:45:57.619   577   577 D io_stats: !@ 179,0 r 1070348 23932378 w 166760 3541716 d 0 0 f 0 0 iot 234316 0 th 0 0 0 pt 0 inp 0 0 1652.212
+07-04 13:45:57.711  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:45:57.804  1417  1717 W DeviceStorageMonitorService: updateBroadcasts(/data) oldLevel:0, newLevel:0, seq:1
+07-04 13:45:57.806  1417  1717 D DeviceStorageMonitorService: Available File Node Number is [12548386]
+07-04 13:45:57.806  1417  1717 W DeviceStorageMonitorService: updateBroadcasts_filenode(/data) fn_oldLevel:0, fn_newLevel:0, seq:1
+07-04 13:45:57.833  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.03518068]
+07-04 13:45:57.834  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.43264297]
+07-04 13:45:57.834  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.82067823]
+07-04 13:45:57.834  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.136 msecs
+07-04 13:45:57.836  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.005154 msecs
+07-04 13:45:57.838  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.471077 msecs
+07-04 13:45:58.235 30609 30842 D ProfileInstaller: Installing profile for com.ytsync.app
+07-04 13:45:58.339  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.06762043]
+07-04 13:45:58.340  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.414763]
+07-04 13:45:58.340  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.75407624]
+07-04 13:45:58.340  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.143 msecs
+07-04 13:45:58.342  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.873539 msecs
+07-04 13:45:58.344  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.570231 msecs
+07-04 13:45:58.395  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:58.396  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:58.396  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:58.764  1839  1839 I wpa_supplicant: Heartbeat 161
+07-04 13:45:58.766  1417  4233 D SGM:GameManager: identifyForegroundApp. com.ytsync.app, mCurrentUserId: 0, callerUserId: 0
+07-04 13:45:58.766  1417  4233 D SGM:PkgDataHelper: getGamePkgData(). com.ytsync.app
+07-04 13:45:58.767  6099  6334 I PolicyManager: [#CMH#] Is foreground game app: false
+07-04 13:45:58.771  1417  4233 D SGM:GameManager: identifyForegroundApp. com.ytsync.app, mCurrentUserId: 0, callerUserId: 150
+07-04 13:45:58.771  1417  4233 D SGM:PkgDataHelper: getGamePkgData(). com.ytsync.app
+07-04 13:45:58.772 11111 11197 I PolicyManager: [#CMH#] Is foreground game app: false
+07-04 13:45:58.846  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.10579549]
+07-04 13:45:58.846  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.28255814]
+07-04 13:45:58.846  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.71177024]
+07-04 13:45:58.846  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.138693 msecs
+07-04 13:45:58.849  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.344923 msecs
+07-04 13:45:58.851  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.466846 msecs
+07-04 13:45:59.352  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.06108484]
+07-04 13:45:59.353  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.30524027]
+07-04 13:45:59.353  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.721723]
+07-04 13:45:59.353  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.146846 msecs
+07-04 13:45:59.356  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.355308 msecs
+07-04 13:45:59.357  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.468307 msecs
+07-04 13:45:59.396  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:45:59.396  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:45:59.396  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:45:59.438  1417  1732 D UsbStatsMonitor: 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0
+07-04 13:45:59.620   577   577 D io_stats: !@ 179,0 r 1070373 23932806 w 166760 3541716 d 0 0 f 0 0 iot 234328 0 th 0 0 0 pt 0 inp 0 0 1654.213
+07-04 13:45:59.859  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.035092045]
+07-04 13:45:59.859  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.20644653]
+07-04 13:45:59.860  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.8421562]
+07-04 13:45:59.860  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.245231 msecs
+07-04 13:45:59.861 26989 27026 I Finsky  : [702] AIM: AppInfoManager-Perf > Destroying AppInfoManager ...
+07-04 13:45:59.862  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.956923 msecs
+07-04 13:45:59.863  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.585769 msecs
+07-04 13:46:00.338  1417  1761 I SemWifiServiceDetector: Traff. tracking stopped
+07-04 13:46:00.396  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:00.396  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:00.396  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:00.450  1417  2479 I ActivityManager: Killing 29393:com.android.vending/u150a210 (adj 999): empty #23
+07-04 13:46:00.459  1417  1461 I libprocessgroup: Successfully killed process cgroup uid 15010210 pid 29393 in 5ms
+07-04 13:46:00.525   829   829 I Zygote  : Process 29393 exited due to signal 9 (Killed)
+07-04 13:46:00.526  1417  1707 D ConnectivityService: releasing NetworkRequest [ REQUEST id=480, [ Capabilities: INTERNET&NOT_RESTRICTED&TRUSTED&NOT_VCN_MANAGED Uid: 15010210 RequestorUid: 15010210 RequestorPkg: com.android.vending UnderlyingNetworks: Null] ] (release request)
+07-04 13:46:00.526  1417  1707 D ConnectivityService:  Removing from current network [100 WIFI], leaving 148 requests.
+07-04 13:46:00.745   811   811 E audit   : type=1400 audit(1783152960.742:699): avc:  denied  { write } for  pid=2769 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:46:00.746   811   811 E audit   : type=1300 audit(1783152960.742:699): arch=c00000b7 syscall=203 success=no exit=-13 a0=95 a1=b4000079d5669b00 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=2769 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:46:00.746   811   811 E audit   : type=1327 audit(1783152960.742:699): proctitle="com.google.android.gms.persistent"
+07-04 13:46:01.397  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:01.397  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:01.397  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:01.622   577   577 D io_stats: !@ 179,0 r 1070374 23932810 w 166764 3541876 d 0 0 f 0 0 iot 234336 0 th 0 0 0 pt 0 inp 0 0 1656.214
+07-04 13:46:01.685 30582 30670 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:01.685  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:02.178 30582 30749 D TrafficStats: tagSocket(149) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:02.178  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:02.181  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:02.398  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:02.398  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:02.398  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:02.617  3176  3176 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.measurement.START pkg=com.google.android.gms }
+07-04 13:46:02.712  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:03.371  1417  1761 I SemWifiServiceDetector: Traff. tracking started
+07-04 13:46:03.398  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:03.398  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:03.398  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:03.623   577   577 D io_stats: !@ 179,0 r 1070399 23933474 w 166779 3541952 d 0 0 f 0 0 iot 234360 0 th 0 0 0 pt 0 inp 0 0 1658.215
+07-04 13:46:03.873  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.030679738]
+07-04 13:46:03.874  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.17012352]
+07-04 13:46:03.874  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.9172107]
+07-04 13:46:03.874  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.091153 msecs
+07-04 13:46:03.877  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.024 msecs
+07-04 13:46:03.878  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.455692 msecs
+07-04 13:46:04.318   845   845 E android.hardware.health@2.1-service-samsung: Could not open /sys/class/power_supply/battery/lrp
+07-04 13:46:04.380  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.030374888]
+07-04 13:46:04.380  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.14960927]
+07-04 13:46:04.380  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.92511255]
+07-04 13:46:04.380  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.075077 msecs
+07-04 13:46:04.382  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.880923 msecs
+07-04 13:46:04.384  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.577769 msecs
+07-04 13:46:04.398  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:04.399  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:04.399  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:04.886  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.04415229]
+07-04 13:46:04.886  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.10864212]
+07-04 13:46:04.886  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.915227]
+07-04 13:46:04.886  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.076923 msecs
+07-04 13:46:04.889  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.046769 msecs
+07-04 13:46:04.890  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.451077 msecs
+07-04 13:46:05.392  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.04415229]
+07-04 13:46:05.393  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.10864212]
+07-04 13:46:05.393  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.915227]
+07-04 13:46:05.393  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.110692 msecs
+07-04 13:46:05.395  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.095 msecs
+07-04 13:46:05.397  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.445231 msecs
+07-04 13:46:05.399  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:05.399  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:05.399  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:05.898  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.04415229]
+07-04 13:46:05.899  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.10864212]
+07-04 13:46:05.899  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.915227]
+07-04 13:46:05.899  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.203154 msecs
+07-04 13:46:05.901  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.964307 msecs
+07-04 13:46:05.903  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.448077 msecs
+07-04 13:46:06.346  1417  1761 I SemWifiServiceDetector: Traff. tracking stopped
+07-04 13:46:06.399  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:06.400  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:06.400  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:07.095  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:0:536960:1800000:0:0:0:0
+07-04 13:46:07.217 30582 30749 D TrafficStats: tagSocket(149) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:07.217  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:07.220  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:07.400  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:07.400  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:07.400  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:07.574  2769  2769 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.time.trustedtime.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentDirectBootAwareApiService }
+07-04 13:46:07.581  2769  2769 D BoundBrokerSvc: onUnbind: Intent { act=com.google.android.gms.time.trustedtime.singleuserapi.service.START dat=chimera-action:/... cmp=com.google.android.gms/.chimera.PersistentSingleUserInternalApiService }
+07-04 13:46:07.625   577   577 D io_stats: !@ 179,0 r 1070405 23933538 w 166784 3541968 d 0 0 f 0 0 iot 234364 0 th 0 0 0 pt 0 inp 0 0 1662.218
+07-04 13:46:07.712  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:08.400  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:08.401  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:08.401  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:08.767  1839  1839 I wpa_supplicant: Heartbeat 162
+07-04 13:46:09.401  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:09.401  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:09.401  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:09.905   907   926 D ccci_mdinit: (1):monitor_time_update_thread round:57 ########
+07-04 13:46:10.402  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:10.402  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:10.402  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:11.402  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:11.402  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:11.402  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:11.818  1417  1453 E Watchdog: !@Sync: 56 heap: 109 / 116 FD: 1037 [2026-07-04 13:46:11.817]
+07-04 13:46:12.249 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:12.249  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:12.252  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:12.372  1417  1761 I SemWifiServiceDetector: Traff. tracking started
+07-04 13:46:12.402  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:12.403  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:12.403  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:12.661   811   811 E audit   : type=1400 audit(1783152972.658:700): avc:  denied  { write } for  pid=3534 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c662,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:46:12.661   811   811 E audit   : type=1300 audit(1783152972.658:700): arch=c00000b7 syscall=203 success=no exit=-13 a0=6 a1=b4000079d4718e40 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3534 auid=4294967295 uid=15010211 gid=15010211 euid=15010211 suid=15010211 fsuid=15010211 egid=15010211 sgid=15010211 fsgid=15010211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c662,c768 key=(null)
+07-04 13:46:12.661   811   811 E audit   : type=1327 audit(1783152972.658:700): proctitle="com.google.android.gms.persistent"
+07-04 13:46:12.712  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:12.875  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.04415229]
+07-04 13:46:12.875  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.10864212]
+07-04 13:46:12.875  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.915227]
+07-04 13:46:12.875  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.168308 msecs
+07-04 13:46:12.878  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.980231 msecs
+07-04 13:46:12.879  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.510384 msecs
+07-04 13:46:13.380  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.03207902]
+07-04 13:46:13.381  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.33401594]
+07-04 13:46:13.381  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.8872494]
+07-04 13:46:13.381  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.091923 msecs
+07-04 13:46:13.384  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.453308 msecs
+07-04 13:46:13.385  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.453231 msecs
+07-04 13:46:13.403  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:13.403  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:13.403  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:13.627   577   577 D io_stats: !@ 179,0 r 1070405 23933538 w 166794 3542008 d 0 0 f 0 0 iot 234368 0 th 0 0 0 pt 0 inp 0 0 1668.220
+07-04 13:46:13.887  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.041532744]
+07-04 13:46:13.888  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.26712033]
+07-04 13:46:13.888  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.8701638]
+07-04 13:46:13.888  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.283769 msecs
+07-04 13:46:13.890  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 1.972385 msecs
+07-04 13:46:13.892  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.514462 msecs
+07-04 13:46:14.393  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.03301052]
+07-04 13:46:14.394  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.18321098]
+07-04 13:46:14.394  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.89062506]
+07-04 13:46:14.394  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.089461 msecs
+07-04 13:46:14.397  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.471923 msecs
+07-04 13:46:14.398  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.436923 msecs
+07-04 13:46:14.404  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:14.404  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:14.404  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:14.900  1417  1761 D SemNscXgbMsL1: Probability - Cloud gaming: [0.029346766]
+07-04 13:46:14.901  1417  1761 D SemNscXgbMsL1: Probability - Real time: [0.26878008]
+07-04 13:46:14.901  1417  1761 D SemNscXgbMsL1: Probability - Non real time: [0.8790781]
+07-04 13:46:14.901  1417  1761 D SemNscXgbMsL1: 1 sample inference time: 1.170154 msecs
+07-04 13:46:14.903  1417  1761 D SemNscXgbL2Rt: L2 RT 1 sample inference time: 2.097154 msecs
+07-04 13:46:14.905  1417  1761 D SemNscXgbL2Nrt: L2 NRT 1 sample inference time: 1.417461 msecs
+07-04 13:46:15.361  1417  1761 I SemWifiServiceDetector: Traff. tracking stopped
+07-04 13:46:15.404  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:15.404  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:15.404  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:15.919  4127  5239 I SDHMS:D : SIOP:: AP:284 BAT:298 USB:0 CHG:293 PA:291 BLK:0 SUBBAT:0 SKIN:298 SKINF:297 SKINB:298 LRP:302 LRP2:298 LRF:302 LRB:301 LRF2:297 LRB2:298 AP2:298 CHG2:295 SPK2:286 VAP:290 
+07-04 13:46:16.404  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:16.405  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:16.405  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:17.203  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:516479:1050000:500000:0:0:0
+07-04 13:46:17.286 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:17.286  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:17.289  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:17.405  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:17.405  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:17.405  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:17.629   577   577 D io_stats: !@ 179,0 r 1070505 23935806 w 166798 3542024 d 0 0 f 0 0 iot 234384 0 th 0 0 0 pt 0 inp 0 0 1672.221
+07-04 13:46:17.713  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:18.405  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:18.405  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:18.405  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:18.777  1839  1839 I wpa_supplicant: Heartbeat 163
+07-04 13:46:19.406  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:19.406  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:19.406  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:20.407  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:20.407  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:20.407  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:21.407  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:21.407  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:21.408  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:21.630   577   577 D io_stats: !@ 179,0 r 1070508 23936066 w 166798 3542024 d 0 0 f 0 0 iot 234388 0 th 0 0 0 pt 0 inp 0 0 1676.223
+07-04 13:46:22.318 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:22.318  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:22.321  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:22.408  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:22.408  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:22.408  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:22.713  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:22.861   811   811 E audit   : type=1400 audit(1783152982.858:701): avc:  denied  { write } for  pid=3176 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:46:22.861   811   811 E audit   : type=1300 audit(1783152982.858:701): arch=c00000b7 syscall=203 success=no exit=-13 a0=5e a1=b400007a64ea91e0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3176 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:46:22.861   811   811 E audit   : type=1327 audit(1783152982.858:701): proctitle="com.google.android.gms"
+07-04 13:46:23.408  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:23.409  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:23.409  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:24.246  2691  4705 I ContactsProvider_EventLog: cp_s: [CONTACT con(297) dat(1689) acc({com.google.android.apps.tachyon(135)=10, phone(2)=1, core(187)=4, google(3)=296}) calls([logtype:100 cnt:1, logtype:500 cnt:1, logtype:1000 cnt:1998]) Iso(IN) uId(0) ]
+07-04 13:46:24.246  2691  4705 I ContactsProvider_EventLog: cp_s: [ agr({[3]=282, [2]=1, [3 ,187]=4, [3 ,135]=10}) ]
+07-04 13:46:24.246  2691  4705 I ContactsProvider_EventLog: cp_s: [ cnt({acore(2691)=1}) ]
+07-04 13:46:24.246  2691  4705 I ContactsProvider_EventLog: cp_s: [PROFILE ] [SAPROFILE con(1) acc({phone(1)=1}) ]
+07-04 13:46:24.246  2691  4705 I ContactsProvider_EventLog: cp_s: [STATE R(F) ]
+07-04 13:46:24.409  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:24.409  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:24.409  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:25.409  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:25.410  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:25.410  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:26.410  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:26.410  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:26.410  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:27.310  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:536960:950000:500000:0:0:0
+07-04 13:46:27.354  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:27.354 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:27.358  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:27.411  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:27.411  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:27.411  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:27.633   577   577 D io_stats: !@ 179,0 r 1070508 23936066 w 166808 3542064 d 0 0 f 0 0 iot 234392 0 th 0 0 0 pt 0 inp 0 0 1682.225
+07-04 13:46:27.714  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:28.412  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:28.412  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:28.412  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:28.788  1839  1839 I wpa_supplicant: Heartbeat 164
+07-04 13:46:29.412  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:29.412  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:29.412  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:30.412  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:30.413  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:30.413  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:30.760   811   811 E audit   : type=1400 audit(1783152990.758:702): avc:  denied  { write } for  pid=2769 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:46:30.760   811   811 E audit   : type=1300 audit(1783152990.758:702): arch=c00000b7 syscall=203 success=no exit=-13 a0=58 a1=b4000079d56699c0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=2769 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:46:30.760   811   811 E audit   : type=1327 audit(1783152990.758:702): proctitle="com.google.android.gms.persistent"
+07-04 13:46:30.797 25380 25567 I gle.android.gms: Explicit concurrent copying GC freed 11169(736KB) AllocSpace objects, 8(288KB) LOS objects, 29% free, 4920KB/6968KB, paused 349us,73us total 121.954ms
+07-04 13:46:31.413  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:31.413  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:31.413  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:32.387  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:32.387 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:32.391  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:32.414  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:32.414  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:32.414  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:32.715  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:33.414  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:33.414  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:33.414  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:34.352   845   845 E android.hardware.health@2.1-service-samsung: Could not open /sys/class/power_supply/battery/lrp
+07-04 13:46:34.415  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:34.415  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:34.415  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:34.435  5682  6492 I ContactsProvider_EventLog: cp_s: [CONTACT con(0) dat(0) acc({}) calls([]) Iso(IN) uId(150) ]
+07-04 13:46:34.435  5682  6492 I ContactsProvider_EventLog: cp_s: [ agr({}) ]
+07-04 13:46:34.435  5682  6492 I ContactsProvider_EventLog: cp_s: [ cnt({}) ]
+07-04 13:46:34.435  5682  6492 I ContactsProvider_EventLog: cp_s: [PROFILE ] [SAPROFILE ]
+07-04 13:46:34.435  5682  6492 I ContactsProvider_EventLog: cp_s: [STATE R(F) ]
+07-04 13:46:35.415  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:35.415  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:35.415  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:35.733   858   920 I libPerfCtl: xgfGetFPS pid:-1 fps:0
+07-04 13:46:35.733   858   920 I libPerfCtl: xgfGetFPS ioctl_ret:-1
+07-04 13:46:36.110   905   905 I SurfaceFlinger: SFWD update time=1690703301022
+07-04 13:46:36.416  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:36.416  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:36.416  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:36.814   858   880 D power@timer: [mtkPowerTimer] visRead:0
+07-04 13:46:37.416  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:37.416  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:37.416  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:37.423  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:512479:850000:500000:0:0:0
+07-04 13:46:37.425 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:37.425  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:37.428  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:37.636   577   577 D io_stats: !@ 179,0 r 1070510 23936094 w 166819 3542104 d 0 0 f 0 0 iot 234396 0 th 0 0 0 pt 0 inp 0 0 1692.229
+07-04 13:46:37.716  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:38.417  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:38.417  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:38.417  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:38.798  1839  1839 I wpa_supplicant: Heartbeat 165
+07-04 13:46:39.417  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:39.417  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:39.417  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:39.935   907   926 D ccci_mdinit: (1):monitor_time_update_thread round:58 ########
+07-04 13:46:40.417  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:40.417  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:40.418  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:41.418  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:41.418  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:41.418  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:41.834  1417  1453 E Watchdog: !@Sync: 57 heap: 109 / 116 FD: 1037 [2026-07-04 13:46:41.833]
+07-04 13:46:42.419  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:42.419  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:42.419  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:42.457 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:42.457  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:42.460  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:42.689   811   811 E audit   : type=1400 audit(1783153002.686:703): avc:  denied  { write } for  pid=3534 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c662,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:46:42.689   811   811 E audit   : type=1300 audit(1783153002.686:703): arch=c00000b7 syscall=203 success=no exit=-13 a0=6 a1=b4000079d435cb40 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3534 auid=4294967295 uid=15010211 gid=15010211 euid=15010211 suid=15010211 fsuid=15010211 egid=15010211 sgid=15010211 fsgid=15010211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c662,c768 key=(null)
+07-04 13:46:42.689   811   811 E audit   : type=1327 audit(1783153002.686:703): proctitle="com.google.android.gms.persistent"
+07-04 13:46:42.716  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:43.419  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:43.419  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:43.419  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:43.638   577   577 D io_stats: !@ 179,0 r 1070511 23936102 w 166823 3542120 d 0 0 f 0 0 iot 234400 0 th 0 0 0 pt 0 inp 0 0 1698.231
+07-04 13:46:44.420  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:44.420  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:44.420  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:45.420  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:45.420  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:45.420  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:45.919  4127  5239 I SDHMS:D : SIOP:: AP:281 BAT:297 USB:0 CHG:291 PA:289 BLK:0 SUBBAT:0 SKIN:296 SKINF:295 SKINB:296 LRP:300 LRP2:296 LRF:300 LRB:300 LRF2:295 LRB2:296 AP2:296 CHG2:293 SPK2:285 VAP:288 
+07-04 13:46:46.421  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:46.421  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:46.421  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:47.421  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:47.421  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:47.421  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:47.491 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:47.492  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:47.495  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:47.532  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:863639:1532000:850000:534000:1375000:500000:0:0:0
+07-04 13:46:47.717  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:48.421  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:48.422  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:48.422  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:48.809  1839  1839 I wpa_supplicant: Heartbeat 166
+07-04 13:46:49.279  1417  1707 D ConnectivityService: reportNetworkActive, notify 1 listeners
+07-04 13:46:49.422  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:49.422  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:49.422  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:50.422  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:50.422  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:50.422  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:50.968  1417  2148 V MdnieScenarioControlService: burn_in_prevention_mode(), enabled : true, mBurnInDisableAppEnabled : false , mAutoBrightnessMode : false, mHighBrightnessModeEnabled : false , mBurnInPreventionACL : true , platform_brightness_value : 89 , BURN_IN_PREVENTION_SUPPORT_VALUE : 143 , mBurnInPreventionEnabled : false , mGameAppLauncher : false
+07-04 13:46:50.968  1417  2148 V MdnieScenarioControlService: Disabled Burn-In Prevention Mode
+07-04 13:46:50.968  1417  2148 D SemDisplaySolutionManagerService: uid : 1000 , pid : 1417 , name : burnin_prevention_off
+07-04 13:46:50.969  1417  2148 D SemDisplaySolutionManagerService: where : application what : DEFAULT setScreenBrightnessScaleFactor(1.0) , mBrightnessCompensation : 1.0 , PMS value : 1.0
+07-04 13:46:50.969  1417  2148 D PowerManagerService: [api] setScreenBrightnessScaleFactor: scaleFactor: 1.0 (uid: 1000 pid: 1417)
+07-04 13:46:50.969  1417  2148 D SemDisplaySolutionManagerService: Normal Mode setMultipleScreenBrightness , application, DEFAULT, 1.0
+07-04 13:46:51.423  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:51.423  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:51.423  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:52.423  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:52.423  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:52.423  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:52.525 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:52.525  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:52.527  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:52.717  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:52.893   811   811 E audit   : type=1400 audit(1783153012.890:704): avc:  denied  { write } for  pid=3176 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:46:52.893   811   811 E audit   : type=1300 audit(1783153012.890:704): arch=c00000b7 syscall=203 success=no exit=-13 a0=5e a1=b4000079dd89fea0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3176 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:46:52.893   811   811 E audit   : type=1327 audit(1783153012.890:704): proctitle="com.google.android.gms"
+07-04 13:46:53.423  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:53.424  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:53.424  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:53.642   577   577 D io_stats: !@ 179,0 r 1070511 23936102 w 166832 3542164 d 0 0 f 0 0 iot 234404 0 th 0 0 0 pt 0 inp 0 0 1708.234
+07-04 13:46:54.424  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:54.424  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:54.424  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:55.424  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:55.424  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:55.424  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:56.425  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:56.425  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:56.425  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:57.425  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:57.426  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:57.426  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:57.562 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:46:57.562  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:57.565  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:46:57.644  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:869999:1850000:850000:544980:1450000:500000:0:0:0
+07-04 13:46:57.718  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:46:57.888  1417  1717 W DeviceStorageMonitorService: updateBroadcasts(/data) oldLevel:0, newLevel:0, seq:1
+07-04 13:46:57.892  1417  1717 D DeviceStorageMonitorService: Available File Node Number is [12548386]
+07-04 13:46:57.892  1417  1717 W DeviceStorageMonitorService: updateBroadcasts_filenode(/data) fn_oldLevel:0, fn_newLevel:0, seq:1
+07-04 13:46:58.426  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:58.426  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:58.426  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:58.819  1839  1839 I wpa_supplicant: Heartbeat 167
+07-04 13:46:59.426  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:46:59.427  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:46:59.427  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:46:59.500  1417  1732 D UsbStatsMonitor: 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0
+07-04 13:47:00.427  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:00.427  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:00.427  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:00.789   811   811 E audit   : type=1400 audit(1783153020.786:705): avc:  denied  { write } for  pid=2769 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:47:00.789   811   811 E audit   : type=1300 audit(1783153020.786:705): arch=c00000b7 syscall=203 success=no exit=-13 a0=58 a1=b4000079d56699a0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=2769 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:47:00.789   811   811 E audit   : type=1327 audit(1783153020.786:705): proctitle="com.google.android.gms.persistent"
+07-04 13:47:01.428  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:01.428  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:01.428  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:02.428  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:02.428  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:02.428  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:02.597 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:02.597  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:02.601  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:02.719  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:03.429  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:03.429  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:03.429  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:03.646   577   577 D io_stats: !@ 179,0 r 1070511 23936102 w 166842 3542196 d 0 0 f 0 0 iot 234404 0 th 0 0 0 pt 0 inp 0 0 1718.238
+07-04 13:47:04.392   845   845 E android.hardware.health@2.1-service-samsung: Could not open /sys/class/power_supply/battery/lrp
+07-04 13:47:04.429  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:04.429  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:04.429  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:05.430  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:05.430  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:05.430  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:05.868  1417  1485 I PowerManagerService: [PWL] Off : 1720s ago
+07-04 13:47:06.111   905   905 I SurfaceFlinger: SFWD update time=1720703770024
+07-04 13:47:06.430  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:06.430  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:06.431  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:07.431  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:07.431  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:07.431  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:07.633  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:07.633 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:07.637  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:07.719  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:07.753  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:505479:774000:500000:0:0:0
+07-04 13:47:08.432  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:08.432  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:08.432  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:08.830  1839  1839 I wpa_supplicant: Heartbeat 168
+07-04 13:47:09.433  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:09.433  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:09.433  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:09.649   577   577 D io_stats: !@ 179,0 r 1070512 23936106 w 166850 3542228 d 0 0 f 0 0 iot 234408 0 th 0 0 0 pt 0 inp 0 0 1724.241
+07-04 13:47:09.950   907   926 D ccci_mdinit: (1):monitor_time_update_thread round:59 ########
+07-04 13:47:10.434  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:10.434  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:10.434  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:11.434  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:11.435  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:11.435  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:11.847  1417  1453 E Watchdog: !@Sync: 58 heap: 110 / 116 FD: 1037 [2026-07-04 13:47:11.847]
+07-04 13:47:12.435  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:12.435  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:12.435  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:12.665 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:12.665  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:12.668  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:12.716   811   811 E audit   : type=1400 audit(1783153032.714:706): avc:  denied  { write } for  pid=3534 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c662,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:47:12.716   811   811 E audit   : type=1300 audit(1783153032.714:706): arch=c00000b7 syscall=203 success=no exit=-13 a0=6 a1=b4000079d435cb60 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3534 auid=4294967295 uid=15010211 gid=15010211 euid=15010211 suid=15010211 fsuid=15010211 egid=15010211 sgid=15010211 fsgid=15010211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c662,c768 key=(null)
+07-04 13:47:12.717   811   811 E audit   : type=1327 audit(1783153032.714:706): proctitle="com.google.android.gms.persistent"
+07-04 13:47:12.719  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:13.435  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:13.436  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:13.436  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:14.436  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:14.436  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:14.436  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:15.436  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:15.437  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:15.437  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:15.921  4127  5239 I SDHMS:D : SIOP:: AP:279 BAT:296 USB:0 CHG:290 PA:287 BLK:0 SUBBAT:0 SKIN:295 SKINF:294 SKINB:295 LRP:299 LRP2:295 LRF:299 LRB:299 LRF2:294 LRB2:295 AP2:295 CHG2:292 SPK2:284 VAP:286 
+07-04 13:47:16.437  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:16.437  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:16.437  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:17.438  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:17.438  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:17.438  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:17.704 30582 30749 D TrafficStats: tagSocket(118) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:17.704  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:17.707  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:17.720  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:17.866  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:505479:774000:500000:0:0:0
+07-04 13:47:18.439  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:18.439  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:18.439  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:18.841  1839  1839 I wpa_supplicant: Heartbeat 169
+07-04 13:47:19.440  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:19.440  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:19.440  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:19.652   577   577 D io_stats: !@ 179,0 r 1070512 23936106 w 166860 3542260 d 0 0 f 0 0 iot 234408 0 th 0 0 0 pt 0 inp 0 0 1734.245
+07-04 13:47:20.440  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:20.441  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:20.441  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:21.441  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:21.441  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:21.441  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:22.442  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:22.442  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:22.442  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:22.720  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:22.736 30582 30749 D TrafficStats: tagSocket(118) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:22.736  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:22.738  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:22.921   811   811 E audit   : type=1400 audit(1783153042.918:707): avc:  denied  { write } for  pid=3176 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:47:22.921   811   811 E audit   : type=1300 audit(1783153042.918:707): arch=c00000b7 syscall=203 success=no exit=-13 a0=5e a1=b4000079dc93a7e0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3176 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:47:22.921   811   811 E audit   : type=1327 audit(1783153042.918:707): proctitle="com.google.android.gms"
+07-04 13:47:23.443  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:23.443  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:23.443  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:23.654   577   577 D io_stats: !@ 179,0 r 1070512 23936106 w 166865 3542284 d 0 0 f 0 0 iot 234412 0 th 0 0 0 pt 0 inp 0 0 1738.246
+07-04 13:47:24.361  2691  4705 I ContactsProvider_EventLog: cp_s: [CONTACT con(297) dat(1689) acc({com.google.android.apps.tachyon(135)=10, phone(2)=1, core(187)=4, google(3)=296}) calls([logtype:100 cnt:1, logtype:500 cnt:1, logtype:1000 cnt:1998]) Iso(IN) uId(0) ]
+07-04 13:47:24.361  2691  4705 I ContactsProvider_EventLog: cp_s: [ agr({[3]=282, [2]=1, [3 ,187]=4, [3 ,135]=10}) ]
+07-04 13:47:24.361  2691  4705 I ContactsProvider_EventLog: cp_s: [ cnt({acore(2691)=1}) ]
+07-04 13:47:24.361  2691  4705 I ContactsProvider_EventLog: cp_s: [PROFILE ] [SAPROFILE con(1) acc({phone(1)=1}) ]
+07-04 13:47:24.361  2691  4705 I ContactsProvider_EventLog: cp_s: [STATE R(F) ]
+07-04 13:47:24.424  2691  2715 W System  : A resource failed to call AbstractCursor.close. 
+07-04 13:47:24.425  2691  2715 W System  : A resource failed to call AbstractCursor.close. 
+07-04 13:47:24.426  2691  2715 W System  : A resource failed to call AbstractCursor.close. 
+07-04 13:47:24.443  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:24.443  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:24.443  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:25.444  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:25.444  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:25.444  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:25.655   577   577 D io_stats: !@ 179,0 r 1070512 23936106 w 166867 3542292 d 0 0 f 0 0 iot 234416 0 th 0 0 0 pt 0 inp 0 0 1740.248
+07-04 13:47:26.444  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:26.445  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:26.445  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:27.445  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:27.445  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:27.445  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:27.721  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:27.765 30582 30749 D TrafficStats: tagSocket(92) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:27.765  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:27.767  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:27.978  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:852960:998000:850000:536959:1800000:500000:0:0:0
+07-04 13:47:28.446  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:28.446  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:28.446  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:28.851  1839  1839 I wpa_supplicant: Heartbeat 170
+07-04 13:47:29.447  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:29.447  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:29.447  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:29.657   577   577 D io_stats: !@ 179,0 r 1070521 23936154 w 166873 3542312 d 0 0 f 0 0 iot 234420 0 th 0 0 0 pt 0 inp 0 0 1744.250
+07-04 13:47:30.447  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:30.447  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:30.448  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:30.800   811   811 E audit   : type=1400 audit(1783153050.798:708): avc:  denied  { write } for  pid=2769 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:47:30.800   811   811 E audit   : type=1300 audit(1783153050.798:708): arch=c00000b7 syscall=203 success=no exit=-13 a0=58 a1=b4000079d5589b60 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=2769 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:47:30.800   811   811 E audit   : type=1327 audit(1783153050.798:708): proctitle="com.google.android.gms.persistent"
+07-04 13:47:31.448  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:31.448  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:31.448  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:32.448  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:32.448  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:32.448  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:32.722  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:32.789 30582 30749 D TrafficStats: tagSocket(92) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:32.790  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:32.793  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:33.449  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:33.449  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:33.449  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:33.659   577   577 D io_stats: !@ 179,0 r 1070521 23936154 w 166878 3542328 d 0 0 f 0 0 iot 234424 0 th 0 0 0 pt 0 inp 0 0 1748.251
+07-04 13:47:34.431   845   845 E android.hardware.health@2.1-service-samsung: Could not open /sys/class/power_supply/battery/lrp
+07-04 13:47:34.449  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:34.449  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:34.449  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:34.519  5682  6492 I ContactsProvider_EventLog: cp_s: [CONTACT con(0) dat(0) acc({}) calls([]) Iso(IN) uId(150) ]
+07-04 13:47:34.519  5682  6492 I ContactsProvider_EventLog: cp_s: [ agr({}) ]
+07-04 13:47:34.519  5682  6492 I ContactsProvider_EventLog: cp_s: [ cnt({}) ]
+07-04 13:47:34.519  5682  6492 I ContactsProvider_EventLog: cp_s: [PROFILE ] [SAPROFILE ]
+07-04 13:47:34.519  5682  6492 I ContactsProvider_EventLog: cp_s: [STATE R(F) ]
+07-04 13:47:35.450  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:35.450  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:35.450  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:35.734   858   920 I libPerfCtl: xgfGetFPS pid:-1 fps:0
+07-04 13:47:35.734   858   920 I libPerfCtl: xgfGetFPS ioctl_ret:-1
+07-04 13:47:36.076  1417  1707 D ConnectivityService: reportNetworkActive, notify 1 listeners
+07-04 13:47:36.111   905   905 I SurfaceFlinger: SFWD update time=1750704212718
+07-04 13:47:36.450  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:36.451  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:36.451  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:36.870   858   880 D power@timer: [mtkPowerTimer] visRead:0
+07-04 13:47:37.451  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:37.451  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:37.451  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:37.722  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:37.821  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:37.821 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:37.823  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:38.085  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:530500:1625000:500000:0:0:0
+07-04 13:47:38.452  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:38.452  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:38.452  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:38.862  1839  1839 I wpa_supplicant: Heartbeat 171
+07-04 13:47:39.453  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:39.453  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:39.453  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:39.661   577   577 D io_stats: !@ 179,0 r 1070521 23936154 w 166885 3542356 d 0 0 f 0 0 iot 234428 0 th 0 0 0 pt 0 inp 0 0 1754.254
+07-04 13:47:39.980   907   926 D ccci_mdinit: (1):monitor_time_update_thread round:60 ########
+07-04 13:47:40.453  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:40.453  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:40.453  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:41.454  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:41.454  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:41.454  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:41.861  1417  1453 E Watchdog: !@Sync: 59 heap: 110 / 116 FD: 1037 [2026-07-04 13:47:41.860]
+07-04 13:47:42.454  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:42.455  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:42.455  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:42.723  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:42.745   811   811 E audit   : type=1400 audit(1783153062.742:709): avc:  denied  { write } for  pid=3534 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c662,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:47:42.745   811   811 E audit   : type=1300 audit(1783153062.742:709): arch=c00000b7 syscall=203 success=no exit=-13 a0=6 a1=b4000079d435cbc0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3534 auid=4294967295 uid=15010211 gid=15010211 euid=15010211 suid=15010211 fsuid=15010211 egid=15010211 sgid=15010211 fsgid=15010211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c662,c768 key=(null)
+07-04 13:47:42.745   811   811 E audit   : type=1327 audit(1783153062.742:709): proctitle="com.google.android.gms.persistent"
+07-04 13:47:42.853 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:42.853  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:42.856  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:43.455  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:43.456  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:43.456  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:44.456  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:44.456  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:44.456  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:45.457  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:45.457  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:45.457  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:45.922  4127  5239 I SDHMS:D : SIOP:: AP:279 BAT:296 USB:0 CHG:290 PA:287 BLK:0 SUBBAT:0 SKIN:295 SKINF:294 SKINB:295 LRP:299 LRP2:295 LRF:299 LRB:299 LRF2:294 LRB2:295 AP2:295 CHG2:292 SPK2:284 VAP:285 
+07-04 13:47:46.457  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:46.458  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:46.458  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:47.458  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:47.458  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:47.458  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:47.724  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:47.889 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:47.889  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:47.892  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:48.194  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:526000:1800000:500000:0:0:0
+07-04 13:47:48.459  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:48.459  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:48.459  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:48.872  1839  1839 I wpa_supplicant: Heartbeat 172
+07-04 13:47:49.460  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:49.460  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:49.460  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:49.665   577   577 D io_stats: !@ 179,0 r 1070521 23936154 w 166895 3542388 d 0 0 f 0 0 iot 234432 0 th 0 0 0 pt 0 inp 0 0 1764.258
+07-04 13:47:50.461  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:50.461  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:50.461  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:51.461  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:51.461  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:51.461  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:51.861  1417  1469 D BatteryExternalStatsWorker: update stats : update-network-netlog (6)
+07-04 13:47:51.861  1417  1469 D BatteryExternalStatsWorker: Update Rail Energy data
+07-04 13:47:51.862  1417  1469 D BatteryExternalStatsWorker: Fetch modem data
+07-04 13:47:51.898  1417  2479 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=1154407 mSleepTimeMs=659899 mIdleTimeMs=40926 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=3170}]}
+07-04 13:47:51.899  1417  1469 D BatteryExternalStatsWorker: mStats lock released
+07-04 13:47:51.913  1417  1469 D BatteryExternalStatsWorker: Update modem state
+07-04 13:47:51.913  1417  1469 D BatteryExternalStatsWorker: done updateExternalStatsLocked
+07-04 13:47:52.462  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:52.462  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:52.462  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:52.725  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:52.923 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:52.924  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:52.927  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:52.953   811   811 E audit   : type=1400 audit(1783153072.950:710): avc:  denied  { write } for  pid=3176 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:47:52.953   811   811 E audit   : type=1300 audit(1783153072.950:710): arch=c00000b7 syscall=203 success=no exit=-13 a0=5e a1=b400007a64ea91c0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3176 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:47:52.953   811   811 E audit   : type=1327 audit(1783153072.950:710): proctitle="com.google.android.gms"
+07-04 13:47:53.285  1417  1707 D ConnectivityService: reportNetworkActive, notify 1 listeners
+07-04 13:47:53.462  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:53.462  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:53.462  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:53.667   577   577 D io_stats: !@ 179,0 r 1070523 23936166 w 166900 3542404 d 0 0 f 0 0 iot 234436 0 th 0 0 0 pt 0 inp 0 0 1768.259
+07-04 13:47:54.463  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:54.463  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:54.463  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:55.463  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:55.464  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:55.464  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:56.464  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:56.464  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:56.464  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:57.465  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:57.465  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:57.465  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:57.725  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:47:57.958 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:47:57.958  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:57.961  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:47:57.993  1417  1717 W DeviceStorageMonitorService: updateBroadcasts(/data) oldLevel:0, newLevel:0, seq:1
+07-04 13:47:57.994  1417  1717 D DeviceStorageMonitorService: Available File Node Number is [12548386]
+07-04 13:47:57.994  1417  1717 W DeviceStorageMonitorService: updateBroadcasts_filenode(/data) fn_oldLevel:0, fn_newLevel:0, seq:1
+07-04 13:47:58.306  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:515460:999000:500000:0:0:0
+07-04 13:47:58.465  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:58.466  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:58.466  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:58.883  1839  1839 I wpa_supplicant: Heartbeat 173
+07-04 13:47:59.466  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:47:59.466  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:47:59.466  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:47:59.562  1417  1732 D UsbStatsMonitor: 0 0 0 0 0 0 0 0 0 0 0 5 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0
+07-04 13:48:00.467  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:00.467  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:00.467  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:00.829   811   811 E audit   : type=1400 audit(1783153080.826:711): avc:  denied  { write } for  pid=2769 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:48:00.829   811   811 E audit   : type=1300 audit(1783153080.826:711): arch=c00000b7 syscall=203 success=no exit=-13 a0=58 a1=b4000079d557dda0 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=2769 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:48:00.829   811   811 E audit   : type=1327 audit(1783153080.826:711): proctitle="com.google.android.gms.persistent"
+07-04 13:48:01.467  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:01.467  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:01.467  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:02.468  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:02.468  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:02.468  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:02.725  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:48:02.991 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:48:02.991  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:02.994  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:03.468  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:03.469  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:03.469  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:03.671   577   577 D io_stats: !@ 179,0 r 1070523 23936166 w 166910 3542444 d 0 0 f 0 0 iot 234436 0 th 0 0 0 pt 0 inp 0 0 1778.264
+07-04 13:48:04.465   845   845 E android.hardware.health@2.1-service-samsung: Could not open /sys/class/power_supply/battery/lrp
+07-04 13:48:04.469  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:04.469  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:04.469  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:05.470  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:05.470  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:05.470  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:06.112   905   905 I SurfaceFlinger: SFWD update time=1780704692412
+07-04 13:48:06.470  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:06.470  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:06.470  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:07.471  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:07.471  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:07.471  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:07.726  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:48:08.027 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:48:08.027  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:08.030  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:08.418  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:507000:850000:500000:0:0:0
+07-04 13:48:08.471  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:08.471  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:08.471  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:08.894  1839  1839 I wpa_supplicant: Heartbeat 174
+07-04 13:48:09.472  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:09.472  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:09.472  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:09.674   577   577 D io_stats: !@ 179,0 r 1070523 23936166 w 166917 3542468 d 0 0 f 0 0 iot 234440 0 th 0 0 0 pt 0 inp 0 0 1784.266
+07-04 13:48:09.996   907   926 D ccci_mdinit: (1):monitor_time_update_thread round:61 ########
+07-04 13:48:10.472  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:10.472  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:10.472  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:11.473  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:11.473  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:11.473  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:11.714  2769  8068 I NearbyDiscovery: FastPair: isDestroyable: Scanner is alive. [CONTEXT service_id=265 ]
+07-04 13:48:11.715  2769  8068 I NearbyDiscovery: DiscoveryService: Skip stopSelf(), fast pair controller is not destroyable. [CONTEXT service_id=265 ]
+07-04 13:48:11.877  1417  1453 E Watchdog: !@Sync: 60 heap: 111 / 116 FD: 1037 objects: 2196869 WaitTime: 1.868 GCcnt: 2 FullGC: 0 [2026-07-04 13:48:11.873]
+07-04 13:48:12.473  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:12.473  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:12.473  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:12.727  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:48:12.774   811   811 E audit   : type=1400 audit(1783153092.770:712): avc:  denied  { write } for  pid=3534 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c662,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:48:12.774   811   811 E audit   : type=1300 audit(1783153092.770:712): arch=c00000b7 syscall=203 success=no exit=-13 a0=6 a1=b4000079d435cb00 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3534 auid=4294967295 uid=15010211 gid=15010211 euid=15010211 suid=15010211 fsuid=15010211 egid=15010211 sgid=15010211 fsgid=15010211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c662,c768 key=(null)
+07-04 13:48:12.774   811   811 E audit   : type=1327 audit(1783153092.770:712): proctitle="com.google.android.gms.persistent"
+07-04 13:48:13.064 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:48:13.065  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:13.068  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:13.473  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:13.474  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:13.474  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:13.675   577   577 D io_stats: !@ 179,0 r 1070551 23936534 w 166922 3542484 d 0 0 f 0 0 iot 234444 0 th 0 0 0 pt 0 inp 0 0 1788.268
+07-04 13:48:14.474  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:14.474  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:14.474  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:15.474  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:15.475  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:15.475  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:15.922  4127  5239 I SDHMS:D : SIOP:: AP:278 BAT:296 USB:0 CHG:289 PA:286 BLK:0 SUBBAT:0 SKIN:294 SKINF:293 SKINB:294 LRP:299 LRP2:294 LRF:299 LRB:298 LRF2:293 LRB2:294 AP2:294 CHG2:291 SPK2:284 VAP:283 
+07-04 13:48:16.473  1417  1619 D ActivityTaskManager: SafeActivityOptions created, mOriginalCallingPid=1417, mOriginalCallingUid=1000, options=ActivityOptions(88924514), mPackageName=null, mAnimationType=-1, mStartX=0, mStartY=0, mWidth=0, mHeight=0, caller=com.android.server.am.PendingIntentRecord.sendInner:500 com.android.server.am.ActivityManagerService.sendIntentSender:6624 com.android.server.am.ActivityManagerService.sendIntentSender:6613 android.app.PendingIntent.sendAndReturnResult:1029 android.app.PendingIntent.send:1000 com.android.server.alarm.AlarmManagerService$DeliveryTracker.deliverLocked:6377 com.android.server.alarm.AlarmManagerService.deliverAlarmsLocked:5218 
+07-04 13:48:16.474  1417  1619 D ActivityManager: Received BROADCAST intent 0x627094f Key{broadcastIntent pkg=android intent=act=FIRST_ALARM_TRIGGER_ACTION flg=0x40000000 pkg=android flags=0x4000000 u=0} requestCode=0 sent=0 from uid 1000
+07-04 13:48:16.475  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:16.475  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:16.475  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:16.481  1417  1417 D MARsTrigger: mPolicyIntentReceiver broadcast received action : FIRST_ALARM_TRIGGER_ACTION
+07-04 13:48:16.481  1417  1475 D MARsPolicyManager: triggerAction called!
+07-04 13:48:16.481  1417  1475 I NSLocationMonitor: getGPSUsingApps() called
+07-04 13:48:16.488  1870  1870 D KeyguardUpdateMonitor: received broadcast android.intent.action.TIME_TICK
+07-04 13:48:16.489  1870  1870 D KeyguardUpdateMonitor: handleTimeUpdate
+07-04 13:48:16.489  1870  2434 D QSClockBellTower: onReceive(android.intent.action.TIME_TICK) mTimeZoneString:null
+07-04 13:48:16.490  1870  1870 D FaceWidgetPagesController: onTimeChanged()
+07-04 13:48:16.491  1870  1870 D FaceWidgetPagesController: refreshViews() reason = ON_TIME_TICK, force = false
+07-04 13:48:16.492  1870  1870 D FaceWidgetMusicViewModel: updateMusicPageColorForVisibility
+07-04 13:48:16.493  1870  1870 D FaceWidgetMusicViewModel: updateMusicPageColorForVisibility, useLightModeColor = false
+07-04 13:48:16.493  1417  1417 I EyeComfortSolutionService: action  :  android.intent.action.TIME_TICK
+07-04 13:48:16.500  1870  1870 D QSClockBellTower: He is ready to ring the bell. (((QSClockBellSound - TimeText:1:48, TimeContentDescription:1:48 pm, DateText:Sat, 4 July, ShortDateText:Sat, 4 Jul, Demo:false, QuickStar-Second(false|12:34:56))))
+07-04 13:48:16.502  1870  1870 D QSClockIndicatorView: Home Indicator status_bar_clock 1:48 notifyTimeChanged(QSClockBellSound - TimeText:1:48, TimeContentDescription:1:48 pm, DateText:Sat, 4 July, ShortDateText:Sat, 4 Jul, Demo:false, QuickStar-Second(false|12:34:56)) ClockVisibleByPolicy:true, ClockVisibleByUser:true, visible?false, parent:android.widget.LinearLayout{efde8a5 V.E...... ........ 0,0-0,58 #7f0b04f0 app:id/left_clock_container}
+07-04 13:48:16.503  1870  1870 D QSClockBellTower: Everyone heard the bell. run(currentTime:1783153096497,   getTime():Sat Jul 04 13:48:16 GMT+05:30 2026,   getTimeZone():libcore.util.ZoneInfo[mDstSavings=0,mUseDst=false,mDelegate=[id="Asia/Kolkata",mRawOffset=19800000,mEarliestRawOffset=21208000,transitions=7]])
+07-04 13:48:16.504  1870  1870 D FaceWidgetMusicPage: mMusicPageTransparencyDataObserver = FaceWidgetMusicPageTransparencyData mMusicPageTransparency = 0.0 mUseLightModeColor = 2 IsUpdatePageColorOnly = true
+07-04 13:48:16.509  2922  2958 I NSLocationManager_FLP: getGPSUsingApps, NO_FREEZE={5013} / FREEZE={10206}
+07-04 13:48:16.530  1870  1870 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 193, bottom margin = 45, real height = 238
+07-04 13:48:16.530  1870  1870 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+07-04 13:48:16.530  1870  1870 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+07-04 13:48:16.530  1870  1870 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 193, bottom margin = 0, real height = 238
+07-04 13:48:16.533  1870  1870 I DymLock|BaseLockContainer: onQsChanged 0.0 -> 0.0
+07-04 13:48:16.534  1870  1870 V QsExpandAnimator: setQsExpansionPosition 0.0
+07-04 13:48:16.537  1870  1870 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 193, bottom margin = 45, real height = 238
+07-04 13:48:16.538  1870  1870 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() height = 0 container Visibility = 8, isValid = false, mIsDozing = true, fraction = 1.0, source = 0, target = 0
+07-04 13:48:16.538  1870  1870 I FaceWidgetPositionAlgorithm: getMediaContainerHeight() supplier = 0
+07-04 13:48:16.538  1870  1870 I FaceWidgetPositionAlgorithm: getClockContainerHeight() supplier = 193, bottom margin = 0, real height = 238
+07-04 13:48:16.543  1870  1870 V QsExpandAnimator: updateAnimators
+07-04 13:48:16.543  1870  1870 V QsExpandAnimator: clearAnimationState 
+07-04 13:48:16.544  1870  1870 V QsExpandAnimator: updateViews
+07-04 13:48:16.550  1870  1870 V QsExpandAnimator: updateTileAnimator
+07-04 13:48:16.552  1870  1870 V QsExpandAnimator: updateHeaderAnimator
+07-04 13:48:16.552  1870  1870 V QsExpandAnimator: updateBarAnimator
+07-04 13:48:16.553  1870  1870 V QsExpandAnimator: setQsExpansionPosition 0.0
+07-04 13:48:16.553  1870  1870 V QsExpandAnimator: onAnimationAtStart
+07-04 13:48:17.475  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:17.475  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:17.475  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:17.677   577   577 D io_stats: !@ 179,0 r 1070554 23936546 w 166922 3542484 d 0 0 f 0 0 iot 234452 0 th 0 0 0 pt 0 inp 0 0 1792.270
+07-04 13:48:17.728  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:48:18.101 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:48:18.101  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:18.104  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:18.476  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:18.476  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:18.476  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:18.526  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:510959:774000:500000:0:0:0
+07-04 13:48:18.904  1839  1839 I wpa_supplicant: Heartbeat 175
+07-04 13:48:19.476  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:19.476  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:19.476  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:19.679   577   577 D io_stats: !@ 179,0 r 1070554 23936546 w 166927 3542500 d 0 0 f 0 0 iot 234456 0 th 0 0 0 pt 0 inp 0 0 1794.271
+07-04 13:48:20.476  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:20.476  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:20.476  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:21.477  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:21.477  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:21.477  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:22.477  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:22.477  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:22.477  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:22.728  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:48:22.981   811   811 E audit   : type=1400 audit(1783153102.978:713): avc:  denied  { write } for  pid=3176 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:48:22.981   811   811 E audit   : type=1300 audit(1783153102.978:713): arch=c00000b7 syscall=203 success=no exit=-13 a0=5e a1=b400007a64ea9300 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=3176 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:48:22.981   811   811 E audit   : type=1327 audit(1783153102.978:713): proctitle="com.google.android.gms"
+07-04 13:48:23.132 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:48:23.132  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:23.135  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:23.477  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:23.477  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:23.477  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:23.680   577   577 D io_stats: !@ 179,0 r 1070555 23936550 w 166932 3542516 d 0 0 f 0 0 iot 234460 0 th 0 0 0 pt 0 inp 0 0 1798.273
+07-04 13:48:24.441  2691  4705 I ContactsProvider_EventLog: cp_s: [CONTACT con(297) dat(1689) acc({com.google.android.apps.tachyon(135)=10, phone(2)=1, core(187)=4, google(3)=296}) calls([logtype:100 cnt:1, logtype:500 cnt:1, logtype:1000 cnt:1998]) Iso(IN) uId(0) ]
+07-04 13:48:24.441  2691  4705 I ContactsProvider_EventLog: cp_s: [ agr({[3]=282, [2]=1, [3 ,187]=4, [3 ,135]=10}) ]
+07-04 13:48:24.441  2691  4705 I ContactsProvider_EventLog: cp_s: [ cnt({acore(2691)=1}) ]
+07-04 13:48:24.441  2691  4705 I ContactsProvider_EventLog: cp_s: [PROFILE ] [SAPROFILE con(1) acc({phone(1)=1}) ]
+07-04 13:48:24.441  2691  4705 I ContactsProvider_EventLog: cp_s: [STATE R(F) ]
+07-04 13:48:24.478  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:24.478  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:24.478  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:25.452  1417  1469 D BatteryExternalStatsWorker: update stats : write (63)
+07-04 13:48:25.452  1417  1469 D BatteryExternalStatsWorker: Update Rail Energy data
+07-04 13:48:25.453  1417  1469 D BatteryExternalStatsWorker: Fetch Bluetooth data
+07-04 13:48:25.453  1417  1469 D BatteryExternalStatsWorker: Fetch modem data
+07-04 13:48:25.457  1417  4245 W BatteryExternalStatsWorker: error reading Bluetooth stats: 11
+07-04 13:48:25.478  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:25.478  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:25.478  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:25.488  1417  2479 D TelephonyManager: requestModemActivityInfo: Sending result to app: ModemActivityInfo{ mTimestamp=1800079 mSleepTimeMs=691763 mIdleTimeMs=42652 mActivityStatsTechSpecificInfo=[{mRat=UNKNOWN,mFrequencyRange=UNKNOWN,mTxTimeMs[]=[0, 0, 0, 0, 0],mRxTimeMs=3391}]}
+07-04 13:48:25.523  1417  1469 D BatteryExternalStatsWorker: Update CPU state
+07-04 13:48:25.523  1417  1469 I KernelWakelockReader: readKernelWakelockStats(true)
+07-04 13:48:25.527   602   608 W android.system.suspend@1.0-service: getWakeLockStats +
+07-04 13:48:25.527   602   608 I android.system.suspend@1.0-service: name: PowerManagerService.Display, isActive: 0, LC: 1606060, AC: 14, AT: 0, TT: 625943
+07-04 13:48:25.527   602   608 I android.system.suspend@1.0-service: name: PowerManager.SuspendLockout, isActive: 0, LC: 1606059, AC: 17, AT: 0, TT: 625253
+07-04 13:48:25.556   602   608 W android.system.suspend@1.0-service: getWakeLockStats -
+07-04 13:48:25.557  1417  1469 D KernelWakelockReader: name=PowerManagerService.WakeLocks	 isActive=false	 lastChange=1800084	 activeCount=187	 activeTime=0	 totalTime=324379	 version=10	 time_delta=73223000
+07-04 13:48:25.558  1417  1469 D KernelWakelockReader: name=PowerManagerService.Broadcasts	 isActive=false	 lastChange=1606317	 activeCount=10	 activeTime=0	 totalTime=5817	 version=10	 time_delta=1794000
+07-04 13:48:25.558  1417  1469 D KernelWakelockReader: name=PowerManagerService.Display	 isActive=false	 lastChange=1606060	 activeCount=14	 activeTime=0	 totalTime=625943	 version=10	 time_delta=302710000
+07-04 13:48:25.558  1417  1469 D KernelWakelockReader: name=PowerManager.SuspendLockout	 isActive=false	 lastChange=1606059	 activeCount=17	 activeTime=0	 totalTime=625253	 version=10	 time_delta=302711000
+07-04 13:48:25.558  1417  1469 D KernelWakelockReader: name=PowerManagerService.Booting	 isActive=false	 lastChange=39434	 activeCount=1	 activeTime=0	 totalTime=23174	 version=10	 time_delta=0
+07-04 13:48:25.558  1417  1469 I BatteryStatsImpl: updateKernelWakelocksLocked:: name=PowerManager.SuspendLockout / totalTime=625253000 / mCount=17 / version=10
+07-04 13:48:25.558  1417  1469 I BatteryStatsImpl: updateKernelWakelocksLocked:: name=PowerManagerService.Display / totalTime=625943000 / mCount=14 / version=10
+07-04 13:48:25.558  1417  1469 I BatteryStatsImpl: updateKernelWakelocksLocked:: name=PowerManagerService.WakeLocks / totalTime=324379000 / mCount=187 / version=10
+07-04 13:48:25.558  1417  1469 I BatteryStatsImpl: updateKernelWakelocksLocked:: name=PowerManagerService.Broadcasts / totalTime=5817000 / mCount=10 / version=10
+07-04 13:48:25.558  1417  1469 I BatteryStatsImpl: updateKernelWakelocksLocked:: name=PowerManagerService.Booting / totalTime=23174000 / mCount=1 / version=10
+07-04 13:48:25.558  1417  1469 D BatteryExternalStatsWorker: Update Kernel wakelock & memory state
+07-04 13:48:25.558  1417  1469 D BatteryExternalStatsWorker: Update RPM state
+07-04 13:48:25.558  1417  1469 D BatteryExternalStatsWorker: mStats lock released
+07-04 13:48:25.569  1417  1469 D BatteryExternalStatsWorker: Update modem state
+07-04 13:48:25.569  1417  1469 D BatteryExternalStatsWorker: done updateExternalStatsLocked
+07-04 13:48:25.681   577   577 D io_stats: !@ 179,0 r 1070567 23936642 w 166943 3543936 d 0 0 f 0 0 iot 234472 0 th 0 0 0 pt 0 inp 0 0 1800.274
+07-04 13:48:26.478  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:26.478  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:26.479  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:27.479  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:27.479  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:27.479  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:27.729  1134  1134 D connsyslogger: Open FIFO for close
+07-04 13:48:27.975  1417  4245 D CustomizedBinderCallsStatsInternal: reportCpuUsage() : 0%
+07-04 13:48:27.976  1417  1458 I BinderCallsStats: Collected cpu time : 0us, collected call count : 0 for 300628 ms
+07-04 13:48:27.979   904  5463 E perfmond: [PERFMOND] psi monitor is supported with /proc/pressure/memory
+07-04 13:48:27.979   904  5463 E perfmond: [PERFMOND] psi monitor is supported with /proc/pressure/io
+07-04 13:48:28.168 30582 30749 D TrafficStats: tagSocket(6) with statsTag=0xffffffff, statsUid=-1
+07-04 13:48:28.169  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:28.171  1417  1799 D NetdEventListenerService: DNS Requested by : 100, 10345
+07-04 13:48:28.479  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:28.479  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:28.479  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:28.642  4127  4127 I SDHMS:LOAD: type: LoadsFreqs, value: 0:0:0:850000:850000:850000:543959:1800000:500000:0:0:0
+07-04 13:48:28.915  1839  1839 I wpa_supplicant: Heartbeat 176
+07-04 13:48:29.479  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:29.479  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:29.480  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:29.683   577   577 D io_stats: !@ 179,0 r 1070567 23936642 w 166948 3543952 d 0 0 f 0 0 iot 234476 0 th 0 0 0 pt 0 inp 0 0 1804.275
+07-04 13:48:30.480  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:30.480  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:30.480  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:30.861   811   811 E audit   : type=1400 audit(1783153110.858:714): avc:  denied  { write } for  pid=2769 comm="ThreadPoolForeg" name="traced_producer" dev="tmpfs" ino=17268 scontext=u:r:gmscore_app:s0:c512,c768 tcontext=u:object_r:traced_producer_socket:s0 tclass=sock_file permissive=0 SEPF_SM-E225F_12_0001 audit_filtered
+07-04 13:48:30.861   811   811 E audit   : type=1300 audit(1783153110.858:714): arch=c00000b7 syscall=203 success=no exit=-13 a0=58 a1=b4000079d5669a00 a2=1e a3=ffffffff95b74536 items=0 ppid=829 pid=2769 auid=4294967295 uid=10211 gid=10211 euid=10211 suid=10211 fsuid=10211 egid=10211 sgid=10211 fsgid=10211 tty=(none) ses=4294967295 comm="ThreadPoolForeg" exe="/system/bin/app_process64" subj=u:r:gmscore_app:s0:c512,c768 key=(null)
+07-04 13:48:30.861   811   811 E audit   : type=1327 audit(1783153110.858:714): proctitle="com.google.android.gms.persistent"
+07-04 13:48:31.480  1091  1759 I bauth_FPBAuthService: pcf : 0x1012, 0 ,1 ,0 ,0 ,0 ,0, 7.0.0.1
+07-04 13:48:31.480  1091  1759 I bauth_FPBAuthService: thread id : 1, preenroll_flag : 0, nd cnt : 0, cso : 1, et : 0
+07-04 13:48:31.480  1091  1759 I bauth_FPBAuthService: FPBAuthService, 11511
+07-04 13:48:31.496  1417  1475 D MARsPolicyManager: triggerAction called!
+07-04 13:48:31.496  1417  1475 I NSLocationMonitor: getGPSUsingApps() called
+07-04 13:48:31.516  2922  2958 I NSLocationManager_FLP: getGPSUsingApps, NO_FREEZE={5013} / FREEZE={10206}

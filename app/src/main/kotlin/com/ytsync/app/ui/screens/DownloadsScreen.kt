@@ -22,6 +22,8 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.ytsync.app.data.db.entity.SongEntity
+import com.ytsync.app.data.db.entity.DownloadPhase
+import com.ytsync.app.data.db.entity.DownloadStatus
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.*
@@ -316,14 +318,55 @@ fun DownloadedSongRow(
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
+
+                // Sub-phase indicators during active downloads
+                if (item.song.downloadPhase == DownloadPhase.PREPARING || item.song.downloadPhase == DownloadPhase.CONVERTING) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.size(14.dp),
+                            strokeWidth = 1.5.dp,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                        val label = if (item.song.downloadPhase == DownloadPhase.PREPARING) "Fetching..." else "Converting..."
+                        Text(
+                            text = label,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                } else if (item.song.downloadPhase == DownloadPhase.DOWNLOADING) {
+                    Spacer(modifier = Modifier.height(8.dp))
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        horizontalArrangement = Arrangement.spacedBy(8.dp)
+                    ) {
+                        LinearProgressIndicator(
+                            progress = { item.song.progress / 100f },
+                            modifier = Modifier.weight(1f).height(4.dp),
+                            color = MaterialTheme.colorScheme.primary,
+                            trackColor = MaterialTheme.colorScheme.surfaceVariant
+                        )
+                        Text(
+                            text = "${item.song.progress}%",
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.primary
+                        )
+                    }
+                }
             }
 
-            Icon(
-                imageVector = Icons.Default.CheckCircle,
-                contentDescription = "Downloaded",
-                tint = MaterialTheme.colorScheme.tertiary,
-                modifier = Modifier.padding(start = 8.dp)
-            )
+            if (item.song.downloadStatus == DownloadStatus.DOWNLOADED) {
+                Icon(
+                    imageVector = Icons.Default.CheckCircle,
+                    contentDescription = "Downloaded",
+                    tint = MaterialTheme.colorScheme.tertiary,
+                    modifier = Modifier.padding(start = 8.dp)
+                )
+            }
         }
     }
 }
