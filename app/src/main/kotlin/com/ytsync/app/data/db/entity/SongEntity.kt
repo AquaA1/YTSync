@@ -44,4 +44,8 @@ data class SongEntity(
 
     @ColumnInfo(name = "progress")
     val progress: Int = 0,
+
+    /** Epoch millis when downloadStatus first became DOWNLOADED. Null until then. */
+    @ColumnInfo(name = "downloaded_at")
+    val downloadedAt: Long? = null,
 )

@@ -1,13 +1,16 @@
 package com.ytsync.app.ui.screens
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
+import android.net.Uri
 import android.os.Build
 import android.util.Log
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.animateContentSize
 import androidx.compose.foundation.clickable
+import androidx.documentfile.provider.DocumentFile
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -300,8 +303,8 @@ fun HomeScreen(
             if (showBottomSheet) {
                 AddPlaylistBottomSheet(
                     onDismiss = { showBottomSheet = false },
-                    onAddPlaylist = { url ->
-                        viewModel.addPlaylist(url)
+                    onAddPlaylist = { url, saveLocationUri ->
+                        viewModel.addPlaylist(url, saveLocationUri)
                         scope.launch { sheetState.hide() }.invokeOnCompletion {
                             if (!sheetState.isVisible) {
                                 showBottomSheet = false
@@ -587,10 +590,29 @@ private fun formatRelativeTimestamp(timestamp: Long?): String {
 @Composable
 fun AddPlaylistBottomSheet(
     onDismiss: () -> Unit,
-    onAddPlaylist: (String) -> Unit,
+    onAddPlaylist: (String, String?) -> Unit,
 ) {
     var url by remember { mutableStateOf("") }
     var isError by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    var selectedFolderUri by remember { mutableStateOf<String?>(null) }
+    var folderDisplayName by remember { mutableStateOf("App default location") }
+
+    val pickerLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocumentTree()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            try {
+                context.contentResolver.takePersistableUriPermission(uri, takeFlags)
+            } catch (e: Exception) {
+                Log.e("AddPlaylistSheet", "Failed to take persistable permission", e)
+            }
+            selectedFolderUri = uri.toString()
+            folderDisplayName = DocumentFile.fromTreeUri(context, uri)?.name ?: "Custom Folder"
+        }
+    }
 
     ModalBottomSheet(
         onDismissRequest = onDismiss,
@@ -625,11 +647,39 @@ fun AddPlaylistBottomSheet(
                 modifier = Modifier.fillMaxWidth(),
                 singleLine = true
             )
+            Spacer(modifier = Modifier.height(16.dp))
+
+            // Save to option
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .clickable { pickerLauncher.launch(null) }
+                    .padding(vertical = 8.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Column {
+                    Text(
+                        text = "Save Location",
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Text(
+                        text = folderDisplayName,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+                TextButton(onClick = { pickerLauncher.launch(null) }) {
+                    Text("Choose folder…")
+                }
+            }
+
             Spacer(modifier = Modifier.height(24.dp))
             Button(
                 onClick = {
                     if (url.trim().startsWith("http") && url.contains("list=")) {
-                        onAddPlaylist(url)
+                        onAddPlaylist(url, selectedFolderUri)
                     } else {
                         isError = true
                     }

@@ -7,6 +7,7 @@ import com.ytsync.app.data.db.entity.DownloadStatus
 import com.ytsync.app.data.db.entity.DownloadPhase
 import com.ytsync.app.data.db.entity.SongEntity
 import com.ytsync.app.data.repository.PlaylistRepository
+import com.ytsync.app.data.file.FileManager
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
@@ -29,7 +30,8 @@ data class DownloadedSongItem(
 
 @HiltViewModel
 class DownloadsViewModel @Inject constructor(
-    private val repository: PlaylistRepository
+    private val repository: PlaylistRepository,
+    private val fileManager: FileManager
 ) : ViewModel() {
 
     private val _sortOrder = MutableStateFlow(DownloadSortOrder.DATE_DOWNLOADED)
@@ -54,15 +56,21 @@ class DownloadsViewModel @Inject constructor(
         
         val items = songs.filter { it.downloadStatus == DownloadStatus.DOWNLOADED || it.downloadPhase != DownloadPhase.DONE }
             .map { song ->
-                val file = song.filePath?.let { File(it) }
-                val exists = file?.exists() == true
-                val size = if (exists) file!!.length() else 0L
-                val lastModified = if (exists) file!!.lastModified() else 0L
+                val exists = fileManager.fileExists(song.filePath)
+                val size = if (exists) fileManager.getFileLength(song.filePath) else 0L
+                val lastModified = if (exists) fileManager.getFileLastModified(song.filePath) else 0L
                 DownloadedSongItem(
                     song = song,
                     playlistName = playlistMap[song.playlistId] ?: "Unknown Playlist",
                     fileSize = size,
-                    downloadedAt = lastModified
+                    // Prefer the Room-stamped downloadedAt (precise, set at download time).
+                    // Fall back to file lastModified for songs that pre-date this field.
+                    // For actively downloading songs, assign Long.MAX_VALUE so they sort to the very top.
+                    downloadedAt = if (song.downloadPhase != DownloadPhase.DONE && song.downloadStatus != DownloadStatus.DOWNLOADED) {
+                        Long.MAX_VALUE
+                    } else {
+                        song.downloadedAt ?: lastModified
+                    }
                 )
             }
 
@@ -95,10 +103,7 @@ class DownloadsViewModel @Inject constructor(
         viewModelScope.launch(Dispatchers.IO) {
             try {
                 songItem.song.filePath?.let { path ->
-                    val file = File(path)
-                    if (file.exists()) {
-                        file.delete()
-                    }
+                    fileManager.deleteFile(path)
                 }
                 repository.resetSongToPending(songItem.song.id)
             } catch (e: Exception) {

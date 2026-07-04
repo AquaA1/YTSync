@@ -1,6 +1,11 @@
 package com.ytsync.app.ui.screens
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Build
+import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -9,6 +14,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ColorLens
 import androidx.compose.material.icons.filled.DeleteForever
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.NetworkWifi
 import androidx.compose.material.icons.filled.Schedule
@@ -18,7 +24,9 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import java.text.SimpleDateFormat
@@ -34,8 +42,25 @@ fun SettingsScreen(
     val syncFrequencyHours by viewModel.syncFrequencyHours.collectAsState()
     val useDynamicColor by viewModel.useDynamicColor.collectAsState()
     val lastSyncedTime by viewModel.lastSyncedTime.collectAsState()
+    val folderDisplayName by viewModel.folderDisplayName.collectAsState()
+    val relocationState by viewModel.relocationState.collectAsState()
 
     var showClearConfirmation by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val pickerLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocumentTree()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            try {
+                context.contentResolver.takePersistableUriPermission(uri, takeFlags)
+            } catch (e: Exception) {
+                Log.e("SettingsScreen", "Failed to take persistable permission", e)
+            }
+            viewModel.onNewDefaultLocationSelected(uri.toString())
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -207,7 +232,55 @@ fun SettingsScreen(
                 }
             }
 
-            // Section: App Theme (only show if Android 12+ supports Material You)
+            // Section: Storage Location
+            Text(
+                text = "Storage Location",
+                style = MaterialTheme.typography.titleMedium,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.primary
+            )
+
+            Card(
+                modifier = Modifier.fillMaxWidth(),
+                shape = RoundedCornerShape(16.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .clickable { pickerLauncher.launch(null) }
+                        .padding(16.dp),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.SpaceBetween
+                ) {
+                    Row(
+                        verticalAlignment = Alignment.CenterVertically,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Icon(
+                            imageVector = Icons.Default.Folder,
+                            contentDescription = null,
+                            tint = MaterialTheme.colorScheme.primary
+                        )
+                        Spacer(modifier = Modifier.width(16.dp))
+                        Column {
+                            Text(
+                                text = "Default Download Folder",
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.SemiBold
+                            )
+                            Text(
+                                text = folderDisplayName,
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                    Button(onClick = { pickerLauncher.launch(null) }) {
+                        Text("Change")
+                    }
+                }
+            }
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
                 Text(
                     text = "App Theme",
@@ -353,6 +426,81 @@ fun SettingsScreen(
                 }
             }
         )
+    }
+
+    when (val state = relocationState) {
+        is RelocationState.ConfirmDialog -> {
+            AlertDialog(
+                onDismissRequest = { viewModel.dismissRelocation() },
+                title = { Text("Move existing songs?", fontWeight = FontWeight.Bold) },
+                text = { Text("Would you like to move your existing downloaded songs to the new folder, or keep them where they are (new downloads will use the new folder)?") },
+                confirmButton = {
+                    Button(
+                        onClick = { viewModel.applyNewLocationMoveFiles(state.pendingNewUri) }
+                    ) {
+                        Text("Move Files")
+                    }
+                },
+                dismissButton = {
+                    Row {
+                        TextButton(
+                            onClick = { viewModel.applyNewLocationKeepFiles(state.pendingNewUri) }
+                        ) {
+                            Text("Keep Files")
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        TextButton(
+                            onClick = { viewModel.dismissRelocation() }
+                        ) {
+                            Text("Cancel")
+                        }
+                    }
+                }
+            )
+        }
+        is RelocationState.Progress -> {
+            AlertDialog(
+                onDismissRequest = {}, // Disallow dismiss during copy
+                title = { Text("Moving songs...", fontWeight = FontWeight.Bold) },
+                text = {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
+                        CircularProgressIndicator()
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = "Moving track ${state.current} of ${state.total}",
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = state.currentTitle,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
+                },
+                confirmButton = {}
+            )
+        }
+        is RelocationState.Summary -> {
+            AlertDialog(
+                onDismissRequest = { viewModel.dismissRelocation() },
+                title = { Text("Relocation Completed", fontWeight = FontWeight.Bold) },
+                text = {
+                    Text(
+                        text = "Successfully moved ${state.successCount} songs. " +
+                                if (state.failureCount > 0) "${state.failureCount} songs failed to move." else ""
+                    )
+                },
+                confirmButton = {
+                    Button(onClick = { viewModel.dismissRelocation() }) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+        else -> {}
     }
 }
 

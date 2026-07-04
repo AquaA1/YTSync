@@ -23,7 +23,8 @@ object DatabaseModule {
             context,
             AppDatabase::class.java,
             "ytsync.db",
-        ).fallbackToDestructiveMigration()
+        ).addMigrations(AppDatabase.MIGRATION_2_3, AppDatabase.MIGRATION_3_4)
+            .fallbackToDestructiveMigration()
             .build()
 
     @Provides

@@ -479,6 +479,7 @@ fun EmptyDownloadsState() {
 }
 
 private fun formatGroupDate(timestamp: Long): String {
+    if (timestamp == Long.MAX_VALUE) return "Downloading"
     if (timestamp == 0L) return "Unknown"
     val calendar = Calendar.getInstance()
     val today = calendar.get(Calendar.DAY_OF_YEAR)

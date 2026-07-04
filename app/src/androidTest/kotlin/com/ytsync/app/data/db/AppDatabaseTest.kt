@@ -60,6 +60,21 @@ class AppDatabaseTest {
     }
 
     @Test
+    fun insertPlaylist_withSaveLocationUri_thenReadBack() = runBlocking {
+        val id = playlistDao.insert(
+            PlaylistEntity(
+                url = "https://music.youtube.com/playlist?list=PLcustom",
+                name = "Custom Save Location Playlist",
+                syncStatus = SyncStatus.SYNCED,
+                saveLocationUri = "content://com.android.externalstorage.documents/tree/primary%3AMusic"
+            )
+        )
+        val loaded = playlistDao.getById(id)
+        assertNotNull(loaded)
+        assertEquals("content://com.android.externalstorage.documents/tree/primary%3AMusic", loaded?.saveLocationUri)
+    }
+
+    @Test
     fun updatePlaylist_syncStatus() = runBlocking {
         val id = playlistDao.insert(
             PlaylistEntity(url = "url", name = "My Mix", syncStatus = SyncStatus.OUT_OF_SYNC)

@@ -253,7 +253,7 @@ class PlaylistListViewModel @Inject constructor(
         _error.value = null
     }
 
-    fun addPlaylist(url: String) {
+    fun addPlaylist(url: String, saveLocationUri: String?) {
         val cleanUrl = url.replace("\\s".toRegex(), "")
         if (!isValidUrl(cleanUrl)) {
             _error.value = "Invalid YouTube playlist URL"
@@ -271,7 +271,8 @@ class PlaylistListViewModel @Inject constructor(
                 val newPlaylist = PlaylistEntity(
                     url = cleanUrl,
                     name = "Loading Playlist…",
-                    syncStatus = SyncStatus.SYNCING
+                    syncStatus = SyncStatus.SYNCING,
+                    saveLocationUri = saveLocationUri
                 )
                 val id = repository.insertPlaylist(newPlaylist)
                 syncPlaylist(id)
@@ -305,13 +306,13 @@ class PlaylistListViewModel @Inject constructor(
     }
 
     fun deletePlaylist(playlist: PlaylistEntity, deleteFiles: Boolean) {
-        viewModelScope.launch {
+        viewModelScope.launch(Dispatchers.IO) {
             try {
                 repository.deletePlaylist(playlist)
                 if (deleteFiles) {
-                    val playlistDir = fileManager.getPlaylistDir(playlist.name)
+                    val (playlistDir, _) = fileManager.getPlaylistDocumentDir(playlist.name, playlist.saveLocationUri)
                     if (playlistDir.exists()) {
-                        playlistDir.deleteRecursively()
+                        playlistDir.delete()
                     }
                 }
             } catch (e: Exception) {

@@ -1,5 +1,11 @@
 package com.ytsync.app.ui.screens
 
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -18,8 +24,12 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.ErrorOutline
+import androidx.compose.material.icons.filled.Folder
 import androidx.compose.material.icons.filled.HourglassEmpty
 import androidx.compose.material.icons.filled.MusicOff
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.TextButton
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -33,8 +43,13 @@ import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
+import androidx.documentfile.provider.DocumentFile
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
@@ -55,6 +70,25 @@ fun PlaylistDetailScreen(
 ) {
     val playlist by viewModel.playlist.collectAsState()
     val songs by viewModel.songs.collectAsState()
+    val folderDisplayName by viewModel.folderDisplayName.collectAsState()
+    val relocationState by viewModel.relocationState.collectAsState()
+
+    var showStorageSettingsDialog by remember { mutableStateOf(false) }
+
+    val context = LocalContext.current
+    val pickerLauncher = rememberLauncherForActivityResult(
+        contract = ActivityResultContracts.OpenDocumentTree()
+    ) { uri: Uri? ->
+        if (uri != null) {
+            val takeFlags = Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION
+            try {
+                context.contentResolver.takePersistableUriPermission(uri, takeFlags)
+            } catch (e: Exception) {
+                Log.e("PlaylistDetailScreen", "Failed to take persistable permission", e)
+            }
+            viewModel.onNewLocationSelected(uri.toString())
+        }
+    }
 
     Scaffold(
         topBar = {
@@ -72,6 +106,14 @@ fun PlaylistDetailScreen(
                         Icon(
                             imageVector = Icons.AutoMirrored.Filled.ArrowBack,
                             contentDescription = "Navigate back",
+                        )
+                    }
+                },
+                actions = {
+                    IconButton(onClick = { showStorageSettingsDialog = true }) {
+                        Icon(
+                            imageVector = Icons.Default.Folder,
+                            contentDescription = "Storage location override",
                         )
                     }
                 },
@@ -105,6 +147,148 @@ fun PlaylistDetailScreen(
                 }
             }
         }
+    }
+
+    if (showStorageSettingsDialog) {
+        AlertDialog(
+            onDismissRequest = { showStorageSettingsDialog = false },
+            title = { Text("Playlist Save Location", fontWeight = FontWeight.Bold) },
+            text = {
+                Column {
+                    Text(
+                        text = "Current location:",
+                        style = MaterialTheme.typography.bodyMedium,
+                        fontWeight = FontWeight.SemiBold
+                    )
+                    Text(
+                        text = folderDisplayName,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant
+                    )
+                }
+            },
+            confirmButton = {
+                Button(
+                    onClick = {
+                        showStorageSettingsDialog = false
+                        pickerLauncher.launch(null)
+                    }
+                ) {
+                    Text("Choose folder…")
+                }
+            },
+            dismissButton = {
+                Row {
+                    if (playlist?.saveLocationUri != null) {
+                        TextButton(
+                            onClick = {
+                                showStorageSettingsDialog = false
+                                viewModel.resetToDefaultSelected()
+                            }
+                        ) {
+                            Text("Reset to default")
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                    }
+                    TextButton(onClick = { showStorageSettingsDialog = false }) {
+                        Text("Close")
+                    }
+                }
+            }
+        )
+    }
+
+    when (val state = relocationState) {
+        is RelocationState.ConfirmDialog -> {
+            val isReset = state.pendingNewUri.isEmpty()
+            val msg = if (isReset) {
+                "Would you like to move your existing downloaded songs back to the app's default location, or keep them where they are?"
+            } else {
+                "Would you like to move your existing downloaded songs to the new folder, or keep them where they are (new downloads will use the new folder)?"
+            }
+            AlertDialog(
+                onDismissRequest = { viewModel.dismissRelocation() },
+                title = { Text(if (isReset) "Reset Save Location" else "Move existing songs?", fontWeight = FontWeight.Bold) },
+                text = { Text(msg) },
+                confirmButton = {
+                    Button(
+                        onClick = {
+                            if (isReset) {
+                                viewModel.applyNewLocationMoveFiles("")
+                            } else {
+                                viewModel.applyNewLocationMoveFiles(state.pendingNewUri)
+                            }
+                        }
+                    ) {
+                        Text("Move Files")
+                    }
+                },
+                dismissButton = {
+                    Row {
+                        TextButton(
+                            onClick = {
+                                if (isReset) {
+                                    viewModel.applyNewLocationKeepFiles("")
+                                } else {
+                                    viewModel.applyNewLocationKeepFiles(state.pendingNewUri)
+                                }
+                            }
+                        ) {
+                            Text("Keep Files")
+                        }
+                        Spacer(modifier = Modifier.width(8.dp))
+                        TextButton(
+                            onClick = { viewModel.dismissRelocation() }
+                        ) {
+                            Text("Cancel")
+                        }
+                    }
+                }
+            )
+        }
+        is RelocationState.Progress -> {
+            AlertDialog(
+                onDismissRequest = {}, // Disallow dismiss during copy
+                title = { Text("Moving songs...", fontWeight = FontWeight.Bold) },
+                text = {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
+                        CircularProgressIndicator()
+                        Spacer(modifier = Modifier.height(16.dp))
+                        Text(
+                            text = "Moving track ${state.current} of ${state.total}",
+                            style = MaterialTheme.typography.bodyMedium
+                        )
+                        Spacer(modifier = Modifier.height(4.dp))
+                        Text(
+                            text = state.currentTitle,
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                    }
+                },
+                confirmButton = {}
+            )
+        }
+        is RelocationState.Summary -> {
+            AlertDialog(
+                onDismissRequest = { viewModel.dismissRelocation() },
+                title = { Text("Relocation Completed", fontWeight = FontWeight.Bold) },
+                text = {
+                    Text(
+                        text = "Successfully moved ${state.successCount} songs. " +
+                                if (state.failureCount > 0) "${state.failureCount} songs failed to move." else ""
+                    )
+                },
+                confirmButton = {
+                    Button(onClick = { viewModel.dismissRelocation() }) {
+                        Text("OK")
+                    }
+                }
+            )
+        }
+        else -> {}
     }
 }
 

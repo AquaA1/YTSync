@@ -31,7 +31,17 @@ interface SongDao {
     @Query("SELECT * FROM songs WHERE id = :id")
     suspend fun getById(id: Long): SongEntity?
 
-    @Query("SELECT * FROM songs WHERE playlist_id = :playlistId ORDER BY title ASC")
+    @Query("""
+        SELECT * FROM songs WHERE playlist_id = :playlistId
+        ORDER BY
+            CASE 
+                WHEN download_phase != 'DONE' THEN 0
+                WHEN download_status = 'DOWNLOADED' THEN 1
+                ELSE 2
+            END ASC,
+            downloaded_at DESC,
+            title ASC
+    """)
     fun getByPlaylistId(playlistId: Long): Flow<List<SongEntity>>
 
     @Query("SELECT COUNT(*) FROM songs WHERE playlist_id = :playlistId AND download_status = 'DOWNLOADED'")

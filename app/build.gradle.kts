@@ -108,4 +108,5 @@ dependencies {
     androidTestImplementation(libs.androidx.test.core.ktx)
     androidTestImplementation(libs.room.testing)
     androidTestImplementation(libs.kotlinx.coroutines.test)
+    implementation("androidx.documentfile:documentfile:1.0.1")
 }

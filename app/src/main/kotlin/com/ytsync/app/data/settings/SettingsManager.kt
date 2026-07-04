@@ -19,10 +19,21 @@ class SettingsManager @Inject constructor(
         private const val KEY_WIFI_ONLY = "wifi_only"
         private const val KEY_SYNC_FREQUENCY = "sync_frequency"
         private const val KEY_DYNAMIC_COLOR = "dynamic_color"
+        private const val KEY_DEFAULT_SAVE_LOCATION_URI = "default_save_location_uri"
     }
 
     private val _useDynamicColor = MutableStateFlow(prefs.getBoolean(KEY_DYNAMIC_COLOR, true))
     val useDynamicColorFlow: StateFlow<Boolean> = _useDynamicColor.asStateFlow()
+
+    private val _defaultSaveLocationUri = MutableStateFlow(prefs.getString(KEY_DEFAULT_SAVE_LOCATION_URI, null))
+    val defaultSaveLocationUriFlow: StateFlow<String?> = _defaultSaveLocationUri.asStateFlow()
+
+    var defaultSaveLocationUri: String?
+        get() = prefs.getString(KEY_DEFAULT_SAVE_LOCATION_URI, null)
+        set(value) {
+            prefs.edit().putString(KEY_DEFAULT_SAVE_LOCATION_URI, value).apply()
+            _defaultSaveLocationUri.value = value
+        }
 
     var useDynamicColor: Boolean
         get() = prefs.getBoolean(KEY_DYNAMIC_COLOR, true)

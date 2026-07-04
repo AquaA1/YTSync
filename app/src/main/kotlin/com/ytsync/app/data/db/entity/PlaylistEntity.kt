@@ -25,4 +25,7 @@ data class PlaylistEntity(
 
     @ColumnInfo(name = "song_count")
     val songCount: Int = 0,
+
+    @ColumnInfo(name = "save_location_uri")
+    val saveLocationUri: String? = null,
 )
