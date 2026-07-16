@@ -52,22 +52,47 @@ app/src/main/kotlin/com/ytsync/app/
 
 ---
 
-## ⚙️ Setup & Installation
+## ⚙️ Step-by-Step Build & Install Guide
 
-### Requirements
-* **JDK 17** or higher
-* **Android SDK** (Target API 35, Min API 26)
-* **Python** available in path (required by the `yt-dlp` wrapper library at runtime)
+Follow these simple, copy-pasteable terminal commands to clone, build, and run YTSync on your machine:
 
-### Build and Install
-Compile the project and install the debug APK on your connected device:
-
+### 1. Clone the Repository
+Clone the codebase from GitHub to your local machine:
 ```bash
-# Clean build and compile debug bundle
-./gradlew assembleDebug
+git clone git@github.com:AquaA1/YTSync.git
+cd YTSync
+```
 
-# Install build directly onto connected device/emulator
+### 2. Verify Prerequisites
+Make sure you have **JDK 17** and **Python** (required for `yt-dlp` runtime execution) installed and configured in your shell:
+```bash
+# Check Java version (should be 17 or higher)
+java -version
+```
+
+### 3. Compile and Build the APK
+Compile the project and build the debug APK:
+```bash
+# Clean build and compile the APK
+./gradlew assembleDebug
+```
+*Once finished, the compiled APK will be located at:*  
+`app/build/outputs/apk/debug/app-debug.apk`
+
+### 4. Install the APK
+
+#### Option A: Direct Install via USB Debugging (Recommended)
+If you have a connected device or emulator with USB debugging enabled:
+```bash
+# Install the built APK directly onto your device
 ./gradlew installDebug
+```
+
+#### Option B: Locate and Transfer APK File
+If you want to manually copy the APK to your phone or share it, copy the file from this path:
+```bash
+# Print the absolute path to your newly built APK
+echo "$(pwd)/app/build/outputs/apk/debug/app-debug.apk"
 ```
 
 ---
