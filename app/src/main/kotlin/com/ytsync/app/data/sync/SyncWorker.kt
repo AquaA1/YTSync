@@ -297,6 +297,7 @@ class SyncWorker @AssistedInject constructor(
                     repository.markPlaylistSynced(playlist.id, meta.name, meta.totalCount)
                     Log.i("SyncDiagnostics", "Step 7: Complete sync end")
                     Log.i(TAG, "Finished syncing playlist: ${meta.name}")
+                    notificationHelper.cancelSyncNotification()
 
                 } catch (e: Exception) {
                     Log.e(TAG, "Failed syncing playlist: ${playlist.name}", e)

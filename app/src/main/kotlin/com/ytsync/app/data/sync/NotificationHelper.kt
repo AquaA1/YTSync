@@ -114,4 +114,8 @@ class NotificationHelper @Inject constructor(
     fun cancelForegroundNotification() {
         notificationManager.cancel(FOREGROUND_NOTIFICATION_ID)
     }
+
+    fun cancelSyncNotification() {
+        notificationManager.cancel(NOTIFICATION_ID)
+    }
 }
